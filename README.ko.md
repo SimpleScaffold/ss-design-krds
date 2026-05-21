@@ -17,7 +17,8 @@ docs/
 ├── workflow-tree.md              ← plan/transform/improve
 ├── validation-checklist-tree.md  ← 공식 311항 체크리스트
 ├── component-category-tree.md    ← KRDS 10패밀리 74컴포넌트
-└── style/                        ← KRDS 공식 스타일 가이드 (9페이지 MD)
+├── style/                        ← KRDS 공식 스타일 가이드 (9페이지 MD)
+└── patterns/                     ← KRDS 기본 패턴 (13페이지 MD)
 ```
 
 ## 스타일 가이드
@@ -32,6 +33,19 @@ KRDS 공식 스타일 페이지(색상·타이포·형태 등)를 [`docs/style/`
 | 공유 임계값 | `scripts/style-guide-lib.mjs` | gov 17px, 행간 1.5, radius 2–12px 등 |
 
 흐름: `docs/style/` → `style-guide-lib.mjs` → 체크리스트 browser 규칙 · MD 검증
+
+## 기본 패턴
+
+KRDS 기본 패턴 페이지(PII·폼·필터·동의 등)는 [`docs/patterns/`](docs/patterns/index.md) MD로 변환해 두었습니다.
+
+| 무엇 | 어디 | 용도 |
+|------|------|------|
+| 패턴 지식 | `docs/patterns/` | AI가 PII·입력폼·필터링 규칙을 먼저 읽음 |
+| 체크리스트 매핑 | `specs/validation/pattern.basic.md` | 기본 패턴 47항 ↔ `docs/patterns/` |
+| 공유 참조 | `scripts/pattern-guide-lib.mjs` | subcategory → MD 경로 |
+| 갱신 | `npm run krds:pattern:md` | global_01~13 재수집 |
+
+흐름: `docs/patterns/` → `pattern-guide-lib.mjs` → `official-checklist.json` specRef
 
 ## 무엇인가요?
 

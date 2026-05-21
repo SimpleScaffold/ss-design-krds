@@ -17,7 +17,8 @@ docs/
 ├── workflow-tree.md              ← plan/transform/improve
 ├── validation-checklist-tree.md  ← official 311-item checklist
 ├── component-category-tree.md    ← KRDS 10 families, 74 components
-└── style/                        ← KRDS official style guide (9 MD pages)
+├── style/                        ← KRDS official style guide (9 MD pages)
+└── patterns/                     ← KRDS basic patterns (13 MD pages)
 ```
 
 ## Style Guide
@@ -32,6 +33,19 @@ Official KRDS style pages (color, typography, shape, etc.) live in [`docs/style/
 | Shared thresholds | `scripts/style-guide-lib.mjs` | gov 17px, line-height 1.5, radius 2–12px |
 
 Flow: `docs/style/` → `style-guide-lib.mjs` → checklist browser rules · MD validation
+
+## Basic Patterns
+
+Official KRDS basic pattern pages (PII, forms, filters, consent, etc.) live in [`docs/patterns/`](docs/patterns/index.md).
+
+| What | Where | Purpose |
+|------|-------|---------|
+| Pattern knowledge | `docs/patterns/` | AI reads PII, form, filter-sort rules first |
+| Checklist mapping | `specs/validation/pattern.basic.md` | 47 basic-pattern items ↔ `docs/patterns/` |
+| Shared refs | `scripts/pattern-guide-lib.mjs` | subcategory → MD path for catalog |
+| Refresh | `npm run krds:pattern:md` | Re-fetch global_01~13 from krds.go.kr |
+
+Flow: `docs/patterns/` → `pattern-guide-lib.mjs` → `official-checklist.json` specRef
 
 ## What It Is
 

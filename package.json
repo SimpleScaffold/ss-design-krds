@@ -31,6 +31,8 @@
     "krds:checklist:pdf-md:validate": "node scripts/validate-checklist-md.mjs",
     "krds:style:md": "node scripts/krds-style-to-md.mjs",
     "krds:style:md:validate": "node scripts/validate-style-md.mjs",
+    "krds:pattern:md": "node scripts/krds-pattern-to-md.mjs",
+    "krds:pattern:md:validate": "node scripts/validate-pattern-md.mjs",
     "krds:improve": "node scripts/krds-improve-loop.mjs",
     "krds:index": "node scripts/generate-spec-index.mjs",
     "krds:docs": "node scripts/generate-docs-trees.mjs",

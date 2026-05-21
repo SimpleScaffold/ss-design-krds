@@ -5,6 +5,7 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 import { STYLE_PAGES } from './krds-style-to-md.mjs';
+import { PATTERN_PAGES } from './krds-pattern-to-md.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -79,6 +80,11 @@ const requiredPaths = [
   'scripts/krds-style-to-md.mjs',
   'scripts/validate-style-md.mjs',
   'scripts/style-guide-lib.mjs',
+  'docs/patterns/index.md',
+  'scripts/krds-pattern-to-md.mjs',
+  'scripts/validate-pattern-md.mjs',
+  'scripts/pattern-guide-lib.mjs',
+  'scripts/krds-page-to-md-lib.mjs',
   'specs/validation-checklist.md',
   'specs/validation-tools.md',
   'scripts/krds-improve-loop.mjs',
@@ -88,6 +94,7 @@ const requiredPaths = [
   'reports/experiment/final-score.json',
   'reports/experiment/component-coverage-check.json',
   ...STYLE_PAGES.map((page) => `docs/style/${page.filename}`),
+  ...PATTERN_PAGES.map((page) => `docs/patterns/${page.filename}`),
 ];
 
 for (const p of requiredPaths) {
@@ -188,6 +195,21 @@ if (styleMdRun.status === 0 || styleMdRun.stdout) {
   }
 } else {
   addCheck('style md validate', false, styleMdRun.stderr || 'validate-style-md failed');
+}
+
+const patternMdRun = spawnSync('node', ['scripts/validate-pattern-md.mjs'], { encoding: 'utf8', cwd: root });
+if (patternMdRun.status === 0 || patternMdRun.stdout) {
+  try {
+    const patternOut = JSON.parse(patternMdRun.stdout || '{}');
+    addCheck('pattern md validate', patternOut.ok === true, JSON.stringify(patternOut.summary));
+    for (const c of patternOut.checks || []) {
+      if (!c.pass) addCheck(`pattern-md:${c.name}`, false, c.detail);
+    }
+  } catch (e) {
+    addCheck('pattern md validate', false, e.message);
+  }
+} else {
+  addCheck('pattern md validate', false, patternMdRun.stderr || 'validate-pattern-md failed');
 }
 
 const similarityRun = spawnSync('node', ['scripts/krds-similarity.mjs', '--target', 'experiment/sample-page/index.html'], { encoding: 'utf8', cwd: root });

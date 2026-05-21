@@ -22,6 +22,24 @@
 
 로컬 MD: [docs/style/index.md](../docs/style/index.md)
 
+## Basic Patterns
+
+- [개인 식별 정보 입력](https://www.krds.go.kr/html/site/global/global_01.html)
+- [도움](https://www.krds.go.kr/html/site/global/global_02.html)
+- [동의](https://www.krds.go.kr/html/site/global/global_03.html)
+- [목록 탐색](https://www.krds.go.kr/html/site/global/global_04.html)
+- [사용자 피드백](https://www.krds.go.kr/html/site/global/global_05.html)
+- [상세 정보 확인](https://www.krds.go.kr/html/site/global/global_06.html)
+- [오류](https://www.krds.go.kr/html/site/global/global_07.html)
+- [입력 폼](https://www.krds.go.kr/html/site/global/global_08.html)
+- [첨부파일](https://www.krds.go.kr/html/site/global/global_09.html)
+- [필터링·정렬](https://www.krds.go.kr/html/site/global/global_10.html)
+- [확인](https://www.krds.go.kr/html/site/global/global_11.html)
+- [모바일 알림](https://www.krds.go.kr/html/site/global/global_12.html)
+- [모바일 설정](https://www.krds.go.kr/html/site/global/global_13.html)
+
+로컬 MD: [docs/patterns/index.md](../docs/patterns/index.md)
+
 ## Components
 
 - [컴포넌트 소개](https://www.krds.go.kr/html/site/component/component01.html)

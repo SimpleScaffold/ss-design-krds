@@ -1,5 +1,7 @@
 # Application Pattern
 
+> 기본 패턴(PII·폼·동의 등) 상세 가이드는 [`docs/patterns/`](../../docs/patterns/index.md)를 참조하세요.
+
 KRDS 서비스 패턴: 신청
 
 ## Page Context Tree

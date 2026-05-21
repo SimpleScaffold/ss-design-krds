@@ -15,9 +15,12 @@ ss-design-krds/
 │   ├── validation-checklist-tree.md ← 공식 311항 체크리스트 트리
 │   ├── checklist-maintenance.md  ← 체크리스트·스크립트 갱신 순서
 │   ├── component-category-tree.md ← 10패밀리 분류
-│   └── style/                    ← KRDS 공식 스타일 가이드 MD (9페이지)
+│   ├── style/                    ← KRDS 공식 스타일 가이드 MD (9페이지)
+│   │   ├── index.md
+│   │   └── 색상.md · 타이포그래피.md · 형태.md · …
+│   └── patterns/                 ← KRDS 기본 패턴 MD (13페이지)
 │       ├── index.md
-│       ├── 색상.md · 타이포그래피.md · 형태.md · …
+│       └── 개인-식별-정보-입력.md · 입력-폼.md · 필터링-정렬.md · …
 │
 ├── specs/                        ← ★ 스펙 상세 (MD)
 │   ├── tokens.md                 ← 색상·타이포·간격 토큰 (요약)
@@ -32,11 +35,11 @@ ss-design-krds/
 │   │   ├── _categories.md        ← 패밀리별 트리 인덱스
 │   │   ├── _index.md             ← 74개 flat 테이블
 │   │   └── *.md                  ← 컴포넌트별 MD (74개)
-│   └── patterns/                 ← 서비스 패턴 (로그인, 검색, 신청)
+│   └── patterns/                 ← 서비스 패턴 구현 스펙 + _index.md (기본 패턴은 docs/patterns/)
 │
 ├── resources/krds/               ← 기계 검증 데이터
 │   ├── checklist/
-│   │   ├── official-checklist.json ← 311항 카탈로그 (specRef → docs/style/)
+│   │   ├── official-checklist.json ← 311항 카탈로그 (specRef → docs/style/, docs/patterns/)
 │   │   └── schema.json
 │   └── manifest.json
 │
@@ -61,9 +64,13 @@ ss-design-krds/
 │   ├── krds-similarity.mjs       ← score 산출 (≥ 95)
 │   ├── krds-ruleset.json         ← similarity 가중치 프로필
 │   ├── krds-checklist.mjs        ← 311항 체크리스트 오케스트레이터
+│   ├── krds-page-to-md-lib.mjs   ← KRDS 페이지 → MD 공통 변환
 │   ├── krds-style-to-md.mjs      ← KRDS style 페이지 → docs/style/ MD
+│   ├── krds-pattern-to-md.mjs    ← KRDS global 패턴 → docs/patterns/ MD
 │   ├── validate-style-md.mjs     ← 스타일 MD 무결성 검증
+│   ├── validate-pattern-md.mjs   ← 기본 패턴 MD 무결성 검증
 │   ├── style-guide-lib.mjs       ← 스타일 임계값·specRef 공유
+│   ├── pattern-guide-lib.mjs     ← 기본 패턴 specRef·기대값 공유
 │   ├── validate-krds.mjs         ← 저장소 무결성
 │   └── …                         ← 상세: docs/checklist-maintenance.md
 │
@@ -103,11 +110,18 @@ ss-design-krds/
 | 무엇이 있나 | KRDS style_01~09 공식 페이지 MD 변환본 (9페이지 + index) |
 | 검증 연동 | `style-guide-lib.mjs` 임계값 → `krds-checklist-browser.mjs` browser 규칙 |
 
+### `docs/patterns/` — KRDS 기본 패턴
+
+| 언제 읽나 | PII·폼·필터·동의·오류 등 UX 패턴이 필요할 때; pattern.basic 47항 실패 시 |
+|----------|---------------------------------------------------------------------|
+| 무엇이 있나 | KRDS global_01~13 공식 페이지 MD 변환본 (13페이지 + index) |
+| 검증 연동 | `pattern-guide-lib.mjs` → `official-checklist.json` specRef |
+
 ### `specs/` — 스펙 상세
 
 | 언제 읽나 | 토큰·컴포넌트·패턴이 필요할 때 |
 |----------|------------------------------|
-| 우선순위 | `tokens.md` → `docs/style/` (상세) → `_categories.md` → 개별 `*.md` |
+| 우선순위 | `tokens.md` → `docs/style/` · `docs/patterns/` (상세) → `_categories.md` → 개별 `*.md` |
 | HTML 참조 | MD에 발췌 포함, 원본은 `assets/` |
 
 ### `assets/krds/` — KRDS HTML 원본 (canonical)

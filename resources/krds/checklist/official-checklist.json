@@ -2,7 +2,7 @@
   "version": "2024.11",
   "stage": 1,
   "source": "디지털 정부서비스 UI/UX 가이드라인 자체 검증 체크리스트",
-  "generatedAt": "2026-05-21T03:39:49.465Z",
+  "generatedAt": "2026-05-21T03:48:15.092Z",
   "summary": {
     "totalItems": 311,
     "byCategory": {
@@ -3538,7 +3538,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "static"
       }
@@ -3556,7 +3556,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "static"
       }
@@ -3574,7 +3574,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "static"
       }
@@ -3592,7 +3592,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "static"
       }
@@ -3610,7 +3610,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3628,7 +3628,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3646,7 +3646,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3664,7 +3664,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3682,7 +3682,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3700,7 +3700,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3718,7 +3718,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3736,7 +3736,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3754,7 +3754,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3772,7 +3772,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3790,7 +3790,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3808,7 +3808,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3826,7 +3826,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3844,7 +3844,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3862,7 +3862,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3880,7 +3880,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3898,7 +3898,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3916,7 +3916,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "automation": {
         "level": "manual"
       }
@@ -3934,7 +3934,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "automation": {
         "level": "static"
       }
@@ -3952,7 +3952,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "automation": {
         "level": "static"
       }
@@ -3970,7 +3970,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "automation": {
         "level": "static"
       }
@@ -3988,7 +3988,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "automation": {
         "level": "static"
       }
@@ -4006,7 +4006,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "automation": {
         "level": "static"
       }
@@ -4024,7 +4024,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "automation": {
         "level": "static"
       }
@@ -4042,7 +4042,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "automation": {
         "level": "static"
       }
@@ -4060,7 +4060,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "automation": {
         "level": "static"
       }
@@ -4078,7 +4078,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "automation": {
         "level": "static"
       }
@@ -4096,7 +4096,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "automation": {
         "level": "static"
       }
@@ -4114,7 +4114,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "automation": {
         "level": "browser"
       }
@@ -4132,7 +4132,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/첨부파일.md",
       "automation": {
         "level": "manual"
       }
@@ -4150,7 +4150,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/첨부파일.md",
       "automation": {
         "level": "manual"
       }
@@ -4168,7 +4168,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/첨부파일.md",
       "automation": {
         "level": "manual"
       }
@@ -4186,7 +4186,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "automation": {
         "level": "manual"
       }
@@ -4204,7 +4204,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "automation": {
         "level": "manual"
       }
@@ -4222,7 +4222,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "automation": {
         "level": "manual"
       }
@@ -4240,7 +4240,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "automation": {
         "level": "manual"
       }
@@ -4258,7 +4258,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "automation": {
         "level": "manual"
       }
@@ -4276,7 +4276,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "automation": {
         "level": "manual"
       }
@@ -4294,7 +4294,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "automation": {
         "level": "manual"
       }
@@ -4312,7 +4312,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "automation": {
         "level": "manual"
       }
@@ -4330,7 +4330,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "automation": {
         "level": "manual"
       }
@@ -4348,7 +4348,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "automation": {
         "level": "manual"
       }
@@ -4366,7 +4366,7 @@
       "complianceCriteria": [],
       "failExamples": [],
       "relatedIds": [],
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "automation": {
         "level": "browser"
       }

@@ -15,7 +15,9 @@ docs/
 ├── workflow-tree.md              ← plan → implement → validate
 ├── validation-checklist-tree.md  ← 공식 311항 체크리스트 트리
 ├── component-category-tree.md    ← KRDS 10패밀리 74컴포넌트 분류
-└── style/                        ← KRDS 공식 스타일 가이드 9페이지 MD
+├── style/                        ← KRDS 공식 스타일 가이드 9페이지 MD
+│   └── index.md
+└── patterns/                     ← KRDS 기본 패턴 13페이지 MD
     └── index.md
 ```
 
@@ -40,11 +42,12 @@ Layer 1 — 진입 (Entry)
 Layer 2 — 가이드 (Guides)
 ├── docs/*.md              ← 트리·설명·내비게이션
 ├── docs/style/*.md        ← KRDS 공식 스타일 (색상·타이포·형태 등 상세)
+├── docs/patterns/*.md     ← KRDS 기본 패턴 (PII·폼·필터 등 상세)
 └── specs/tokens.md 등      ← 토큰 요약·a11y·스택 (상세는 docs/style/)
 
 Layer 3 — 상세 (Specs)
 ├── specs/components/*.md  ← 74개 컴포넌트 MD
-├── specs/patterns/*.md    ← 서비스 패턴
+├── specs/patterns/*.md    ← 서비스 패턴 구현 스펙 (기본 패턴 상세는 docs/patterns/)
 └── assets/krds/html/code/ ← HTML 원본 (MD 읽은 후)
 ```
 
@@ -81,6 +84,7 @@ Layer 3 — 상세 (Specs)
 node scripts/krds-similarity.mjs --target <page.html>   # score ≥ 95
 npm run krds:checklist -- --target <page.html>           # 공식 311항
 npm run krds:style:md:validate                           # 스타일 MD 무결성
+npm run krds:pattern:md:validate                         # 기본 패턴 MD 무결성
 npm run krds:validate                                      # 전체 검증
 ```
 
@@ -100,7 +104,9 @@ npm run krds:validate                                      # 전체 검증
 | [checklist-maintenance.md](./checklist-maintenance.md) | 체크리스트·검증 스크립트 갱신 순서 |
 | [component-category-tree.md](./component-category-tree.md) | KRDS 10패밀리 컴포넌트 분류 |
 | [style/index.md](./style/index.md) | KRDS 공식 스타일 가이드 (색상·타이포·레이아웃 등) |
+| [patterns/index.md](./patterns/index.md) | KRDS 기본 패턴 (PII·폼·필터·동의 등 13페이지) |
 | [specs/validation/style.md](../specs/validation/style.md) | 스타일 21항 체크리스트 ↔ `docs/style/` 매핑 |
+| [specs/validation/pattern.basic.md](../specs/validation/pattern.basic.md) | 기본 패턴 47항 ↔ `docs/patterns/` 매핑 |
 
 ## Specs 바로가기
 

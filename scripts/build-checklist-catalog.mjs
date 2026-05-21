@@ -7,6 +7,7 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { STYLE_SPEC_REFS } from './style-guide-lib.mjs';
+import { PATTERN_SPEC_REFS } from './pattern-guide-lib.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -14,6 +15,7 @@ const outDir = path.join(root, 'resources/krds/checklist');
 
 const SPEC_REFS = {
   ...STYLE_SPEC_REFS,
+  ...PATTERN_SPEC_REFS,
   'component.official-banner': 'specs/components/masthead.md',
   'component.identifier': 'specs/components/identifier.md',
   'component.footer': 'specs/components/footer.md',
@@ -34,15 +36,11 @@ const SPEC_REFS = {
   'component.textarea': 'specs/components/textarea.md',
   'component.text-input': 'specs/components/text_input.md',
   'component.file-upload': 'specs/components/file_upload.md',
-  'pattern.pii': 'specs/patterns/application.md',
-  'pattern.form': 'specs/patterns/application.md',
-  'pattern.attachment': 'specs/patterns/application.md',
-  'pattern.filter': 'specs/patterns/search.md',
   'pattern.visit': 'specs/patterns/search.md',
   'pattern.search': 'specs/patterns/search.md',
   'pattern.login': 'specs/patterns/login.md',
   'pattern.application': 'specs/patterns/application.md',
-  'pattern.policy': 'specs/patterns/application.md'
+  'pattern.policy': 'specs/patterns/application.md',
 };
 
 const STATIC_RULE_IDS = new Set([

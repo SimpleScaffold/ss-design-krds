@@ -18,11 +18,13 @@ AI 에이전트가 KRDS UI 작업 시 **어떤 MD를 어떤 순서로** 읽어�
 │   └── 왜: 74개 중 필요한 컴포넌트를 패밀리별로 빠르게 찾기
 ├── 5. specs/components/<name>.md (필요한 것만)
 │   └── 왜: HTML/Tailwind 예시, a11y, Related 컴포넌트
-├── 6. specs/accessibility.md
+├── 6. docs/patterns/index.md (폼·PII·필터·동의 등 해당 시)
+│   └── 왜: KRDS 기본 패턴 사용성·접근성 가이드
+├── 7. specs/accessibility.md
 │   └── 왜: skip-link, label, sr-only 등 a11y 게이트
-├── 7. assets/krds/html/code/<name>.html
+├── 8. assets/krds/html/code/<name>.html
 │   └── 왜: MD로 이해한 뒤 공식 HTML 복사·적용
-└── 8. node scripts/krds-similarity.mjs --target <file>
+└── 9. node scripts/krds-similarity.mjs --target <file>
     └── 왜: score ≥ 95 통과 확인
 ```
 
@@ -73,7 +75,25 @@ AI 에이전트가 KRDS UI 작업 시 **어떤 MD를 어떤 순서로** 읽어�
 
 ---
 
-## 시나리오 4: 스타일·체크리스트 검증
+## 시나리오 4: 기본 패턴 (폼·PII·필터 등)
+
+```text
+[기본 패턴 UI]
+├── 1. docs/patterns/index.md
+│   └── 왜: 13개 기본 패턴 목록·읽기 순서
+├── 2. docs/patterns/<주제>.md (해당 패턴만)
+│   └── 왜: 사용성·접근성·상호작용 가이드 (공식 KRDS 본문)
+├── 3. specs/validation/pattern.basic.md (체크리스트 연동 시)
+│   └── 왜: 47항 기본 패턴 검증 ↔ spec 매핑
+└── 4. specs/components/<name>.md
+    └── 왜: text_input, file_upload, checkbox 등 컴포넌트 구현
+```
+
+**예시 프롬프트**: "개인 식별 정보 입력 폼을 KRDS PII 패턴에 맞게 설계해 주세요."
+
+---
+
+## 시나리오 5: 스타일·체크리스트 검증
 
 ```text
 [스타일 검증]

@@ -15,6 +15,8 @@
 | `krds:checklist:pdf-md:validate` | validate-checklist-md.mjs | MD 품질·JSON 대조 |
 | `krds:style:md` | krds-style-to-md.mjs | KRDS style 페이지 → `docs/style/` MD |
 | `krds:style:md:validate` | validate-style-md.mjs | 스타일 MD 무결성 (9페이지) |
+| `krds:pattern:md` | krds-pattern-to-md.mjs | KRDS global 패턴 → `docs/patterns/` MD |
+| `krds:pattern:md:validate` | validate-pattern-md.mjs | 기본 패턴 MD 무결성 (13페이지) |
 
 ## 데이터 소스 (3갈래)
 
@@ -46,6 +48,15 @@
 2. MD 품질 확인 → `npm run krds:style:md:validate`
 3. 임계값·규칙 변경 시 → `style-guide-lib.mjs` + `checklist-rules/style.json` + `krds-checklist-browser.mjs`
 4. 카탈로그·문서 반영 → `npm run krds:checklist:catalog` → `npm run krds:checklist:docs` → `npm run krds:validate`
+
+## 기본 패턴 MD 갱신 순서
+
+1. KRDS global 페이지(global_01~13) 변경 시 → `npm run krds:pattern:md`
+2. MD 품질 확인 → `npm run krds:pattern:md:validate`
+3. specRef·기대값 변경 시 → `pattern-guide-lib.mjs` + `build-checklist-catalog.mjs`의 `PATTERN_SPEC_REFS`
+4. 카탈로그·문서 반영 → `npm run krds:checklist:catalog` → `npm run krds:checklist:docs` → `npm run krds:validate`
+
+기본 패턴 47항의 `specRef`는 `docs/patterns/개인-식별-정보-입력.md` · `입력-폼.md` · `첨부파일.md` · `필터링-정렬.md`를 가리킵니다.
 
 ## 갱신 순서 (체크리스트)
 

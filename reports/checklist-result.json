@@ -8,7 +8,7 @@
   ],
   "category": "all",
   "mode": "static",
-  "generatedAt": "2026-05-21T03:42:59.015Z",
+  "generatedAt": "2026-05-21T03:48:45.026Z",
   "runs": {
     "static": {
       "total": 48,
@@ -2972,7 +2972,7 @@
       "automation": {
         "level": "static"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": "no-rule-mapping"
     },
@@ -2987,7 +2987,7 @@
       "automation": {
         "level": "static"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": "no-rule-mapping"
     },
@@ -3002,7 +3002,7 @@
       "automation": {
         "level": "static"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": "no-rule-mapping"
     },
@@ -3017,7 +3017,7 @@
       "automation": {
         "level": "static"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": "no-rule-mapping"
     },
@@ -3032,7 +3032,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3047,7 +3047,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3062,7 +3062,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3077,7 +3077,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3092,7 +3092,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3107,7 +3107,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3122,7 +3122,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3137,7 +3137,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3152,7 +3152,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3167,7 +3167,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3182,7 +3182,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3197,7 +3197,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3212,7 +3212,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3227,7 +3227,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3242,7 +3242,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3257,7 +3257,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3272,7 +3272,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3287,7 +3287,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/개인-식별-정보-입력.md",
       "status": "manual",
       "evidence": null
     },
@@ -3302,7 +3302,7 @@
       "automation": {
         "level": "static"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "status": "manual",
       "evidence": "no-rule-mapping"
     },
@@ -3317,7 +3317,7 @@
       "automation": {
         "level": "static"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "status": "manual",
       "evidence": "no-rule-mapping"
     },
@@ -3332,7 +3332,7 @@
       "automation": {
         "level": "static"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "status": "manual",
       "evidence": "no-rule-mapping"
     },
@@ -3347,7 +3347,7 @@
       "automation": {
         "level": "static"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "status": "manual",
       "evidence": "no-rule-mapping"
     },
@@ -3362,7 +3362,7 @@
       "automation": {
         "level": "static"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "status": "manual",
       "evidence": "no-rule-mapping"
     },
@@ -3377,7 +3377,7 @@
       "automation": {
         "level": "static"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "status": "manual",
       "evidence": "no-rule-mapping"
     },
@@ -3392,7 +3392,7 @@
       "automation": {
         "level": "static"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "status": "manual",
       "evidence": "no-rule-mapping"
     },
@@ -3407,7 +3407,7 @@
       "automation": {
         "level": "static"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "status": "manual",
       "evidence": "no-rule-mapping"
     },
@@ -3422,7 +3422,7 @@
       "automation": {
         "level": "static"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "status": "manual",
       "evidence": "no-rule-mapping"
     },
@@ -3437,7 +3437,7 @@
       "automation": {
         "level": "static"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "status": "manual",
       "evidence": "no-rule-mapping"
     },
@@ -3452,7 +3452,7 @@
       "automation": {
         "level": "browser"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/입력-폼.md",
       "status": "manual",
       "evidence": "no-rule-mapping"
     },
@@ -3467,7 +3467,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/첨부파일.md",
       "status": "manual",
       "evidence": null
     },
@@ -3482,7 +3482,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/첨부파일.md",
       "status": "manual",
       "evidence": null
     },
@@ -3497,7 +3497,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/application.md",
+      "specRef": "docs/patterns/첨부파일.md",
       "status": "manual",
       "evidence": null
     },
@@ -3512,7 +3512,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "status": "manual",
       "evidence": null
     },
@@ -3527,7 +3527,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "status": "manual",
       "evidence": null
     },
@@ -3542,7 +3542,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "status": "manual",
       "evidence": null
     },
@@ -3557,7 +3557,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "status": "manual",
       "evidence": null
     },
@@ -3572,7 +3572,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "status": "manual",
       "evidence": null
     },
@@ -3587,7 +3587,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "status": "manual",
       "evidence": null
     },
@@ -3602,7 +3602,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "status": "manual",
       "evidence": null
     },
@@ -3617,7 +3617,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "status": "manual",
       "evidence": null
     },
@@ -3632,7 +3632,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "status": "manual",
       "evidence": null
     },
@@ -3647,7 +3647,7 @@
       "automation": {
         "level": "manual"
       },
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "status": "manual",
       "evidence": null
     },
@@ -3662,7 +3662,7 @@
       "automation": {
         "level": "browser"
       },
-      "specRef": "specs/patterns/search.md",
+      "specRef": "docs/patterns/필터링-정렬.md",
       "status": "manual",
       "evidence": "no-rule-mapping"
     },

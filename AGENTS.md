@@ -19,6 +19,7 @@ ss-design-krds는 AI 에이전트(Claude, Cursor 등)가 [KRDS(Korea Design Syst
 3. docs/page-structure-tree.md ← DOM 골격
 4. specs/tokens.md            ← 토큰 요약 (hex 금지)
 4b. docs/style/index.md       ← 스타일 상세 (색상·타이포·형태 등, 필요 시)
+4c. docs/patterns/index.md   ← 기본 패턴 상세 (PII·폼·필터 등, 필요 시)
 5. specs/components/_categories.md ← 컴포넌트 찾기
 6. specs/components/<name>.md ← 상세
 7. assets/krds/html/code/     ← HTML 복사
@@ -52,6 +53,7 @@ npm run krds:index      # 컴포넌트 MD 재생성
 npm run krds:score      # 유사도 점수
 npm run krds:checklist  # 공식 체크리스트 311항
 npm run krds:style:md:validate  # 스타일 MD 무결성
+npm run krds:pattern:md:validate  # 기본 패턴 MD 무결성
 npm run krds:validate   # 전체 검증
 ```
 
@@ -63,6 +65,7 @@ npm run krds:validate   # 전체 검증
 |------|------|
 | `docs/` | AI 전용 MD 지식베이스 (시작점) |
 | `docs/style/` | KRDS 공식 스타일 가이드 MD (색상·타이포·형태 등) |
+| `docs/patterns/` | KRDS 기본 패턴 MD (global_01~13) |
 | `specs/` | 토큰·컴포넌트·패턴 MD 스펙 |
 | `skills/krds-*/` | plan / transform / improve |
 | `assets/krds/html/code/` | 공식 HTML 74개 |

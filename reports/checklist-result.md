@@ -2,7 +2,7 @@
 
 - **대상**: /home/ravenkim97/job/ai/ss-design-krds/experiment/sample-page/index.html
 - **tier**: gov, self, common
-- **생성**: 2026-05-21T03:42:59.015Z
+- **생성**: 2026-05-21T03:48:45.026Z
 
 ## 요약
 
