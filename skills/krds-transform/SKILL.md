@@ -31,11 +31,39 @@ description: 기존 웹사이트·앱 UI를 KRDS 테마와 구조로 전환할 �
    - analytics/tracking 훅 변경 금지
 6. **접근성 재검증** (`specs/accessibility.md`)
 
+## Scoped Migration: preserve-colors
+
+기관 고유 팔레트(확장형)를 유지하면서 KRDS 구조·비색 토큰만 적용할 때:
+
+| 모드 | 적용 | 금지 |
+|------|------|------|
+| `preserve-colors: all` | typography, spacing, radius, `krds-` DOM·landmark, 레이아웃 규칙 | `color.*` 토큰, hex, 기존 CSS 색 변수 변경 |
+
+**부트스트랩**
+
+```bash
+npm run krds:apply -- --target <project> --stack tailwind|vanilla|react --preserve-colors all
+```
+
+- `krds-color-bridge.css` — 기존 `--primary` 등 → `--krds-color-*` 매핑 (`manifests/token-bridge.json`)
+- import: `theme-structure` + bridge + `tokens-semantic` + `components.css` ( **`tokens-color` / full theme 금지** )
+
+**검증 (색상 카테고리 제외)**
+
+```bash
+npm run krds:checklist -- --target <page.html> \
+  --category style.typography,style.shape,style.layout,component \
+  --mode static+browser
+```
+
+색 대비·매직넘버는 프로젝트 팔레트 책임.
+
 ## Migration Rules
 
 - 변환 범위 밖 broad rewrite 금지
 - 구조 앵커·스크립트 훅 호환 유지
 - 각 교체 패턴에 change map 제공
+- `preserve-colors: all`이면 테마 전환 3단계에서 **색상 치환 생략**
 
 ## Output Contract
 

@@ -89,6 +89,14 @@ npm run krds:build:tailwind
 
 See [`packages/krds-tailwind/README.md`](packages/krds-tailwind/README.md)
 
+### Apply to existing project (preserve colors)
+
+```bash
+npm run krds:apply -- --target /path/to/project --stack tailwind --preserve-colors all
+```
+
+Generates `krds-color-bridge.css` and structure-only imports. See [`specs/stacks.md`](specs/stacks.md).
+
 ### npm validation (CI)
 
 ```json
@@ -129,6 +137,8 @@ npx playwright install chromium   # L2 browser checklist (WSL/CI)
 npm run krds:score           # similarity score (threshold: 95)
 npm run krds:score:tailwind  # Tailwind sample similarity
 npm run krds:build:tailwind  # Tailwind CSS + 74 snippets
+npm run krds:apply           # apply KRDS to existing repo (--preserve-colors all)
+npm run krds:split:tokens    # split krds_tokens.css into color / semantic
 npm run krds:checklist       # official 311-item checklist
 npm run krds:style:md:validate  # style MD integrity (9 pages)
 npm run krds:style:md        # regenerate docs/style/ from KRDS site (maintenance)

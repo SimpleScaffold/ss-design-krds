@@ -101,8 +101,35 @@ import { Button } from '@gracefullight/krds-tw';
 2. 구현 — `specs/components/*.md` + `assets/krds/html/code/` 참조
 3. `krds-improve` — `krds-similarity.mjs` score ≥ 95
 
+## 색 보존 일괄 적용 (`krds:apply`)
+
+기존 레포에 **색은 그대로**, 타이포·간격·radius·`krds-` 구조만 KRDS에 맞출 때:
+
+```bash
+npm run krds:apply -- --target <project-root> --stack tailwind|vanilla|react --preserve-colors all
+# 미리보기: --dry-run
+```
+
+| 스택 | 산출물 |
+|------|--------|
+| `tailwind` | `krds-color-bridge.css`, `styles/krds-app.css` 또는 기존 `app.css`에 import 블록 |
+| `vanilla` | bridge + `krds-vanilla-setup.md` (link 순서) |
+| `react` | bridge + `krds-react-setup.md` (에이전트 가이드) |
+
+**Tailwind import (색 보존)**
+
+```css
+@import "tailwindcss";
+@import "@simplescaffold/krds-tailwind/theme-structure";
+@import "./krds-color-bridge.css";
+@import "@simplescaffold/krds-tailwind/tokens-semantic";
+@import "@simplescaffold/krds-tailwind/components.css";
+```
+
+패키지 export: `theme-structure`, `tokens-semantic`, `components.css` · 구조 전용 스니펫: `dist/components-structure/`
+
 ## 공통 규칙 (모든 스택)
 
-- `specs/tokens.md` 토큰 키 사용 (임의 hex 금지)
+- `specs/tokens.md` 토큰 키 사용 (임의 hex 금지 — **단, `preserve-colors: all`이면 기존 팔레트 유지**)
 - `specs/accessibility.md` a11y 게이트 통과
 - `data-krds-component` / `data-krds-reference`로 출처 추적 (HTML/Tailwind)

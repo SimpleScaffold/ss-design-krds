@@ -1,0 +1,54 @@
+/*! tailwindcss v4.3.0 | MIT License | https://tailwindcss.com */
+:root, :host {
+  --font-krds: "Pretendard GOV", "Pretendard", "Noto Sans KR", sans-serif;
+  --spacing-krds-1: 4px;
+  --spacing-krds-2: 8px;
+  --spacing-krds-3: 12px;
+  --spacing-krds-4: 16px;
+  --spacing-krds-6: 24px;
+  --radius-krds-sm: 4px;
+  --radius-krds-md: 8px;
+  --radius-krds-lg: 12px;
+  --radius-krds-full: 9999px;
+}
+.rounded-krds-sm {
+  border-radius: var(--radius-krds-sm);
+}
+.rounded-krds-md {
+  border-radius: var(--radius-krds-md);
+}
+.rounded-krds-lg {
+  border-radius: var(--radius-krds-lg);
+}
+.rounded-krds-full {
+  border-radius: var(--radius-krds-full);
+}
+.font-krds {
+  font-family: var(--font-krds);
+}
+.p-krds-1 {
+  padding: var(--spacing-krds-1);
+}
+.p-krds-2 {
+  padding: var(--spacing-krds-2);
+}
+.p-krds-4 {
+  padding: var(--spacing-krds-4);
+}
+.p-krds-6 {
+  padding: var(--spacing-krds-6);
+}
+.px-krds-4 {
+  padding-left: var(--spacing-krds-4);
+  padding-right: var(--spacing-krds-4);
+}
+.py-krds-3 {
+  padding-top: var(--spacing-krds-3);
+  padding-bottom: var(--spacing-krds-3);
+}
+.gap-krds-4 {
+  gap: var(--spacing-krds-4);
+}
+.gap-krds-6 {
+  gap: var(--spacing-krds-6);
+}

@@ -35,6 +35,24 @@ npm run krds:checklist -- \
   --output reports/checklist-result.json
 ```
 
+## 색 보존 모드 (`preserve-colors: all`)
+
+`krds:apply --preserve-colors all`로 **기관 팔레트를 유지**한 경우:
+
+- `style.color.*` browser 규칙(KRDS 팔레트·일관성)은 **N/A** — `--category`에서 제외
+- typography, shape, layout, component 카테고리로 검증
+
+```bash
+npm run krds:checklist -- \
+  --target <your-page.html> \
+  --tier gov,self,common \
+  --category style.typography,style.shape,style.layout,component \
+  --mode static+browser \
+  --output reports/checklist-no-color.json
+```
+
+**접근성 책임**: 색을 바꾸지 않으므로 WCAG 명도 대비(매직넘버 40/50/70)는 **프로젝트 팔레트**가 충족해야 합니다. KRDS `style.color` 자동 검증은 적용하지 않습니다.
+
 ## 데이터 소스
 
 - 구조화 카탈로그: `resources/krds/checklist/official-checklist.json` (311항)

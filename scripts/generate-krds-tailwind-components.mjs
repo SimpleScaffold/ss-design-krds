@@ -6,14 +6,33 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 
+const noColorUtils = process.argv.includes('--no-color-utils');
+
 const componentRoot = path.join(root, 'assets/krds/html/code');
 const taxonomyPath = path.join(root, 'specs/components/_taxonomy.json');
-const outDir = path.join(root, 'packages/krds-tailwind/src/components');
-const distDir = path.join(root, 'packages/krds-tailwind/dist/components');
+const outDir = path.join(
+  root,
+  'packages/krds-tailwind/src/components' + (noColorUtils ? '-structure' : '')
+);
+const distDir = path.join(
+  root,
+  'packages/krds-tailwind/dist/components' + (noColorUtils ? '-structure' : '')
+);
 
 const taxonomy = JSON.parse(await fs.readFile(taxonomyPath, 'utf8'));
 
-const BASE = 'font-krds text-krds-text';
+const BASE = noColorUtils ? 'font-krds' : 'font-krds text-krds-text';
+
+const COLOR_UTILITY_RE =
+  /^(?:bg-krds-|text-krds-(?:text|secondary|disabled|primary|danger|success|warning|info)|border-krds-|divide-krds-|from-krds-|to-krds-|hover:bg-krds-|hover:text-krds-)/;
+
+function stripColorUtilities(classStr) {
+  if (!noColorUtils) return classStr;
+  return classStr
+    .split(/\s+/)
+    .filter((t) => t && !COLOR_UTILITY_RE.test(t))
+    .join(' ');
+}
 
 const SELECTOR_TW = {
   'krds-btn': `inline-flex items-center justify-center ${BASE} rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border`,
@@ -73,27 +92,40 @@ const VARIANT_TW = {
 };
 
 function mergeClasses(existing, additions) {
-  const set = new Set((existing || '').split(/\s+/).filter(Boolean));
-  for (const token of additions.split(/\s+/).filter(Boolean)) {
+  const set = new Set(
+    stripColorUtilities(existing || '')
+      .split(/\s+/)
+      .filter(Boolean)
+  );
+  for (const token of stripColorUtilities(additions)
+    .split(/\s+/)
+    .filter(Boolean)) {
     set.add(token);
   }
   return [...set].join(' ');
 }
 
 function enhanceClassAttr(classValue) {
-  let result = classValue.trim();
+  let result = stripColorUtilities(classValue.trim());
   for (const [key, tw] of Object.entries(SELECTOR_TW)) {
     if (result.split(/\s+/).some((c) => c === key || c.startsWith(key))) {
-      result = mergeClasses(result, tw);
+      result = mergeClasses(result, noColorUtils ? stripColorUtilities(tw) : tw);
     }
   }
   const tokens = result.split(/\s+/);
-  for (const variant of Object.keys(VARIANT_TW)) {
+  const variantEntries = noColorUtils
+    ? Object.fromEntries(
+        Object.entries(VARIANT_TW).filter(
+          ([k]) => !['primary', 'secondary', 'tertiary', 'danger', 'success'].includes(k)
+        )
+      )
+    : VARIANT_TW;
+  for (const variant of Object.keys(variantEntries)) {
     if (tokens.includes(variant)) {
-      result = mergeClasses(result, VARIANT_TW[variant]);
+      result = mergeClasses(result, variantEntries[variant]);
     }
   }
-  return result;
+  return stripColorUtilities(result);
 }
 
 function enhanceHtml(html, componentName) {
@@ -161,4 +193,14 @@ for (const file of files) {
   await fs.writeFile(path.join(distDir, `${name}.html`), content, 'utf8');
 }
 
-console.log(JSON.stringify({ total: files.length, outDir: 'packages/krds-tailwind/src/components' }, null, 2));
+console.log(
+  JSON.stringify(
+    {
+      total: files.length,
+      outDir: outDir.replace(root + path.sep, ''),
+      noColorUtils
+    },
+    null,
+    2
+  )
+);

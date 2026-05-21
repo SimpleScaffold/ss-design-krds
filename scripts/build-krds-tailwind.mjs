@@ -11,8 +11,11 @@ const distDir = path.join(pkgDir, 'dist');
 const srcComponents = path.join(pkgDir, 'src/components');
 const distComponents = path.join(distDir, 'components');
 const templatesTheme = path.join(root, 'templates/tailwind-theme.css');
+const splitScript = path.join(root, 'scripts/split-krds-tokens.mjs');
 
 await fs.mkdir(distDir, { recursive: true });
+
+execSync(`node "${splitScript}"`, { cwd: root, stdio: 'inherit' });
 await fs.mkdir(distComponents, { recursive: true });
 
 const cli = path.join(root, 'node_modules/@tailwindcss/cli/dist/index.mjs');
@@ -32,18 +35,45 @@ runTw(
   path.join(pkgDir, 'src/theme-only.css'),
   path.join(distDir, 'theme.css')
 );
+runTw(
+  path.join(pkgDir, 'src/theme-structure-only.css'),
+  path.join(distDir, 'theme-structure.css')
+);
+runTw(
+  path.join(pkgDir, 'src/theme-color-only.css'),
+  path.join(distDir, 'theme-color.css')
+);
 
-try {
-  const componentFiles = await fs.readdir(srcComponents);
-  for (const file of componentFiles.filter((f) => f.endsWith('.html'))) {
-    await fs.copyFile(
-      path.join(srcComponents, file),
-      path.join(distComponents, file)
-    );
-  }
-} catch {
-  console.warn('No src/components yet — run krds:generate:tailwind first');
+const tokenFiles = ['tokens-color.css', 'tokens-semantic.css'];
+for (const file of tokenFiles) {
+  await fs.copyFile(
+    path.join(pkgDir, 'src', file),
+    path.join(distDir, file)
+  );
 }
+
+const componentsCss = path.join(
+  root,
+  'assets/krds/resources/css/component/output.css'
+);
+await fs.copyFile(componentsCss, path.join(distDir, 'components.css'));
+
+const copyComponents = async (srcSub, distSub) => {
+  const src = path.join(pkgDir, 'src', srcSub);
+  const dist = path.join(distDir, distSub);
+  try {
+    await fs.mkdir(dist, { recursive: true });
+    const componentFiles = await fs.readdir(src);
+    for (const file of componentFiles.filter((f) => f.endsWith('.html'))) {
+      await fs.copyFile(path.join(src, file), path.join(dist, file));
+    }
+  } catch {
+    console.warn(`No src/${srcSub} yet — run krds:generate:tailwind first`);
+  }
+};
+
+await copyComponents('components', 'components');
+await copyComponents('components-structure', 'components-structure');
 
 const themeSrc = await fs.readFile(path.join(pkgDir, 'src/theme.css'), 'utf8');
 await fs.writeFile(

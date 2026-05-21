@@ -89,6 +89,18 @@ npm run krds:build:tailwind
 
 자세한 내용: [`packages/krds-tailwind/README.md`](packages/krds-tailwind/README.md)
 
+### 기존 레포 — 색 제외 일괄 적용
+
+기관 팔레트를 유지하면서 타이포·간격·`krds-` 구조만 적용:
+
+```bash
+npm run krds:apply -- --target /path/to/project --stack tailwind --preserve-colors all
+# 스택 자동 추론: --stack 생략 가능
+# 미리보기: --dry-run
+```
+
+산출: `krds-color-bridge.css` (기존 CSS 변수 → `--krds-color-*`). [`specs/stacks.md`](specs/stacks.md) · [`specs/tokens.md`](specs/tokens.md) 참고.
+
 ### npm 검증 (CI)
 
 ```json
@@ -129,6 +141,8 @@ npx playwright install chromium   # L2 browser 체크리스트 (WSL/CI)
 npm run krds:score      # 유사도 점수 (기준: 95)
 npm run krds:score:tailwind  # Tailwind 샘플 유사도
 npm run krds:build:tailwind  # Tailwind CSS + 74 스니펫 빌드
+npm run krds:apply           # 기존 프로젝트에 KRDS 적용 (--preserve-colors all)
+npm run krds:split:tokens    # krds_tokens.css → color / semantic 분리
 npm run krds:checklist  # 공식 311항 자체 검증 체크리스트
 npm run krds:style:md:validate  # 스타일 MD 무결성 (9페이지)
 npm run krds:style:md   # KRDS 사이트 → docs/style/ 재생성 (유지보수)

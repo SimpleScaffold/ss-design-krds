@@ -39,7 +39,10 @@
     "krds:coverage": "node scripts/verify-krds-component-coverage.mjs && node scripts/verify-krds-component-coverage.mjs --target experiment/sample-page/tailwind.html",
     "krds:build-sample": "node scripts/build-sample-experiment.mjs",
     "krds:generate:tailwind": "node scripts/generate-krds-tailwind-components.mjs",
-    "krds:build:tailwind": "node scripts/generate-krds-tailwind-components.mjs && node scripts/build-krds-tailwind.mjs",
+    "krds:generate:tailwind:structure": "node scripts/generate-krds-tailwind-components.mjs --no-color-utils",
+    "krds:split:tokens": "node scripts/split-krds-tokens.mjs",
+    "krds:build:tailwind": "node scripts/generate-krds-tailwind-components.mjs && node scripts/generate-krds-tailwind-components.mjs --no-color-utils && node scripts/build-krds-tailwind.mjs",
+    "krds:apply": "node scripts/krds-apply.mjs",
     "krds:sync:tailwind-specs": "node scripts/sync-tailwind-specs.mjs",
     "krds:score:tailwind": "node scripts/krds-similarity.mjs --target experiment/sample-page/tailwind.html",
     "postinstall": "npx playwright install chromium || true"

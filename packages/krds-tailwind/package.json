@@ -12,7 +12,13 @@
   "exports": {
     ".": "./dist/krds-tailwind.css",
     "./theme": "./dist/theme.css",
-    "./components/*": "./dist/components/*.html"
+    "./theme-structure": "./dist/theme-structure.css",
+    "./theme-color": "./dist/theme-color.css",
+    "./tokens-semantic": "./dist/tokens-semantic.css",
+    "./tokens-color": "./dist/tokens-color.css",
+    "./components.css": "./dist/components.css",
+    "./components/*": "./dist/components/*.html",
+    "./components-structure/*": "./dist/components-structure/*.html"
   },
   "peerDependencies": {
     "tailwindcss": "^4.0.0"

@@ -19,11 +19,33 @@ npm run krds:build:tailwind
 ## CSS 사용
 
 ```css
-/* app.css */
+/* app.css — 표준형 (KRDS 색 포함) */
 @import "tailwindcss";
 @import "@simplescaffold/krds-tailwind/theme";
 @import "@simplescaffold/krds-tailwind";
 ```
+
+```css
+/* app.css — 확장형 (기관 색 보존) */
+@import "tailwindcss";
+@import "@simplescaffold/krds-tailwind/theme-structure";
+@import "./krds-color-bridge.css";
+@import "@simplescaffold/krds-tailwind/tokens-semantic";
+@import "@simplescaffold/krds-tailwind/components.css";
+```
+
+`npm run krds:apply -- --target . --preserve-colors all` 로 bridge·import 초안 생성.
+
+| Export | 내용 |
+|--------|------|
+| `./theme` | color + structure (기존) |
+| `./theme-structure` | 타이포·간격·radius만 |
+| `./theme-color` | Tailwind `@theme` 색만 |
+| `./tokens-semantic` | 공식 gap/padding/radius 토큰 |
+| `./tokens-color` | 공식 색 토큰 (보존 모드에서는 미사용) |
+| `./components.css` | 공식 `output.css` |
+| `./components/*` | HTML 스니펫 |
+| `./components-structure/*` | 색 유틸 제외 스니펫 (`--no-color-utils` 빌드) |
 
 - **`@simplescaffold/krds-tailwind/theme`** — `@theme` 토큰 + `bg-krds-*`, `font-krds` 등 alias만
 - **`@simplescaffold/krds-tailwind`** — Tailwind + KRDS 토큰 + 공식 `output.css` 전체

@@ -120,6 +120,18 @@ KRDS Tokens
 }
 ```
 
+## 확장형 / 색 보존 (preserve-colors)
+
+KRDS **확장형** 스타일은 기관 고유 색·형태를 쓰되 토큰 체계로 관리합니다.
+
+| 토큰 키 | 의미 | 색 보존 시 |
+|---------|------|------------|
+| `color.text.primary` | 본문·제목 (`#1e2124`) | 기존 `--text` / gray 팔레트 유지 |
+| `color.action.primary` | CTA·링크 블루 (`#256ef4`) | 기존 `--primary` / 브랜드색 유지 |
+| typography, spacing, radius | 비색 구조 토큰 | KRDS 값 적용 |
+
+**일괄 적용**: `npm run krds:apply -- --preserve-colors all` → `krds-color-bridge.css`로 `--krds-color-*`만 프로젝트 변수에 연결. `@simplescaffold/krds-tailwind/theme-structure` + `tokens-semantic` 사용, `theme`/`tokens-color` import 금지.
+
 ## 참고
 
 - [gracefullight/krds-tokens](https://github.com/gracefullight/krds/tree/main/packages/krds-tokens)

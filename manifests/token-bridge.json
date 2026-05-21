@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "description": "KRDS primitive color variables → consumer CSS variable candidates. krds:apply scans --target and picks the first match.",
+  "paletteFamilies": {
+    "primary": {
+      "krdsPrefix": "--krds-color-light-primary",
+      "consumerCandidates": [
+        "--primary",
+        "--brand-primary",
+        "--color-primary",
+        "--color-brand-primary"
+      ]
+    },
+    "secondary": {
+      "krdsPrefix": "--krds-color-light-secondary",
+      "consumerCandidates": [
+        "--secondary",
+        "--brand-secondary",
+        "--color-secondary"
+      ]
+    },
+    "gray": {
+      "krdsPrefix": "--krds-color-light-gray",
+      "consumerCandidates": [
+        "--gray",
+        "--neutral",
+        "--color-gray",
+        "--text-primary",
+        "--background",
+        "--surface"
+      ]
+    },
+    "danger": {
+      "krdsPrefix": "--krds-color-light-danger",
+      "consumerCandidates": ["--danger", "--error", "--color-danger", "--color-error"]
+    },
+    "success": {
+      "krdsPrefix": "--krds-color-light-success",
+      "consumerCandidates": ["--success", "--color-success"]
+    },
+    "warning": {
+      "krdsPrefix": "--krds-color-light-warning",
+      "consumerCandidates": ["--warning", "--color-warning"]
+    },
+    "information": {
+      "krdsPrefix": "--krds-color-light-information",
+      "consumerCandidates": ["--info", "--information", "--color-info"]
+    },
+    "point": {
+      "krdsPrefix": "--krds-color-light-point",
+      "consumerCandidates": ["--accent", "--point", "--color-accent"]
+    },
+    "graphic": {
+      "krdsPrefix": "--krds-color-light-graphic",
+      "consumerCandidates": ["--graphic", "--chart"]
+    },
+    "alpha-black": {
+      "krdsPrefix": "--krds-color-light-alpha-black",
+      "consumerCandidates": ["--alpha-black", "--black-alpha"]
+    },
+    "alpha-white": {
+      "krdsPrefix": "--krds-color-light-alpha-white",
+      "consumerCandidates": ["--alpha-white", "--white-alpha"]
+    }
+  },
+  "highContrastMirrorLight": true,
+  "accessibilityNote": "색 보존 모드에서는 기존 팔레트의 WCAG 명도 대비(매직넘버) 준수가 소비자 책임입니다."
+}

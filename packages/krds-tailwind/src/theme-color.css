@@ -1,0 +1,40 @@
+/**
+ * KRDS semantic color tokens → Tailwind v4 @theme (표준형)
+ * 색 보존 시 import하지 말고 krds-color-bridge.css + theme-structure만 사용하세요.
+ */
+@theme {
+  /* color.text */
+  --color-krds-text: #1e2124;
+  --color-krds-text-secondary: #58616a;
+  --color-krds-text-disabled: #8a949e;
+
+  /* color.surface */
+  --color-krds-surface: #ffffff;
+  --color-krds-surface-subtle: #f4f5f6;
+
+  /* color.border */
+  --color-krds-border: #cdd1d5;
+
+  /* color.action */
+  --color-krds-primary: #256ef4;
+  --color-krds-primary-hover: #0b50d0;
+
+  /* color.status */
+  --color-krds-danger: #de3412;
+  --color-krds-success: #228738;
+  --color-krds-warning: #9e6a00;
+  --color-krds-info: #0b78cb;
+}
+
+.bg-krds-primary { background-color: var(--color-krds-primary); }
+.bg-krds-primary-hover:hover { background-color: var(--color-krds-primary-hover); }
+.bg-krds-surface { background-color: var(--color-krds-surface); }
+.bg-krds-surface-subtle { background-color: var(--color-krds-surface-subtle); }
+.text-krds-text { color: var(--color-krds-text); }
+.text-krds-secondary { color: var(--color-krds-text-secondary); }
+.text-krds-disabled { color: var(--color-krds-text-disabled); }
+.border-krds-border { border-color: var(--color-krds-border); }
+.text-krds-danger { color: var(--color-krds-danger); }
+.text-krds-success { color: var(--color-krds-success); }
+.text-krds-warning { color: var(--color-krds-warning); }
+.text-krds-info { color: var(--color-krds-info); }
