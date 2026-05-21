@@ -2,6 +2,35 @@
 
 KRDS는 [디지털 포용](https://www.krds.go.kr/html/site/intro/intro04.html)과 WCAG 2.2 준수를 전제로 합니다.
 
+## A11y Checklist Tree
+
+```text
+KRDS Accessibility
+├── [필수] Document
+│   ├── html lang="ko"
+│   ├── title + meta description
+│   └── DOCTYPE html
+├── [필수] Navigation
+│   ├── skip-link → #content
+│   └── landmarks (header, nav, main, footer)
+├── [필수] Forms
+│   ├── label-for-id binding
+│   └── fieldset + legend (group inputs)
+├── [필수] Interactive
+│   ├── icon-only button → sr-only
+│   └── focus-visible styles
+├── [필수] Media
+│   └── img alt (decorative: alt="")
+├── [권장] Tables
+│   ├── thead / tbody
+│   └── caption (sr-only OK)
+└── [권장] Keyboard
+    ├── Tab order logical
+    └── modal: Escape, focus trap
+```
+
+**검증**: `[필수]` 항목은 `krds-similarity.mjs` failed rules = 0 이어야 합니다.
+
 ## 필수 구조
 
 | 요소 | 규칙 |

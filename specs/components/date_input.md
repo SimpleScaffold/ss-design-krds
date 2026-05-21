@@ -1,15 +1,25 @@
 # Date Input (`date_input`)
 
-> Source: `assets/krds/html/code/date_input.html`
+> **Category**: Input (입력)
+> **Parent**: —
+> **Variants**: —
+> **Source**: `assets/krds/html/code/date_input.html`
 
-## When to use
+## Overview
 
-- KRDS 공식 컴포넌트 `date_input` 패턴이 필요할 때
-- `data-krds-component="date_input"` / `data-krds-reference="assets/krds/html/code/date_input.html"`로 출처 추적
+날짜 선택 입력(type=date)입니다.
+
+## Component Tree
+
+```text
+date_input (기본)
+```
 
 ## Tokens
 
-- `specs/tokens.md` 참조 — 임의 hex 금지
+- `specs/tokens.md` 참조 — **임의 hex/폰트 금지**
+- Action 계열: `color.action.primary` (`#256ef4`)
+- Surface: `color.surface.subtle` (`#f4f5f6`)
 
 ## HTML (official)
 
@@ -34,25 +44,54 @@
 					<div class="calendar-head">
 						<button type="button" class="btn-cal-move prev"><span class="sr-only">이전 달</span></button>
 						<div class="calendar-switch-wrap">
-							<div class="calendar-drop-down"
-<!-- truncated -->
+							<div class="calendar-drop-down">
+								<button type="button" class="btn-cal-switch year" aria-label="연도 선택">2024년</button>
+								<div class="calendar-select calendar-year-wrap">
+									<ul class="sel year">
+										<li>
+											<button type="button">2001년</button>
+										</li>
+										<li>
+											<button type="button" class="active">2002년</button>
+										</li>
+										<li>
+											<button type="butto
+<!-- truncated at 1200 chars -->
 ```
 
 ## Tailwind
 
 ```html
-<!-- krds- 클래스 + templates/tailwind-theme.css 토큰 병행 -->
-<div data-krds-component="date_input" data-krds-reference="assets/krds/html/code/date_input.html">
-  <!-- assets/krds/html/code/date_input.html 구조 참조 -->
-</div>
+<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
+<button type="button" class="krds-input bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
+  Date Input 예시
+</button>
 ```
+
+## Page Context
+
+페이지 트리상 위치: `form > .field > input[type=date]`
+
+전체 DOM 계층: [docs/page-structure-tree.md](../../docs/page-structure-tree.md)
 
 ## Accessibility
 
-- `specs/accessibility.md` 게이트 준수
-- label-input 바인딩, sr-only, alt text 확인
+- [specs/accessibility.md](../accessibility.md) 게이트 준수
+- label-input `for`/`id` 바인딩 (input 계열)
+- icon-only button → `sr-only` 텍스트 필수
+- table → `thead`/`tbody`/`caption` semantic
+
+## Related
+
+- [calendar.md](./calendar.md)
+- [calendar_range.md](./calendar_range.md)
 
 ## Do / Don't
 
-**Do**: 공식 HTML 구조·클래스 유지  
-**Don't**: krds- 접두사 없이 generic 클래스만 사용
+**Do**
+- 공식 HTML 구조·`krds-` 클래스 유지
+- `data-krds-component="date_input"` / `data-krds-reference="assets/krds/html/code/date_input.html"` 출처 추적
+
+**Don't**
+- krds- 접두사 없이 generic Bootstrap/Material 클래스만 사용
+- 토큰 없이 임의 색상·폰트 지정

@@ -1,15 +1,25 @@
 # Critical Alerts (`critical_alerts`)
 
-> Source: `assets/krds/html/code/critical_alerts.html`
+> **Category**: Feedback (피드백)
+> **Parent**: —
+> **Variants**: —
+> **Source**: `assets/krds/html/code/critical_alerts.html`
 
-## When to use
+## Overview
 
-- KRDS 공식 컴포넌트 `critical_alerts` 패턴이 필요할 때
-- `data-krds-component="critical_alerts"` / `data-krds-reference="assets/krds/html/code/critical_alerts.html"`로 출처 추적
+긴급·중요 공지를 강조하는 알림 배너입니다.
+
+## Component Tree
+
+```text
+critical_alerts (기본)
+```
 
 ## Tokens
 
-- `specs/tokens.md` 참조 — 임의 hex 금지
+- `specs/tokens.md` 참조 — **임의 hex/폰트 금지**
+- Action 계열: `color.action.primary` (`#256ef4`)
+- Surface: `color.surface.subtle` (`#f4f5f6`)
 
 ## HTML (official)
 
@@ -40,25 +50,50 @@
 		<li>
 			<div class="critical-ban">
 				<span class="critical-badge info">안내</span>
-				<p class="critical-txt">긴급 공지 내용
-<!-- truncated -->
+				<p class="critical-txt">긴급 공지 내용 표시</p>
+				<a href="#" class="krds-btn medium link basic">
+					<span class="m-hide">자세히 보기</span>
+					<i class="svg-icon ico-angle right"></i>
+				</a>
+			</div>
+		</li>
+	</ul>
+</div>
+<!-- //critical alerts -->
 ```
 
 ## Tailwind
 
 ```html
-<!-- krds- 클래스 + templates/tailwind-theme.css 토큰 병행 -->
-<div data-krds-component="critical_alerts" data-krds-reference="assets/krds/html/code/critical_alerts.html">
-  <!-- assets/krds/html/code/critical_alerts.html 구조 참조 -->
-</div>
+<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
+<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
+  Critical Alerts 예시
+</button>
 ```
+
+## Page Context
+
+페이지 트리상 위치: `main#content > aside.critical-alert`
+
+전체 DOM 계층: [docs/page-structure-tree.md](../../docs/page-structure-tree.md)
 
 ## Accessibility
 
-- `specs/accessibility.md` 게이트 준수
-- label-input 바인딩, sr-only, alt text 확인
+- [specs/accessibility.md](../accessibility.md) 게이트 준수
+- label-input `for`/`id` 바인딩 (input 계열)
+- icon-only button → `sr-only` 텍스트 필수
+- table → `thead`/`tbody`/`caption` semantic
+
+## Related
+
+- [contextual_help.md](./contextual_help.md)
 
 ## Do / Don't
 
-**Do**: 공식 HTML 구조·클래스 유지  
-**Don't**: krds- 접두사 없이 generic 클래스만 사용
+**Do**
+- 공식 HTML 구조·`krds-` 클래스 유지
+- `data-krds-component="critical_alerts"` / `data-krds-reference="assets/krds/html/code/critical_alerts.html"` 출처 추적
+
+**Don't**
+- krds- 접두사 없이 generic Bootstrap/Material 클래스만 사용
+- 토큰 없이 임의 색상·폰트 지정

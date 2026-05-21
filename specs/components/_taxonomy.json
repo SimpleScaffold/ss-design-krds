@@ -1,0 +1,608 @@
+{
+  "categories": {
+    "identity": { "ko": "아이덴티티", "en": "Identity", "description": "기관·서비스 식별, 공식 누리집 안내, 파비콘" },
+    "navigation": { "ko": "탐색", "en": "Navigation", "description": "메뉴, breadcrumb, 페이지 내 탐색, 단계 표시" },
+    "layout": { "ko": "레이아웃 및 표현", "en": "Layout", "description": "헤더·푸터, 목록, 캐러셀, 탭 등 페이지 구조" },
+    "action": { "ko": "액션", "en": "Action", "description": "버튼, 링크 등 사용자 행동 유도" },
+    "selection": { "ko": "선택", "en": "Selection", "description": "체크박스, 라디오, 셀렉트, 토글" },
+    "feedback": { "ko": "피드백", "en": "Feedback", "description": "뱃지, 태그, 스피너, 긴급 알림" },
+    "help": { "ko": "도움", "en": "Help", "description": "도움말, 툴팁, 아코디언, 공개/숨김" },
+    "input": { "ko": "입력", "en": "Input", "description": "텍스트, 날짜, 파일, 캘린더 입력" },
+    "settings": { "ko": "설정", "en": "Settings", "description": "언어 전환, 글자·화면 크기 조절" },
+    "content": { "ko": "콘텐츠", "en": "Content", "description": "표, 목록, 모달, TTS 등 콘텐츠 표현" }
+  },
+  "components": {
+    "identifier": {
+      "category": "identity",
+      "overview": "기관·서비스 식별자(로고·명칭)를 표시합니다. 헤더 상단에 배치합니다.",
+      "pageContext": "#krds-header > identifier",
+      "variants": [],
+      "parent": null,
+      "related": ["header", "masthead"]
+    },
+    "masthead": {
+      "category": "identity",
+      "overview": "공식 전자정부 누리집 안내 배너입니다. 페이지 최상단에 위치합니다.",
+      "pageContext": "#wrap > #krds-masthead",
+      "variants": [],
+      "parent": null,
+      "related": ["identifier", "skip_link"]
+    },
+    "favicon": {
+      "category": "identity",
+      "overview": "브라우저 탭·북마크용 파비콘 설정 가이드입니다.",
+      "pageContext": "head > link[rel=icon]",
+      "variants": [],
+      "parent": null,
+      "related": ["identifier"]
+    },
+    "skip_link": {
+      "category": "navigation",
+      "overview": "키보드 사용자가 본문으로 바로 이동하는 skip link입니다. 필수 a11y 요소입니다.",
+      "pageContext": "#wrap > #krds-skip-link → #content",
+      "variants": [],
+      "parent": null,
+      "related": ["masthead"]
+    },
+    "breadcrumb": {
+      "category": "navigation",
+      "overview": "현재 페이지 위치를 계층적으로 표시합니다. main#content 상단에 배치합니다.",
+      "pageContext": "main#content > nav.breadcrumb",
+      "variants": [],
+      "parent": null,
+      "related": ["in_page_navigation", "side_navigation"]
+    },
+    "side_navigation": {
+      "category": "navigation",
+      "overview": "좌측 사이드바 형태의 보조 탐색 메뉴입니다.",
+      "pageContext": "#container > aside 또는 좌측 nav",
+      "variants": [],
+      "parent": null,
+      "related": ["main_menu_pc", "in_page_navigation"]
+    },
+    "main_menu_pc": {
+      "category": "navigation",
+      "overview": "데스크톱용 주요 메뉴입니다. header 내부 nav에 배치합니다.",
+      "pageContext": "#krds-header > nav[aria-label]",
+      "variants": ["main_menu_mobile"],
+      "parent": null,
+      "related": ["header", "breadcrumb"]
+    },
+    "main_menu_mobile": {
+      "category": "navigation",
+      "overview": "모바일용 햄버거·드로어 메뉴입니다. main_menu_pc의 반응형 대응입니다.",
+      "pageContext": "#krds-header > mobile menu",
+      "variants": [],
+      "parent": "main_menu_pc",
+      "related": ["main_menu_pc", "header"]
+    },
+    "in_page_navigation": {
+      "category": "navigation",
+      "overview": "긴 콘텐츠 페이지 내 섹션 앵커 탐색입니다.",
+      "pageContext": "main#content > aside.in-page-nav",
+      "variants": [],
+      "parent": null,
+      "related": ["breadcrumb", "side_navigation"]
+    },
+    "pagination": {
+      "category": "navigation",
+      "overview": "목록·검색 결과의 페이지 이동 컨트롤입니다.",
+      "pageContext": "section > nav.pagination",
+      "variants": [],
+      "parent": null,
+      "related": ["table", "structured_list"]
+    },
+    "step_indicator": {
+      "category": "navigation",
+      "overview": "다단계 신청·입력 절차의 현재 단계를 표시합니다.",
+      "pageContext": "main#content > section.process",
+      "variants": [],
+      "parent": null,
+      "related": ["application pattern"]
+    },
+    "header": {
+      "category": "layout",
+      "overview": "페이지 상단 헤더 영역입니다. identifier, 메뉴, 검색 등을 포함합니다.",
+      "pageContext": "#krds-header (header landmark)",
+      "variants": [],
+      "parent": null,
+      "related": ["identifier", "main_menu_pc", "masthead"]
+    },
+    "footer": {
+      "category": "layout",
+      "overview": "페이지 하단 푸터 영역입니다. 링크, 저작권, 연락처를 포함합니다.",
+      "pageContext": "#krds-footer (footer landmark)",
+      "variants": [],
+      "parent": null,
+      "related": ["link", "identifier"]
+    },
+    "structured_list": {
+      "category": "layout",
+      "overview": "정의 목록(dl) 형태의 구조화된 정보 목록입니다.",
+      "pageContext": "main#content > section > .structured-list",
+      "variants": ["structured_list_table"],
+      "parent": null,
+      "related": ["text_list", "table"]
+    },
+    "structured_list_table": {
+      "category": "layout",
+      "overview": "표 형태의 구조화된 목록입니다. structured_list의 테이블 변형입니다.",
+      "pageContext": "main#content > section",
+      "variants": [],
+      "parent": "structured_list",
+      "related": ["structured_list", "table"]
+    },
+    "carousel": {
+      "category": "layout",
+      "overview": "여러 콘텐츠를 슬라이드로 순환 표시합니다.",
+      "pageContext": "main#content > section.hero",
+      "variants": ["carousel_banner"],
+      "parent": null,
+      "related": ["carousel_banner"]
+    },
+    "carousel_banner": {
+      "category": "layout",
+      "overview": "히어로 배너 형태의 캐러셀입니다. 메인 프로모션에 사용합니다.",
+      "pageContext": "main#content > section#hero",
+      "variants": [],
+      "parent": "carousel",
+      "related": ["carousel", "button_hierarchy"]
+    },
+    "tab": {
+      "category": "layout",
+      "overview": "동일 영역에서 콘텐츠를 탭으로 전환합니다.",
+      "pageContext": "main#content > section > .tab-list",
+      "variants": [],
+      "parent": null,
+      "related": ["text_list"]
+    },
+    "button": {
+      "category": "action",
+      "overview": "기본 KRDS 버튼입니다. primary/secondary/tertiary 계층을 따릅니다.",
+      "pageContext": "section > .button-row, form > button",
+      "variants": ["button_size", "button_icon", "button_text", "button_with_icon"],
+      "parent": "button_hierarchy",
+      "related": ["button_hierarchy", "link"]
+    },
+    "button_hierarchy": {
+      "category": "action",
+      "overview": "primary·secondary·tertiary 버튼 계층 가이드입니다. 한 화면에 1개 primary 권장.",
+      "pageContext": "section > .button-row",
+      "variants": ["button", "button_size", "button_icon", "button_text", "button_with_icon"],
+      "parent": null,
+      "related": ["button"]
+    },
+    "button_size": {
+      "category": "action",
+      "overview": "버튼 크기 변형(xsmall, small, medium, large)입니다.",
+      "pageContext": "form > .krds-btn",
+      "variants": [],
+      "parent": "button",
+      "related": ["button", "button_hierarchy"]
+    },
+    "button_icon": {
+      "category": "action",
+      "overview": "아이콘만 있는 버튼입니다. sr-only 라벨 필수.",
+      "pageContext": "section > .button-row > .krds-btn.icon",
+      "variants": [],
+      "parent": "button",
+      "related": ["button", "button_with_icon"]
+    },
+    "button_text": {
+      "category": "action",
+      "overview": "텍스트 링크형 버튼(밑줄·텍스트 스타일)입니다.",
+      "pageContext": "section > a.krds-btn.text",
+      "variants": [],
+      "parent": "button",
+      "related": ["link", "button"]
+    },
+    "button_with_icon": {
+      "category": "action",
+      "overview": "아이콘과 텍스트가 함께 있는 버튼입니다.",
+      "pageContext": "section > .krds-btn",
+      "variants": [],
+      "parent": "button",
+      "related": ["button_icon", "button"]
+    },
+    "link": {
+      "category": "action",
+      "overview": "KRDS 스타일 하이퍼링크입니다. 본문·푸터·메뉴에서 사용합니다.",
+      "pageContext": "footer, nav, 본문 a.krds-link",
+      "variants": ["tag_link"],
+      "parent": null,
+      "related": ["button_text", "breadcrumb"]
+    },
+    "checkbox": {
+      "category": "selection",
+      "overview": "다중 선택 체크박스입니다. fieldset+legend 또는 label로 그룹화합니다.",
+      "pageContext": "form > fieldset.choice-group",
+      "variants": ["checkbox_chip", "checkbox_size"],
+      "parent": null,
+      "related": ["radio_button"]
+    },
+    "checkbox_chip": {
+      "category": "selection",
+      "overview": "칩(chip) 형태의 체크박스입니다. 필터·태그 선택에 사용합니다.",
+      "pageContext": "form > .choice-group",
+      "variants": [],
+      "parent": "checkbox",
+      "related": ["checkbox", "radio_chip"]
+    },
+    "checkbox_size": {
+      "category": "selection",
+      "overview": "체크박스 크기 변형입니다.",
+      "pageContext": "form > fieldset",
+      "variants": [],
+      "parent": "checkbox",
+      "related": ["checkbox"]
+    },
+    "radio_button": {
+      "category": "selection",
+      "overview": "단일 선택 라디오 버튼입니다.",
+      "pageContext": "form > fieldset.choice-group",
+      "variants": ["radio_chip", "radio_size"],
+      "parent": null,
+      "related": ["checkbox", "select"]
+    },
+    "radio_chip": {
+      "category": "selection",
+      "overview": "칩 형태의 라디오 버튼입니다.",
+      "pageContext": "form > .choice-group",
+      "variants": [],
+      "parent": "radio_button",
+      "related": ["radio_button", "checkbox_chip"]
+    },
+    "radio_size": {
+      "category": "selection",
+      "overview": "라디오 버튼 크기 변형입니다.",
+      "pageContext": "form > fieldset",
+      "variants": [],
+      "parent": "radio_button",
+      "related": ["radio_button"]
+    },
+    "select": {
+      "category": "selection",
+      "overview": "드롭다운 선택(select) 컴포넌트입니다.",
+      "pageContext": "form > .field > select.krds-input",
+      "variants": ["select_size", "select_sorting", "select_state"],
+      "parent": null,
+      "related": ["text_input", "radio_button"]
+    },
+    "select_size": {
+      "category": "selection",
+      "overview": "select 크기 변형입니다.",
+      "pageContext": "form > select",
+      "variants": [],
+      "parent": "select",
+      "related": ["select"]
+    },
+    "select_sorting": {
+      "category": "selection",
+      "overview": "정렬 옵션용 select입니다. 목록·표 상단에 배치합니다.",
+      "pageContext": "section > select (sort)",
+      "variants": [],
+      "parent": "select",
+      "related": ["select", "table"]
+    },
+    "select_state": {
+      "category": "selection",
+      "overview": "상태(활성/비활성/오류)가 있는 select입니다.",
+      "pageContext": "form > select",
+      "variants": [],
+      "parent": "select",
+      "related": ["select", "text_input_state"]
+    },
+    "toggle_switch": {
+      "category": "selection",
+      "overview": "ON/OFF 토글 스위치입니다.",
+      "pageContext": "form > label.toggle",
+      "variants": ["toggle_switch_size"],
+      "parent": null,
+      "related": ["checkbox"]
+    },
+    "toggle_switch_size": {
+      "category": "selection",
+      "overview": "토글 스위치 크기 변형입니다.",
+      "pageContext": "form > label.toggle",
+      "variants": [],
+      "parent": "toggle_switch",
+      "related": ["toggle_switch"]
+    },
+    "badge": {
+      "category": "feedback",
+      "overview": "상태·카테고리를 표시하는 뱃지입니다.",
+      "pageContext": "section > .krds-badge",
+      "variants": ["badge_number", "badge_size"],
+      "parent": null,
+      "related": ["tag"]
+    },
+    "badge_number": {
+      "category": "feedback",
+      "overview": "숫자(재고·카운트)를 표시하는 뱃지입니다.",
+      "pageContext": "table td > .krds-badge",
+      "variants": [],
+      "parent": "badge",
+      "related": ["badge", "table"]
+    },
+    "badge_size": {
+      "category": "feedback",
+      "overview": "뱃지 크기 변형입니다.",
+      "pageContext": "section > .krds-badge",
+      "variants": [],
+      "parent": "badge",
+      "related": ["badge"]
+    },
+    "tag": {
+      "category": "feedback",
+      "overview": "키워드·카테고리 태그입니다.",
+      "pageContext": "section > .tag",
+      "variants": ["tag_link"],
+      "parent": null,
+      "related": ["badge", "link"]
+    },
+    "tag_link": {
+      "category": "feedback",
+      "overview": "클릭 가능한 링크형 태그입니다.",
+      "pageContext": "section > a.tag",
+      "variants": [],
+      "parent": "tag",
+      "related": ["tag", "link"]
+    },
+    "spinner": {
+      "category": "feedback",
+      "overview": "로딩 중임을 나타내는 스피너입니다.",
+      "pageContext": "section (loading state)",
+      "variants": [],
+      "parent": null,
+      "related": ["critical_alerts"]
+    },
+    "critical_alerts": {
+      "category": "feedback",
+      "overview": "긴급·중요 공지를 강조하는 알림 배너입니다.",
+      "pageContext": "main#content > aside.critical-alert",
+      "variants": [],
+      "parent": null,
+      "related": ["contextual_help"]
+    },
+    "contextual_help": {
+      "category": "help",
+      "overview": "필드·섹션 옆 맥락 도움말입니다.",
+      "pageContext": "form > .context-help",
+      "variants": [],
+      "parent": null,
+      "related": ["help_panel", "tooltip"]
+    },
+    "help_panel": {
+      "category": "help",
+      "overview": "도움말 패널(사이드·모달 형태)입니다.",
+      "pageContext": "aside 또는 modal",
+      "variants": [],
+      "parent": null,
+      "related": ["contextual_help", "modal"]
+    },
+    "tooltip": {
+      "category": "help",
+      "overview": "호버·포커스 시 표시되는 툴팁입니다.",
+      "pageContext": "inline .tooltip",
+      "variants": ["tooltip_box", "tooltip_vertical"],
+      "parent": null,
+      "related": ["contextual_help"]
+    },
+    "tooltip_box": {
+      "category": "help",
+      "overview": "박스 형태 툴팁입니다.",
+      "pageContext": "inline",
+      "variants": [],
+      "parent": "tooltip",
+      "related": ["tooltip"]
+    },
+    "tooltip_vertical": {
+      "category": "help",
+      "overview": "세로 배치 툴팁입니다.",
+      "pageContext": "inline",
+      "variants": [],
+      "parent": "tooltip",
+      "related": ["tooltip"]
+    },
+    "coach_mark": {
+      "category": "help",
+      "overview": "신규 기능 안내용 코치마크(온보딩)입니다.",
+      "pageContext": "overlay on target element",
+      "variants": [],
+      "parent": null,
+      "related": ["tutorial_panel"]
+    },
+    "tutorial_panel": {
+      "category": "help",
+      "overview": "단계별 튜토리얼 패널입니다.",
+      "pageContext": "overlay panel",
+      "variants": [],
+      "parent": null,
+      "related": ["coach_mark", "modal"]
+    },
+    "disclosure": {
+      "category": "help",
+      "overview": "접기/펼치기(disclosure) 패턴입니다.",
+      "pageContext": "section > details",
+      "variants": [],
+      "parent": null,
+      "related": ["accordion"]
+    },
+    "accordion": {
+      "category": "help",
+      "overview": "FAQ 등 다중 접기/펼치기 아코디언입니다.",
+      "pageContext": "section.accordion",
+      "variants": ["accordion_line"],
+      "parent": null,
+      "related": ["disclosure"]
+    },
+    "accordion_line": {
+      "category": "help",
+      "overview": "구분선이 있는 아코디언 변형입니다.",
+      "pageContext": "section > details",
+      "variants": [],
+      "parent": "accordion",
+      "related": ["accordion"]
+    },
+    "text_input": {
+      "category": "input",
+      "overview": "기본 텍스트 입력 필드입니다. label-for-id 바인딩 필수.",
+      "pageContext": "form > .field > input.krds-input",
+      "variants": ["text_input_icon", "text_input_size", "text_input_state"],
+      "parent": null,
+      "related": ["textarea", "select"]
+    },
+    "text_input_icon": {
+      "category": "input",
+      "overview": "아이콘이 있는 텍스트 입력입니다.",
+      "pageContext": "form > .field",
+      "variants": [],
+      "parent": "text_input",
+      "related": ["text_input"]
+    },
+    "text_input_size": {
+      "category": "input",
+      "overview": "텍스트 입력 크기 변형입니다.",
+      "pageContext": "form > input",
+      "variants": [],
+      "parent": "text_input",
+      "related": ["text_input"]
+    },
+    "text_input_state": {
+      "category": "input",
+      "overview": "오류·성공·비활성 상태가 있는 텍스트 입력입니다.",
+      "pageContext": "form > .field",
+      "variants": [],
+      "parent": "text_input",
+      "related": ["text_input", "select_state"]
+    },
+    "textarea": {
+      "category": "input",
+      "overview": "여러 줄 텍스트 입력입니다.",
+      "pageContext": "form > .field > textarea.krds-input",
+      "variants": [],
+      "parent": null,
+      "related": ["text_input"]
+    },
+    "date_input": {
+      "category": "input",
+      "overview": "날짜 선택 입력(type=date)입니다.",
+      "pageContext": "form > .field > input[type=date]",
+      "variants": [],
+      "parent": null,
+      "related": ["calendar", "calendar_range"]
+    },
+    "file_upload": {
+      "category": "input",
+      "overview": "파일 첨부 업로드 컴포넌트입니다.",
+      "pageContext": "form > .field (file)",
+      "variants": [],
+      "parent": null,
+      "related": ["text_input"]
+    },
+    "calendar": {
+      "category": "input",
+      "overview": "달력 UI 날짜 선택입니다.",
+      "pageContext": "form > .calendar",
+      "variants": ["calendar_range"],
+      "parent": null,
+      "related": ["date_input"]
+    },
+    "calendar_range": {
+      "category": "input",
+      "overview": "기간(시작~종료) 선택 달력입니다.",
+      "pageContext": "form > .calendar-range",
+      "variants": [],
+      "parent": "calendar",
+      "related": ["calendar", "date_input"]
+    },
+    "language_switcher": {
+      "category": "settings",
+      "overview": "언어 전환(한/영) 컴포넌트입니다.",
+      "pageContext": "header 또는 masthead",
+      "variants": ["language_switcher_page"],
+      "parent": null,
+      "related": ["masthead"]
+    },
+    "language_switcher_page": {
+      "category": "settings",
+      "overview": "페이지 단위 언어 전환 UI입니다.",
+      "pageContext": "header 또는 dedicated page",
+      "variants": [],
+      "parent": "language_switcher",
+      "related": ["language_switcher"]
+    },
+    "resize": {
+      "category": "settings",
+      "overview": "글자·화면 크기 조절(디지털 포용) 컴포넌트입니다.",
+      "pageContext": "header 또는 floating panel",
+      "variants": [],
+      "parent": null,
+      "related": ["masthead"]
+    },
+    "table": {
+      "category": "content",
+      "overview": "데이터 표(table)입니다. thead/tbody/caption 필수.",
+      "pageContext": "main#content > section > table.krds-table",
+      "variants": [],
+      "parent": null,
+      "related": ["structured_list_table", "pagination"]
+    },
+    "text_list": {
+      "category": "content",
+      "overview": "비순서 목록(ul) 스타일입니다.",
+      "pageContext": "section > ul",
+      "variants": ["text_list_ordered"],
+      "parent": null,
+      "related": ["structured_list"]
+    },
+    "text_list_ordered": {
+      "category": "content",
+      "overview": "순서 목록(ol) 스타일입니다.",
+      "pageContext": "section > ol.steps",
+      "variants": [],
+      "parent": "text_list",
+      "related": ["text_list", "step_indicator"]
+    },
+    "modal": {
+      "category": "content",
+      "overview": "모달 다이얼로그입니다. focus trap·Escape 닫기 필요.",
+      "pageContext": "body > dialog 또는 overlay",
+      "variants": ["modal_sample"],
+      "parent": null,
+      "related": ["help_panel"]
+    },
+    "modal_sample": {
+      "category": "content",
+      "overview": "모달 샘플/템플릿 구현 예시입니다.",
+      "pageContext": "overlay",
+      "variants": [],
+      "parent": "modal",
+      "related": ["modal"]
+    },
+    "tts": {
+      "category": "content",
+      "overview": "텍스트 음성 변환(TTS) 재생 컨트롤입니다.",
+      "pageContext": "section > .tts-control",
+      "variants": ["tts_icon", "tts_size"],
+      "parent": null,
+      "related": []
+    },
+    "tts_icon": {
+      "category": "content",
+      "overview": "아이콘형 TTS 버튼입니다.",
+      "pageContext": "inline",
+      "variants": [],
+      "parent": "tts",
+      "related": ["tts", "button_icon"]
+    },
+    "tts_size": {
+      "category": "content",
+      "overview": "TTS 컨트롤 크기 변형입니다.",
+      "pageContext": "inline",
+      "variants": [],
+      "parent": "tts",
+      "related": ["tts"]
+    }
+  }
+}

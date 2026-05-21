@@ -1,15 +1,25 @@
 # Side Navigation (`side_navigation`)
 
-> Source: `assets/krds/html/code/side_navigation.html`
+> **Category**: Navigation (탐색)
+> **Parent**: —
+> **Variants**: —
+> **Source**: `assets/krds/html/code/side_navigation.html`
 
-## When to use
+## Overview
 
-- KRDS 공식 컴포넌트 `side_navigation` 패턴이 필요할 때
-- `data-krds-component="side_navigation"` / `data-krds-reference="assets/krds/html/code/side_navigation.html"`로 출처 추적
+좌측 사이드바 형태의 보조 탐색 메뉴입니다.
+
+## Component Tree
+
+```text
+side_navigation (기본)
+```
 
 ## Tokens
 
-- `specs/tokens.md` 참조 — 임의 hex 금지
+- `specs/tokens.md` 참조 — **임의 hex/폰트 금지**
+- Action 계열: `color.action.primary` (`#256ef4`)
+- Surface: `color.surface.subtle` (`#f4f5f6`)
 
 ## HTML (official)
 
@@ -28,25 +38,52 @@
 						<button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-2" aria-expanded="false" aria-haspopup="true">3Depth-menu</button>
 						<!-- lnb-submenu-lv2 -->
 						<div class="lnb-submenu-lv2" id="lnbmenu-2" role="menu">
-							<button type="button" class="lnb-btn-tit">3Depth-title</but
-<!-- truncated -->
+							<button type="button" class="lnb-btn-tit">3Depth-title</button>
+							<ul>
+								<li role="none"><a href="#" class="lnb-btn" role="menuitem">4Depth</a></li>
+								<li role="none"><a href="#" class="lnb-btn" role="menuitem">4Depth</a></li>
+								<li role="none"><a href="#" class="lnb-btn" role="menuitem">4Depth</a></li>
+							</ul>
+						</div>
+						<!-- //lnb-submenu-lv2 -->
+					</li>
+					<li class="lnb-subitem" role="none"><a href="#" class="l
+<!-- truncated at 1200 chars -->
 ```
 
 ## Tailwind
 
 ```html
-<!-- krds- 클래스 + templates/tailwind-theme.css 토큰 병행 -->
-<div data-krds-component="side_navigation" data-krds-reference="assets/krds/html/code/side_navigation.html">
-  <!-- assets/krds/html/code/side_navigation.html 구조 참조 -->
-</div>
+<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
+<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
+  Side Navigation 예시
+</button>
 ```
+
+## Page Context
+
+페이지 트리상 위치: `#container > aside 또는 좌측 nav`
+
+전체 DOM 계층: [docs/page-structure-tree.md](../../docs/page-structure-tree.md)
 
 ## Accessibility
 
-- `specs/accessibility.md` 게이트 준수
-- label-input 바인딩, sr-only, alt text 확인
+- [specs/accessibility.md](../accessibility.md) 게이트 준수
+- label-input `for`/`id` 바인딩 (input 계열)
+- icon-only button → `sr-only` 텍스트 필수
+- table → `thead`/`tbody`/`caption` semantic
+
+## Related
+
+- [main_menu_pc.md](./main_menu_pc.md)
+- [in_page_navigation.md](./in_page_navigation.md)
 
 ## Do / Don't
 
-**Do**: 공식 HTML 구조·클래스 유지  
-**Don't**: krds- 접두사 없이 generic 클래스만 사용
+**Do**
+- 공식 HTML 구조·`krds-` 클래스 유지
+- `data-krds-component="side_navigation"` / `data-krds-reference="assets/krds/html/code/side_navigation.html"` 출처 추적
+
+**Don't**
+- krds- 접두사 없이 generic Bootstrap/Material 클래스만 사용
+- 토큰 없이 임의 색상·폰트 지정

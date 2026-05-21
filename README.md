@@ -4,6 +4,20 @@ AI agents skill bundle and validation harness for building [KRDS](https://www.kr
 
 English | [한국어](README.ko.md)
 
+## AI Agent Entry Point
+
+**[`docs/index.md`](docs/index.md)** — MD knowledge base hub. Start here before any KRDS UI work.
+
+```text
+docs/
+├── index.md                   ← ★ start here
+├── reading-guide.md           ← scenario-based reading order
+├── repo-tree.md               ← repository tree
+├── page-structure-tree.md     ← page DOM hierarchy
+├── workflow-tree.md           ← plan/transform/improve
+└── component-category-tree.md ← KRDS 10 families, 74 components
+```
+
 ## What It Is
 
 ss-design-krds turns the [KRDS HTML Component Kit](https://github.com/KRDS-uiux/krds-uiux) into a repeatable agent workflow:

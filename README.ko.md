@@ -1,8 +1,22 @@
 # ss-design-krds
 
-AI 에이전트(Claude, Cursor 등)가 [KRDS(Korea Design System)](https://www.krds.go.kr/html/site/index.html) 규칙을 읽고 HTML/CSS·Tailwind 어디에든 적용할 수 있는 **스킬·스펙·검증 패키지**입니다.
+AI 에이전트(Claude, Cursor 등)가 [KRDS(Korea Design System)](https://www.krds.go.kr/html/site/index.html) 규칙을 읽고 HTML/CSS·Tailwind 어디에든 적용할 수 있는 **MD 중심 스킬·스펙·검증 패키지**입니다.
 
 [English](README.md)
+
+## AI 에이전트 시작점
+
+**[`docs/index.md`](docs/index.md)** — MD 지식베이스 허브. KRDS UI 작업 전 여기서 시작하세요.
+
+```text
+docs/
+├── index.md                   ← ★ 시작
+├── reading-guide.md           ← 시나리오별 읽기 순서
+├── repo-tree.md               ← 저장소 트리
+├── page-structure-tree.md     ← 페이지 DOM 계층
+├── workflow-tree.md           ← plan/transform/improve
+└── component-category-tree.md ← KRDS 10패밀리 74컴포넌트
+```
 
 ## 무엇인가요?
 

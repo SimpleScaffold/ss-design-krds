@@ -43,6 +43,14 @@ function addCheck(name, pass, detail) {
 }
 
 const requiredPaths = [
+  'docs/index.md',
+  'docs/reading-guide.md',
+  'docs/repo-tree.md',
+  'docs/page-structure-tree.md',
+  'docs/workflow-tree.md',
+  'docs/component-category-tree.md',
+  'specs/components/_taxonomy.json',
+  'specs/components/_categories.md',
   'assets/krds/html/code',
   'references/krds/html/code',
   'skills/krds-plan/SKILL.md',
@@ -59,6 +67,7 @@ const requiredPaths = [
   'scripts/krds-improve-loop.mjs',
   'scripts/verify-krds-component-coverage.mjs',
   'scripts/generate-spec-index.mjs',
+  'scripts/generate-docs-trees.mjs',
   'reports/experiment/final-score.json',
   'reports/experiment/component-coverage-check.json'
 ];
@@ -90,6 +99,19 @@ addCheck('krds-plan covers initial-state workflow', /초기|initial|신규/i.tes
 addCheck('krds-plan covers website or app scope', /website|app|페이지|앱/i.test(planSkill), 'website/app coverage');
 addCheck('krds-transform covers theme change workflow', /theme|테마|전환/i.test(transformSkill), 'theme transformation coverage');
 addCheck('krds-improve covers compliance scoring', /score|threshold|rule|점수/i.test(improveSkill), 'scoring-driven improvement coverage');
+
+const agentsMd = await fs.readFile(path.join(root, 'AGENTS.md'), 'utf8');
+const claudeMd = await fs.readFile(path.join(root, 'CLAUDE.md'), 'utf8');
+addCheck('AGENTS.md points to docs/index.md', /docs\/index\.md/.test(agentsMd), 'docs/index.md entry');
+addCheck('CLAUDE.md points to docs/index.md', /docs\/index\.md/.test(claudeMd), 'docs/index.md entry');
+
+const sampleComponent = await fs.readFile(path.join(root, 'specs/components/button.md'), 'utf8');
+addCheck('component MD has Overview section', /## Overview/.test(sampleComponent), 'Overview');
+addCheck('component MD has Component Tree section', /## Component Tree/.test(sampleComponent), 'Component Tree');
+addCheck('component MD has Category metadata', /Category/.test(sampleComponent), 'Category');
+
+const taxonomy = JSON.parse(await fs.readFile(path.join(root, 'specs/components/_taxonomy.json'), 'utf8'));
+addCheck('taxonomy covers 74 components', Object.keys(taxonomy.components).length >= 74, String(Object.keys(taxonomy.components).length));
 
 const similarityRun = spawnSync('node', ['scripts/krds-similarity.mjs', '--target', 'experiment/sample-page/index.html'], { encoding: 'utf8', cwd: root });
 if (similarityRun.status === 0 || similarityRun.stdout) {

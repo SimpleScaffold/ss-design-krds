@@ -1,15 +1,25 @@
 # In Page Navigation (`in_page_navigation`)
 
-> Source: `assets/krds/html/code/in_page_navigation.html`
+> **Category**: Navigation (탐색)
+> **Parent**: —
+> **Variants**: —
+> **Source**: `assets/krds/html/code/in_page_navigation.html`
 
-## When to use
+## Overview
 
-- KRDS 공식 컴포넌트 `in_page_navigation` 패턴이 필요할 때
-- `data-krds-component="in_page_navigation"` / `data-krds-reference="assets/krds/html/code/in_page_navigation.html"`로 출처 추적
+긴 콘텐츠 페이지 내 섹션 앵커 탐색입니다.
+
+## Component Tree
+
+```text
+in_page_navigation (기본)
+```
 
 ## Tokens
 
-- `specs/tokens.md` 참조 — 임의 hex 금지
+- `specs/tokens.md` 참조 — **임의 hex/폰트 금지**
+- Action 계열: `color.action.primary` (`#256ef4`)
+- Surface: `color.surface.subtle` (`#f4f5f6`)
 
 ## HTML (official)
 
@@ -34,25 +44,48 @@
 			</ul>
 		</nav>
 		<div class="in-page-navigation-action">
-			<button type="button" class="krds-btn medium">온라인 신청하기</
-<!-- truncated -->
+			<button type="button" class="krds-btn medium">온라인 신청하기</button>
+			<p class="quick-info">장애아동수당 외 <strong>1건</strong></p>
+		</div>
+	</div>
+	<!-- //In page navigation -->
+</div>
+<!-- //krds-in-page-navigation-type -->
 ```
 
 ## Tailwind
 
 ```html
-<!-- krds- 클래스 + templates/tailwind-theme.css 토큰 병행 -->
-<div data-krds-component="in_page_navigation" data-krds-reference="assets/krds/html/code/in_page_navigation.html">
-  <!-- assets/krds/html/code/in_page_navigation.html 구조 참조 -->
-</div>
+<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
+<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
+  In Page Navigation 예시
+</button>
 ```
+
+## Page Context
+
+페이지 트리상 위치: `main#content > aside.in-page-nav`
+
+전체 DOM 계층: [docs/page-structure-tree.md](../../docs/page-structure-tree.md)
 
 ## Accessibility
 
-- `specs/accessibility.md` 게이트 준수
-- label-input 바인딩, sr-only, alt text 확인
+- [specs/accessibility.md](../accessibility.md) 게이트 준수
+- label-input `for`/`id` 바인딩 (input 계열)
+- icon-only button → `sr-only` 텍스트 필수
+- table → `thead`/`tbody`/`caption` semantic
+
+## Related
+
+- [breadcrumb.md](./breadcrumb.md)
+- [side_navigation.md](./side_navigation.md)
 
 ## Do / Don't
 
-**Do**: 공식 HTML 구조·클래스 유지  
-**Don't**: krds- 접두사 없이 generic 클래스만 사용
+**Do**
+- 공식 HTML 구조·`krds-` 클래스 유지
+- `data-krds-component="in_page_navigation"` / `data-krds-reference="assets/krds/html/code/in_page_navigation.html"` 출처 추적
+
+**Don't**
+- krds- 접두사 없이 generic Bootstrap/Material 클래스만 사용
+- 토큰 없이 임의 색상·폰트 지정

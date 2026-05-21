@@ -1,15 +1,26 @@
 # Modal Sample (`modal_sample`)
 
-> Source: `assets/krds/html/code/modal_sample.html`
+> **Category**: Content (콘텐츠)
+> **Parent**: modal
+> **Variants**: —
+> **Source**: `assets/krds/html/code/modal_sample.html`
 
-## When to use
+## Overview
 
-- KRDS 공식 컴포넌트 `modal_sample` 패턴이 필요할 때
-- `data-krds-component="modal_sample"` / `data-krds-reference="assets/krds/html/code/modal_sample.html"`로 출처 추적
+모달 샘플/템플릿 구현 예시입니다.
+
+## Component Tree
+
+```text
+modal (부모)
+└── modal_sample
+```
 
 ## Tokens
 
-- `specs/tokens.md` 참조 — 임의 hex 금지
+- `specs/tokens.md` 참조 — **임의 hex/폰트 금지**
+- Action 계열: `color.action.primary` (`#256ef4`)
+- Surface: `color.surface.subtle` (`#f4f5f6`)
 
 ## HTML (official)
 
@@ -35,25 +46,55 @@
 			<!-- //modal contents -->
 			<!-- modal btn -->
 			<div class="modal-btn btn-wrap">
-				<button type="button" class="krds-btn medium tertiary close
-<!-- truncated -->
+				<button type="button" class="krds-btn medium tertiary close-modal">아니요</button>
+				<button type="button" class="krds-btn medium primary close-modal">예</button>
+			</div>
+			<!-- //modal btn -->
+			<!-- close button -->
+			<button type="button" class="krds-btn medium icon btn-close close-modal">
+				<span class="sr-only">닫기</span>
+				<i class="svg-icon ico-popup-close"></i>
+			</button>
+			<!-- //close button -->
+		</div>
+	</div>
+	<div class="modal-back 
+<!-- truncated at 1200 chars -->
 ```
 
 ## Tailwind
 
 ```html
-<!-- krds- 클래스 + templates/tailwind-theme.css 토큰 병행 -->
-<div data-krds-component="modal_sample" data-krds-reference="assets/krds/html/code/modal_sample.html">
-  <!-- assets/krds/html/code/modal_sample.html 구조 참조 -->
-</div>
+<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
+<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
+  Modal Sample 예시
+</button>
 ```
+
+## Page Context
+
+페이지 트리상 위치: `overlay`
+
+전체 DOM 계층: [docs/page-structure-tree.md](../../docs/page-structure-tree.md)
 
 ## Accessibility
 
-- `specs/accessibility.md` 게이트 준수
-- label-input 바인딩, sr-only, alt text 확인
+- [specs/accessibility.md](../accessibility.md) 게이트 준수
+- label-input `for`/`id` 바인딩 (input 계열)
+- icon-only button → `sr-only` 텍스트 필수
+- table → `thead`/`tbody`/`caption` semantic
+
+## Related
+
+- [modal.md](./modal.md) (parent)
+- [modal.md](./modal.md)
 
 ## Do / Don't
 
-**Do**: 공식 HTML 구조·클래스 유지  
-**Don't**: krds- 접두사 없이 generic 클래스만 사용
+**Do**
+- 공식 HTML 구조·`krds-` 클래스 유지
+- `data-krds-component="modal_sample"` / `data-krds-reference="assets/krds/html/code/modal_sample.html"` 출처 추적
+
+**Don't**
+- krds- 접두사 없이 generic Bootstrap/Material 클래스만 사용
+- 토큰 없이 임의 색상·폰트 지정

@@ -2,6 +2,19 @@
 
 KRDS 서비스 패턴: 로그인
 
+## Page Context Tree
+
+```text
+main#content
+└── section.login
+    ├── h1 "로그인"
+    ├── form.krds-form
+    │   ├── .field (user-id)
+    │   ├── .field (password)
+    │   └── button.krds-btn.primary
+    └── (optional) link "아이디/비밀번호 찾기"
+```
+
 ## Reference
 
 - [KRDS 서비스 패턴 - 로그인](https://www.krds.go.kr/html/site/pattern/pattern05.html)

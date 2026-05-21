@@ -2,6 +2,32 @@
 
 ss-design-krds는 **프레임워크에 종속되지 않는 MD 스펙**을 제공합니다. 프로젝트 스택에 맞는 적용 방식을 선택하세요.
 
+## Stack Decision Tree
+
+```text
+[프로젝트 스택?]
+├── React 앱?
+│   ├── MUI 사용? → gracefullight/krds (references/gracefullight-krds.md)
+│   └── Tailwind 사용? → krds-react (references/krds-react.md)
+├── Tailwind만?
+│   └── templates/tailwind-theme.css + krds- 클래스
+├── 순수 HTML/CSS?
+│   └── assets/krds/html/code/ + resources/css/
+└── AI 설계만 (코드 없음)?
+    └── specs/ MD (tokens, components, patterns)
+```
+
+```mermaid
+flowchart TD
+  start[ProjectStack] --> react{React}
+  react -->|Yes| mui{MUI}
+  mui -->|Yes| gracefullight[gracefullight/krds]
+  mui -->|No| krdsReact[krds-react]
+  react -->|No| tailwind{Tailwind}
+  tailwind -->|Yes| twTheme[tailwind-theme.css]
+  tailwind -->|No| htmlCss[HTML krds-uiux]
+```
+
 ## Decision Matrix
 
 | 상황 | 권장 스택 | 참조 |

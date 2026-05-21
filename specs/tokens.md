@@ -4,6 +4,49 @@
 
 원본 CSS: `assets/krds/resources/css/token/krds_tokens.css`
 
+## Token Tree
+
+```text
+KRDS Tokens
+├── color
+│   ├── text
+│   │   ├── primary      #1e2124
+│   │   ├── secondary    #58616a
+│   │   └── disabled     #8a949e
+│   ├── surface
+│   │   ├── default      #ffffff
+│   │   └── subtle       #f4f5f6
+│   ├── border
+│   │   └── default      #cdd1d5
+│   ├── action
+│   │   ├── primary      #256ef4
+│   │   └── primary-hover #0b50d0
+│   └── status
+│       ├── danger       #de3412
+│       ├── success      #228738
+│       ├── warning      #9e6a00
+│       └── info         #0b78cb
+├── typography
+│   ├── font.family.base
+│   ├── pc.heading (xlarge/large/medium)
+│   ├── pc.body (large/medium/small)
+│   └── pc.label (medium/small)
+├── spacing (8px rhythm)
+│   └── 1(4px) → 2(8px) → 4(16px) → 6(24px) → 10(40px)
+└── radius
+    ├── sm (4px)
+    ├── md (8px)
+    ├── lg (12px)
+    └── full (9999px)
+```
+
+## 왜 에이전트가 hex를 만들면 안 되나
+
+1. **일관성**: KRDS는 74개 컴포넌트가 동일 토큰을 공유합니다. 임의 hex는 컴포넌트 간 색상 불일치를 만듭니다.
+2. **접근성**: semantic token은 WCAG 대비를 전제로 설계되었습니다.
+3. **검증**: `krds-similarity.mjs`는 `krds-` 클래스 사용을 확인하지, 임의 색상은 감지하지 못합니다.
+4. **유지보수**: 토큰 키(`color.action.primary`)는 다크모드·테마 변경 시 일괄 교체 가능합니다.
+
 ## Semantic Colors (Light Mode)
 
 | Token Key | CSS Variable | Hex | 용도 |

@@ -1,15 +1,25 @@
 # Contextual Help (`contextual_help`)
 
-> Source: `assets/krds/html/code/contextual_help.html`
+> **Category**: Help (도움)
+> **Parent**: —
+> **Variants**: —
+> **Source**: `assets/krds/html/code/contextual_help.html`
 
-## When to use
+## Overview
 
-- KRDS 공식 컴포넌트 `contextual_help` 패턴이 필요할 때
-- `data-krds-component="contextual_help"` / `data-krds-reference="assets/krds/html/code/contextual_help.html"`로 출처 추적
+필드·섹션 옆 맥락 도움말입니다.
+
+## Component Tree
+
+```text
+contextual_help (기본)
+```
 
 ## Tokens
 
-- `specs/tokens.md` 참조 — 임의 hex 금지
+- `specs/tokens.md` 참조 — **임의 hex/폰트 금지**
+- Action 계열: `color.action.primary` (`#256ef4`)
+- Surface: `color.surface.subtle` (`#f4f5f6`)
 
 ## HTML (official)
 
@@ -32,25 +42,56 @@
 				</div>
 			</div>
 			<button type="button" class="krds-btn xsmall icon tooltip-close">
-				<span class
-<!-- truncated -->
+				<span class="sr-only">닫기</span>
+				<i class="svg-icon ico-modal-close"></i>
+			</button>
+		</div>
+	</div>
+</div>
+<!-- //tooltip : 위치 - 상단 왼쪽 -->
+
+<!-- tooltip : 위치 - 상단 중앙 -->
+<div class="krds-contextual-help top center">
+	<p class="tooltip-txt">예시이미지(상단 중앙)</p>
+	<div class="tooltip-action">
+		<button type="button" class="krds-btn medium icon tooltip-btn" aria-expanded="false">
+			<span class="sr-only">도움말<
+<!-- truncated at 1200 chars -->
 ```
 
 ## Tailwind
 
 ```html
-<!-- krds- 클래스 + templates/tailwind-theme.css 토큰 병행 -->
-<div data-krds-component="contextual_help" data-krds-reference="assets/krds/html/code/contextual_help.html">
-  <!-- assets/krds/html/code/contextual_help.html 구조 참조 -->
-</div>
+<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
+<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
+  Contextual Help 예시
+</button>
 ```
+
+## Page Context
+
+페이지 트리상 위치: `form > .context-help`
+
+전체 DOM 계층: [docs/page-structure-tree.md](../../docs/page-structure-tree.md)
 
 ## Accessibility
 
-- `specs/accessibility.md` 게이트 준수
-- label-input 바인딩, sr-only, alt text 확인
+- [specs/accessibility.md](../accessibility.md) 게이트 준수
+- label-input `for`/`id` 바인딩 (input 계열)
+- icon-only button → `sr-only` 텍스트 필수
+- table → `thead`/`tbody`/`caption` semantic
+
+## Related
+
+- [help_panel.md](./help_panel.md)
+- [tooltip.md](./tooltip.md)
 
 ## Do / Don't
 
-**Do**: 공식 HTML 구조·클래스 유지  
-**Don't**: krds- 접두사 없이 generic 클래스만 사용
+**Do**
+- 공식 HTML 구조·`krds-` 클래스 유지
+- `data-krds-component="contextual_help"` / `data-krds-reference="assets/krds/html/code/contextual_help.html"` 출처 추적
+
+**Don't**
+- krds- 접두사 없이 generic Bootstrap/Material 클래스만 사용
+- 토큰 없이 임의 색상·폰트 지정

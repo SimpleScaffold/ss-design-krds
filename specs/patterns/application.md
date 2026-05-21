@@ -2,6 +2,23 @@
 
 KRDS 서비스 패턴: 신청
 
+## Page Context Tree
+
+```text
+main#content
+├── section (step_indicator)     ← 1단계: 절차 안내
+│   └── ol.steps
+├── section (form)               ← 2~3단계: 입력
+│   └── form.krds-form
+│       ├── fieldset (약관 동의)
+│       ├── .field × N
+│       └── button.krds-btn.primary "다음"
+└── section (confirm)            ← 4단계: 확인·완료
+    └── structured_list (요약)
+```
+
+**단계 흐름**: 약관 동의 → 정보 입력 → 확인 → 완료
+
 ## Reference
 
 - [KRDS 서비스 패턴 - 신청](https://www.krds.go.kr/html/site/pattern/pattern04.html)

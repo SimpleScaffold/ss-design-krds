@@ -2,6 +2,21 @@
 
 KRDS 서비스 패턴: 검색
 
+## Page Context Tree
+
+```text
+#krds-header 또는 main#content 상단
+└── form[role="search"]
+    ├── label.sr-only (검색어)
+    ├── input.krds-input[type=search]
+    └── button.krds-btn.primary
+
+(검색 결과)
+main#content
+└── section.results
+    └── [aria-live="polite"] 동적 결과 영역
+```
+
 ## Reference
 
 - [KRDS 서비스 패턴 - 검색](https://www.krds.go.kr/html/site/pattern/pattern02.html)
