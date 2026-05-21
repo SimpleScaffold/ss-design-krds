@@ -49,9 +49,24 @@ tts (부모)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Tts Size 예시
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<button type="button" class="krds-tts xsmall font-krds inline-flex gap-krds-2 text-krds-label-sm min-h-[30px] px-krds-2 py-krds-1 w-full" data-krds-component="tts_size">
+	<span class="krds-tts-icon font-krds inline-flex gap-krds-2" aria-hidden="true">
+		<i class="svg-icon ico-volume"></i>
+	</span>
+	<span class="krds-tts-text font-krds inline-flex gap-krds-2"> Xsmall TTS</span>
+</button>
+<button type="button" class="krds-tts small font-krds inline-flex gap-krds-2 text-krds-body-sm min-h-[30px] px-krds-2 py-krds-1">
+	<span class="krds-tts-icon font-krds inline-flex gap-krds-2">
+		<i class="svg-icon ico-volume"></i>
+	</span>
+	<span class="krds-tts-text font-krds inline-flex gap-krds-2">Small TTS</span>
+</button>
+<button type="button" class="krds-tts medium font-krds inline-flex gap-krds-2 text-krds-body-md">
+	<span class="krds-tts-icon font-krds inline-flex gap-krds-2" aria-hidden="true">
+		<i class="svg-icon ico-volume"></i>
+	</span>
+	<span class="krds-tts-text font-krds inline-flex gap-krds-2">Medium TTS</span>
 </button>
 ```
 

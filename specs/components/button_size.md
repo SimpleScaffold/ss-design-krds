@@ -37,10 +37,12 @@ button (부모)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-btn primary bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Button Size 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<button type="button" class="krds-btn xsmall inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-label-sm min-h-[30px] px-krds-2 py-krds-1" data-krds-component="button_size">x-small 버튼</button>
+<button type="button" class="krds-btn small inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-body-sm min-h-[30px] px-krds-2 py-krds-1">small 버튼</button>
+<button type="button" class="krds-btn medium inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-body-md">medium 버튼</button>
+<button type="button" class="krds-btn large inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-body-lg">large 버튼</button>
+<button type="button" class="krds-btn xlarge inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border">x-large 버튼</button>
 ```
 
 ## Page Context

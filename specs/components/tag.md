@@ -85,10 +85,67 @@ tag (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Tag 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="krds-tag-wrap large inline-flex items-center font-krds text-krds-text rounded-krds-sm bg-krds-surface-subtle px-krds-4 py-krds-1 text-krds-body-lg" data-krds-component="tag">
+	<span class="krds-btn-tag inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+	<span class="krds-btn-tag inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+	<span class="krds-btn-tag inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+</div>
+<div class="krds-tag-wrap medium inline-flex items-center font-krds text-krds-text rounded-krds-sm bg-krds-surface-subtle px-krds-4 py-krds-1 text-krds-body-md">
+	<span class="krds-btn-tag inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+	<span class="krds-btn-tag inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+	<span class="krds-btn-tag inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+</div>
+<div class="krds-tag-wrap small inline-flex items-center font-krds text-krds-text rounded-krds-sm bg-krds-surface-subtle px-krds-4 py-krds-1 text-krds-body-sm min-h-[30px] px-krds-2">
+	<span class="krds-btn-tag inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+	<span class="krds-btn-tag inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+	<span class="krds-btn-tag inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border">
+		태그
+		<button type="button" class="btn-delete">
+			<span class="sr-only">삭제</span>
+		</button>
+	</span>
+</div>
 ```
 
 ## Page Context

@@ -60,10 +60,36 @@ table (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-table bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Table 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="krds-table-wrap w-full overflow-x-auto font-krds text-krds-text border-collapse flex gap-krds-2" data-krds-component="table">
+	<table class="tbl col data w-full font-krds text-krds-text">
+		<caption>000에 대한 표로 제목1,제목2에 대한 내용으로 구성되어 있으며 제목1은 제목1-1,제목1-2,제목1-3으로 구성되어있다.</caption>
+		<colgroup>
+			<col style="width: 30%;">
+			<col>
+		</colgroup>
+		<thead>
+		<tr>
+			<th scope="col">제목1</th>
+			<th scope="col">제목2</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<th scope="row">제목1-1</th>
+			<td>내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. </td>
+		</tr>
+		<tr>
+			<th scope="row">제목1-2</th>
+			<td>내용이 들어갑니다.</td>
+		</tr>
+		<tr>
+			<th scope="row">제목1-3</th>
+			<td>내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. </td>
+		</tr>
+		</tbody>
+	</table>
+</div>
 ```
 
 ## Page Context

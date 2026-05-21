@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ss-design-krds.local/checklist/item.schema.json",
+  "title": "KRDSOfficialChecklistItem",
+  "type": "object",
+  "required": ["id", "category", "subcategory", "tier", "title", "automation"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9.-]+$" },
+    "category": {
+      "type": "string",
+      "enum": ["style", "component", "pattern.basic", "pattern.service"]
+    },
+    "subcategory": { "type": "string" },
+    "tier": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["gov", "self", "common"] },
+      "minItems": 1
+    },
+    "title": { "type": "string" },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "screens": { "type": "array", "items": { "type": "string" } },
+        "elements": { "type": "array", "items": { "type": "string" } },
+        "conditions": { "type": "string" },
+        "exceptions": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "procedure": { "type": "array", "items": { "type": "string" } },
+    "complianceCriteria": { "type": "array", "items": { "type": "string" } },
+    "failExamples": { "type": "array", "items": { "type": "string" } },
+    "relatedIds": { "type": "array", "items": { "type": "string" } },
+    "specRef": { "type": "string" },
+    "automation": {
+      "type": "object",
+      "required": ["level"],
+      "properties": {
+        "level": { "type": "string", "enum": ["static", "browser", "manual"] },
+        "ruleId": { "type": "string" },
+        "naWhen": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

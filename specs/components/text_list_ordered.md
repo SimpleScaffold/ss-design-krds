@@ -76,10 +76,56 @@ text_list (부모)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Text List Ordered 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<ol class="krds-info-list ordered font-krds w-full" data-krds-component="text_list_ordered">
+  <li><span class="num">1. </span>텍스트 목록 레벨1</li>
+  <li>
+    <span class="num">2. </span>텍스트 목록 레벨1
+    <ol class="krds-info-list ordered">
+      <li><span class="num">a. </span>텍스트 목록 레벨2</li>
+      <li>
+        <span class="num">b. </span>텍스트 목록 레벨2
+        <ol class="krds-info-list ordered">
+					<li><span class="num">①</span>텍스트 목록 레벨3</li>
+					<li><span class="num">②</span>텍스트 목록 레벨3</li>
+				</ol>
+      </li>
+			<li><span class="num">c. </span>텍스트 목록 레벨2</li>
+    </ol>
+  </li>
+  <li><span class="num">3. </span>텍스트 목록 레벨1</li>
+</ol>
+
+<br>
+<br>
+
+<ol class="krds-info-list ordered">
+  <li>
+    <span class="num">1. </span>텍스트 목록 레벨1
+    <ul class="krds-info-list dash">
+      <li>
+        텍스트 목록 레벨2
+        <ol class="krds-info-list ordered">
+					<li><span class="num">①</span>텍스트 목록 레벨3</li>
+					<li><span class="num">②</span>텍스트 목록 레벨3</li>
+				</ol>
+      </li>
+    </ul>
+  </li>
+	<li>
+    <span class="num">2. </span>텍스트 목록 레벨1
+    <ol class="krds-info-list ordered">
+			<li>
+				<span class="num">a. </span>텍스트 목록 레벨2
+				<ul class="krds-info-list hollow">
+          <li>텍스트 목록 레벨3</li>
+          <li>텍스트 목록 레벨3</li>
+        </ul>
+			</li>
+		</ol>
+  </li>
+</ol>
+<!-- //krds-info-list -->
 ```
 
 ## Page Context

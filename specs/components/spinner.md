@@ -56,10 +56,31 @@ spinner (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Spinner 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="form-group font-krds" data-krds-component="spinner">
+	<div class="form-tit">
+		<label for="consult_name">Label</label>
+	</div>
+	<div class="form-conts">
+		<div class="form-spinner">
+			<input type="text" id="consult_name" class="krds-input w-full font-krds text-krds-text border border-krds-border rounded-krds-sm px-krds-4 py-krds-3 bg-krds-surface" placeholder="placeholder">
+			<div class="krds-spinner inline-block font-krds" role="status">
+				<span class="sr-only">로딩 중</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //인풋 내 스피너 -->
+
+<br>
+<br>
+
+<!-- 스피너 -->
+<div class="krds-spinner inline-block font-krds" role="status">
+	<span class="sr-only">로딩 중</span>
+	Loading data..
+</div>
+<!-- //스피너 -->
 ```
 
 ## Page Context

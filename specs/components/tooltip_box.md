@@ -43,10 +43,18 @@ tooltip (부모)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Tooltip Box 예시
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<button type="button" class="krds-btn small text krds-tooltip tooltip-box inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-secondary text-krds-body-sm min-h-[30px] px-krds-2 py-krds-1 border-0 bg-transparent" data-tooltip="tooltip-box 툴팁은 150자 내외의 텍스트만 제공되어야 합니다. 내부에 닫기 버튼을 포함한 대화형 요소를 사용하지 않습니다. 본문을 가리지 않도록 주의합니다." data-krds-component="tooltip_box">
+  tooltip-box
+  <i class="svg-icon ico-angle right"></i>
 </button>
+
+<button type="button" class="krds-btn icon krds-tooltip tooltip-box inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-secondary text-krds-body-sm w-11 p-0" data-tooltip="tooltip-box 툴팁은 150자 내외의 텍스트만 제공되어야 합니다. 내부에 닫기 버튼을 포함한 대화형 요소를 사용하지 않습니다. 본문을 가리지 않도록 주의합니다.">
+  <span class="sr-only">도움말</span>
+  <i class="svg-icon ico-help"></i>
+</button>
+
+<button type="button" class="krds-btn krds-tooltip tooltip-box inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-secondary text-krds-body-sm" data-tooltip="tooltip-box 툴팁은 150자 내외의 텍스트만 제공되어야 합니다. 내부에 닫기 버튼을 포함한 대화형 요소를 사용하지 않습니다. 본문을 가리지 않도록 주의합니다.">도움말</button>
 ```
 
 ## Page Context

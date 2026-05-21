@@ -44,7 +44,7 @@ for (let i = 1; i <= maxIterations; i++) {
   if (report.summary.failed.includes('meta-description') && !/name="description"/.test(next)) {
     next = next.replace('</head>', '  <meta name="description" content="KRDS aligned public service page" />\n</head>');
   }
-  if (report.summary.failed.includes('skip-link-target-exists') && /id="content"/.test(next) && !/href="#content"/.test(next)) {
+  if (report.summary.failed.includes('skip-link-target') && /id="content"/.test(next) && !/href="#content"/.test(next)) {
     next = next.replace(/href="#[^"]*"/, 'href="#content"');
   }
   await fs.writeFile(target, next, 'utf8');

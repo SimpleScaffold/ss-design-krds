@@ -13,7 +13,10 @@ docs/
 ├── repo-tree.md                  ← 저장소 전체 구조 + 폴더 설명
 ├── page-structure-tree.md        ← KRDS 페이지 DOM 계층
 ├── workflow-tree.md              ← plan → implement → validate
-└── component-category-tree.md    ← KRDS 10패밀리 74컴포넌트 분류
+├── validation-checklist-tree.md  ← 공식 311항 체크리스트 트리
+├── component-category-tree.md    ← KRDS 10패밀리 74컴포넌트 분류
+└── style/                        ← KRDS 공식 스타일 가이드 9페이지 MD
+    └── index.md
 ```
 
 ## 시나리오별 시작점
@@ -36,7 +39,8 @@ Layer 1 — 진입 (Entry)
 
 Layer 2 — 가이드 (Guides)
 ├── docs/*.md              ← 트리·설명·내비게이션
-└── specs/tokens.md 등      ← 토큰·a11y·스택
+├── docs/style/*.md        ← KRDS 공식 스타일 (색상·타이포·형태 등 상세)
+└── specs/tokens.md 등      ← 토큰 요약·a11y·스택 (상세는 docs/style/)
 
 Layer 3 — 상세 (Specs)
 ├── specs/components/*.md  ← 74개 컴포넌트 MD
@@ -75,8 +79,14 @@ Layer 3 — 상세 (Specs)
 
 ```bash
 node scripts/krds-similarity.mjs --target <page.html>   # score ≥ 95
+npm run krds:checklist -- --target <page.html>           # 공식 311항
+npm run krds:style:md:validate                           # 스타일 MD 무결성
 npm run krds:validate                                      # 전체 검증
 ```
+
+스타일 검증: [specs/validation/style.md](../specs/validation/style.md) (21항 ↔ [docs/style/](./style/index.md) 매핑)
+
+체크리스트: [validation-checklist-tree.md](./validation-checklist-tree.md) · [specs/validation-checklist.md](../specs/validation-checklist.md) · [checklist-maintenance.md](./checklist-maintenance.md)
 
 ## 하위 문서 링크
 
@@ -86,14 +96,21 @@ npm run krds:validate                                      # 전체 검증
 | [repo-tree.md](./repo-tree.md) | 저장소 디렉터리 트리 + 각 폴더 역할 |
 | [page-structure-tree.md](./page-structure-tree.md) | KRDS 페이지 DOM 계층 |
 | [workflow-tree.md](./workflow-tree.md) | plan → transform → improve 워크플로 |
+| [validation-checklist-tree.md](./validation-checklist-tree.md) | 공식 311항 자체 검증 체크리스트 |
+| [checklist-maintenance.md](./checklist-maintenance.md) | 체크리스트·검증 스크립트 갱신 순서 |
 | [component-category-tree.md](./component-category-tree.md) | KRDS 10패밀리 컴포넌트 분류 |
+| [style/index.md](./style/index.md) | KRDS 공식 스타일 가이드 (색상·타이포·레이아웃 등) |
+| [specs/validation/style.md](../specs/validation/style.md) | 스타일 21항 체크리스트 ↔ `docs/style/` 매핑 |
 
 ## Specs 바로가기
 
 | Spec | 용도 |
 |------|------|
-| [specs/tokens.md](../specs/tokens.md) | 색상·타이포·간격 토큰 |
+| [specs/tokens.md](../specs/tokens.md) | 색상·타이포·간격 토큰 (요약) |
+| [style/index.md](./style/index.md) | KRDS 스타일 가이드 상세 (공식 페이지 MD) |
 | [specs/accessibility.md](../specs/accessibility.md) | a11y 게이트 |
 | [specs/stacks.md](../specs/stacks.md) | HTML/Tailwind/React 스택 선택 |
+| [packages/krds-tailwind/README.md](../packages/krds-tailwind/README.md) | `@simplescaffold/krds-tailwind` npm 패키지 |
+| [experiment/sample-page/tailwind.html](../experiment/sample-page/tailwind.html) | Tailwind 샘플 페이지 |
 | [specs/components/_categories.md](../specs/components/_categories.md) | 카테고리별 컴포넌트 |
 | [specs/components/_index.md](../specs/components/_index.md) | 74개 flat 인덱스 |

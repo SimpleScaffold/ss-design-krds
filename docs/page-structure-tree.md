@@ -96,7 +96,8 @@ section.form-section
 ## 참조 구현
 
 - [experiment/sample-page/index.html](../experiment/sample-page/index.html) — 전체 DOM 골격 예시
-- [scripts/krds-ruleset.json](../scripts/krds-ruleset.json) — requiredSelectors 목록
+- [scripts/krds-ruleset.json](../scripts/krds-ruleset.json) — similarity 가중치 프로필
+- [scripts/checklist-rules/](../scripts/checklist-rules/) — 규칙 ID·체크리스트 매핑
 
 ## 관련 문서
 

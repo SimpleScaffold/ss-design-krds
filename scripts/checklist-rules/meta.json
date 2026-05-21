@@ -1,0 +1,155 @@
+{
+  "scoreProfile": "scripts/krds-ruleset.json",
+  "rules": [
+    {
+      "id": "doctype",
+      "engine": "static",
+      "checklistIds": [],
+      "description": "HTML5 doctype 선언"
+    },
+    {
+      "id": "lang-ko",
+      "engine": "static",
+      "checklistIds": [],
+      "description": "html lang=ko"
+    },
+    {
+      "id": "meta-charset",
+      "engine": "static",
+      "checklistIds": [],
+      "description": "meta charset"
+    },
+    {
+      "id": "meta-viewport",
+      "engine": "static",
+      "checklistIds": [],
+      "description": "meta viewport"
+    },
+    {
+      "id": "meta-description",
+      "engine": "static",
+      "checklistIds": [],
+      "description": "meta description"
+    },
+    {
+      "id": "landmark-header",
+      "engine": "static",
+      "checklistIds": [],
+      "description": "header landmark"
+    },
+    {
+      "id": "landmark-nav",
+      "engine": "static",
+      "checklistIds": ["component.header.3"],
+      "description": "nav landmark"
+    },
+    {
+      "id": "landmark-main",
+      "engine": "static",
+      "checklistIds": [],
+      "description": "main landmark"
+    },
+    {
+      "id": "landmark-footer",
+      "engine": "static",
+      "checklistIds": ["component.footer.2"],
+      "description": "footer landmark"
+    },
+    {
+      "id": "selector-krds-skip-link",
+      "engine": "static",
+      "checklistIds": ["component.skip-link.2"],
+      "description": "#krds-skip-link"
+    },
+    {
+      "id": "selector-wrap-g-wrap",
+      "engine": "static",
+      "checklistIds": [],
+      "description": "#wrap.g-wrap"
+    },
+    {
+      "id": "selector-krds-masthead",
+      "engine": "static",
+      "checklistIds": ["component.official-banner.1"],
+      "description": "#krds-masthead"
+    },
+    {
+      "id": "selector-krds-header",
+      "engine": "static",
+      "checklistIds": ["component.header.2"],
+      "description": "#krds-header"
+    },
+    {
+      "id": "selector-container",
+      "engine": "static",
+      "checklistIds": [],
+      "description": "#container"
+    },
+    {
+      "id": "selector-content",
+      "engine": "static",
+      "checklistIds": [],
+      "description": "#content"
+    },
+    {
+      "id": "selector-krds-footer",
+      "engine": "static",
+      "checklistIds": ["component.footer.2"],
+      "description": "#krds-footer"
+    },
+    {
+      "id": "class-krds-btn",
+      "engine": "static",
+      "checklistIds": ["component.button.1"],
+      "description": "krds-btn class usage"
+    },
+    {
+      "id": "class-krds-input",
+      "engine": "static",
+      "checklistIds": [],
+      "description": "krds-input class usage"
+    },
+    {
+      "id": "class-krds-form",
+      "engine": "static",
+      "checklistIds": ["pattern.basic.form.1"],
+      "description": "krds-form class usage"
+    },
+    {
+      "id": "class-krds-table",
+      "engine": "static",
+      "checklistIds": [],
+      "description": "krds-table class usage"
+    },
+    {
+      "id": "class-krds-badge",
+      "engine": "static",
+      "checklistIds": [],
+      "description": "krds-badge class usage"
+    },
+    {
+      "id": "class-sr-only",
+      "engine": "static",
+      "checklistIds": [],
+      "description": "sr-only class usage"
+    },
+    {
+      "id": "nav-aria-label",
+      "engine": "static",
+      "checklistIds": ["component.main-menu.5"],
+      "description": "nav aria-label"
+    },
+    {
+      "id": "table-semantic",
+      "engine": "static",
+      "checklistIds": [],
+      "description": "table thead/tbody"
+    },
+    {
+      "id": "image-has-alt",
+      "engine": "static",
+      "checklistIds": [],
+      "description": "img alt attribute"
+    }
+  ]
+}

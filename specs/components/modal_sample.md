@@ -65,10 +65,16 @@ modal (부모)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Modal Sample 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<section id="modal_sample_01" class="krds-modal fade in shown font-krds w-full" role="dialog" aria-labelledby="tit_modal_sample_01" data-krds-component="modal_sample">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<!-- modal title -->
+			<div class="modal-header">
+				<h2 id="tit_modal_sample_01" class="modal-title">
+					모달 제목
+				</h2>
+			</div>
 ```
 
 ## Page Context

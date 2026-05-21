@@ -62,10 +62,16 @@ modal (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Modal 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<section id="modal_sample_03" class="krds-modal fade font-krds w-full" role="dialog" aria-labelledby="tit_modal_sample_03" data-krds-component="modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<!-- modal title -->
+			<div class="modal-header">
+				<h2 id="tit_modal_sample_03" class="modal-title">
+					모달 제목
+				</h2>
+			</div>
 ```
 
 ## Page Context

@@ -44,10 +44,19 @@ toggle_switch (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Toggle Switch 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="krds-form-toggle-switch flex flex-col gap-krds-4 font-krds max-w-2xl" data-krds-component="toggle_switch">
+	<input type="checkbox" id="switch">
+	<label for="switch"><span class="switch-toggle"><i></i></span>switch : default</label>
+</div>
+<div class="krds-form-toggle-switch flex flex-col gap-krds-4 font-krds max-w-2xl">
+	<input type="checkbox" id="switch_checked" checked>
+	<label for="switch_checked"><span class="switch-toggle"><i></i></span>switch : checked</label>
+</div>
+<div class="krds-form-toggle-switch flex flex-col gap-krds-4 font-krds max-w-2xl">
+	<input type="checkbox" id="switch_disabled_1" disabled>
+	<label for="switch_disabled_1"><span class="switch-toggle"><i></i></span>switch : disabled</label>
+</div>
 ```
 
 ## Page Context

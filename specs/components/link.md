@@ -49,10 +49,24 @@ link (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Link 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<a href="https://www.site_name.com/" class="krds-btn small link inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-body-sm min-h-[30px] px-krds-2 py-krds-1" target="_blank" title="새 창 열림" data-krds-component="link">
+	<span class="underline">기본 링크</span>
+	<i class="svg-icon ico-go"></i>
+</a>
+<a href="#!" class="krds-btn medium link pure inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-body-md">
+	<span class="underline">가상클래스 상태 시 컬러 유지</span>
+</a>
+<a href="#!" class="krds-btn large link basic inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-body-lg" target="_blank" title="새 창 열림">
+	<span class="underline">본문 텍스트 컬러 링크</span>
+	<i class="svg-icon ico-go"></i>
+</a>
+<a href="#!" class="krds-btn large link basic inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-body-lg">
+	<span class="underline hidden-underline">가상클래스 상태 시 밑줄</span>
+</a>
+<a href="#!" class="krds-btn large link basic inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-body-lg">
+	<span>밑줄 없음</span>
+</a>
 ```
 
 ## Page Context

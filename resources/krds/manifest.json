@@ -3,12 +3,8 @@
   "version": "1.1.0",
   "source": "https://github.com/KRDS-uiux/krds-uiux",
   "sourcePackage": "krds-uiux",
-  "mirrors": {
-    "assets": "assets/krds",
-    "references": "references/krds"
-  },
-  "componentCount": 74,
   "componentRoot": "assets/krds/html/code",
+  "componentCount": 74,
   "reports": {
     "krdsCatalog": "reports/krds-uiux-files.md",
     "designMdCatalog": "reports/design-md-files.md",

@@ -72,10 +72,56 @@ radio_button (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Radio Button 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="fieldset font-krds" data-krds-component="radio_button">
+	<div class="form-group">
+		<div class="form-conts">
+			<div class="krds-check-area inline-flex items-center gap-krds-2 font-krds">
+				<div class="krds-form-check flex flex-col gap-krds-4 font-krds max-w-2xl">
+					<input type="radio" name="rdo_1" id="rdo_1">
+					<label for="rdo_1">기본</label>
+				</div>
+				<div class="krds-form-check flex flex-col gap-krds-4 font-krds max-w-2xl">
+					<input type="radio" name="rdo_1" id="rdo_2" checked>
+					<label for="rdo_2">선택됨</label>
+				</div>
+				<div class="krds-form-check flex flex-col gap-krds-4 font-krds max-w-2xl">
+					<input type="radio" name="rdo_1" id="rdo_3" disabled>
+					<label for="rdo_3">비활성화</label>
+				</div>
+				<div class="krds-form-check flex flex-col gap-krds-4 font-krds max-w-2xl">
+					<input type="radio" name="rdo_1a" id="rdo_4" disabled checked>
+					<label for="rdo_4">선택된 비활성화</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="form-conts">
+			<div class="krds-check-area chk-column inline-flex items-center gap-krds-2 font-krds">
+				<div class="krds-form-check flex flex-col gap-krds-4 font-krds max-w-2xl">
+					<input type="radio" name="rdo_1" id="rdo_1-1" checked>
+					<label for="rdo_1-1">라디오버튼</label>
+					<div class="krds-form-check-cnt flex flex-col gap-krds-4 font-krds max-w-2xl">
+						<p class="krds-form-check-p flex flex-col gap-krds-4 font-krds max-w-2xl">
+							부가적인 설명이 들어갑니다.
+						</p>
+					</div>
+				</div>
+				<div class="krds-form-check flex flex-col gap-krds-4 font-krds max-w-2xl">
+					<input type="radio" name="rdo_1" id="rdo_1-2">
+					<label for="rdo_1-2">라디오버튼</label>
+					<div class="krds-form-check-cnt flex flex-col gap-krds-4 font-krds max-w-2xl">
+						<p class="krds-form-check-p flex flex-col gap-krds-4 font-krds max-w-2xl">
+							부가적인 설명이 들어갑니다.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 ```
 
 ## Page Context

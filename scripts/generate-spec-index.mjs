@@ -37,12 +37,24 @@ function buildComponentTree(name, meta) {
   return lines.join('\n');
 }
 
-function buildTailwindExample(name, meta) {
+async function loadTailwindSnippet(name) {
+  const snippetPath = path.join(root, 'packages/krds-tailwind/src/components', `${name}.html`);
+  try {
+    const raw = await fs.readFile(snippetPath, 'utf8');
+    return raw
+      .replace(/^(?:<!--[\s\S]*?-->\s*)+/g, '')
+      .trim();
+  } catch {
+    return null;
+  }
+}
+
+function buildTailwindFallback(name) {
   const cls = name.startsWith('button') ? 'krds-btn primary' :
     name.includes('input') || name.includes('select') || name === 'textarea' ? 'krds-input' :
     name.includes('table') ? 'krds-table' :
     name.includes('badge') ? 'krds-badge' : 'krds-component';
-  return `<button type="button" class="${cls} bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">\n  ${titleize(name)} 예시\n</button>`;
+  return `<button type="button" class="${cls} bg-krds-primary rounded-krds-sm px-krds-4 py-krds-3 font-krds" data-krds-component="${name}">\n  ${titleize(name)} 예시\n</button>`;
 }
 
 let created = 0;
@@ -79,6 +91,8 @@ for (const file of files) {
     ? meta.variants.join(', ')
     : '—';
 
+  const tailwindSnippet = (await loadTailwindSnippet(name)) || buildTailwindFallback(name);
+
   const content = `# ${titleize(name)} (\`${name}\`)
 
 > **Category**: ${catMeta.en} (${catMeta.ko})
@@ -111,8 +125,8 @@ ${htmlSnippet}${htmlSnippet.length >= 1200 ? '\n<!-- truncated at 1200 chars -->
 ## Tailwind
 
 \`\`\`html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-${buildTailwindExample(name, meta)}
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+${tailwindSnippet}
 \`\`\`
 
 ## Page Context

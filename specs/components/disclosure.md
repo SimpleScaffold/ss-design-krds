@@ -42,10 +42,18 @@ disclosure (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Disclosure 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="krds-disclosure conts-expand-area font-krds border-b border-krds-border" data-krds-component="disclosure">
+	<button type="button" class="btn-conts-expand">신청 서비스안내</button>
+	<div class="expand-wrap">
+		<div class="expand-in">
+			<ul class="krds-info-list dash">
+				<li>하나의 아이디로 안전하고 편리하게 여러 전자정부 서비스를 이용할 수 있는 서비스입니다.</li>
+				<li>디지털원패스 이용문의 : 1533-3713 (평일9~18시, 공휴일제외)</li>
+			</ul>
+		</div>
+	</div>
+</div>
 ```
 
 ## Page Context

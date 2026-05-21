@@ -58,10 +58,35 @@ coach_mark (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Coach Mark 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="txt-box bg-white krds-coach-mark font-krds" data-krds-component="coach_mark">
+	<!-- 따라하기 말풍선 -->
+	<div class="coach-balloon">
+		<h5 class="sr-only">따라하기 가이드</h5>
+		<h6 class="coach-tit">1단계 : 코치 마크</h6>
+		<p class="desc">1단계 코치 마크 내용입니다.</p>
+		<div class="coach-controls">
+			<div class="num">
+				<span class="sr-only">현재 단계</span>
+				<strong>1</strong>
+				<span class="sr-only">총 단계</span>
+				<span>4</span>
+			</div>
+			<div class="btn-wrap">
+				<button type="button" class="krds-btn small text inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-body-sm min-h-[30px] px-krds-2 py-krds-1 border-0 bg-transparent">그만보기</button>
+				<button type="button" class="krds-btn small tertiary inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border bg-krds-surface border-krds-border text-krds-body-sm min-h-[30px] px-krds-2 py-krds-1">다음으로</button>
+			</div>
+		</div>
+	</div>
+	<!--// 따라하기 말풍선 -->
+
+	<!-- 코치 마크 내용 -->
+	<div>
+		<h3>코치 마크 내용</h3>
+	</div>
+	<!-- //코치 마크 내용 -->
+</div>
+<!-- coach mark -->
 ```
 
 ## Page Context

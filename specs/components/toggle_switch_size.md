@@ -40,10 +40,15 @@ toggle_switch (부모)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Toggle Switch Size 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="krds-form-toggle-switch large flex flex-col gap-krds-4 font-krds max-w-2xl text-krds-body-lg" data-krds-component="toggle_switch_size">
+	<input type="checkbox" id="switch_lg_1">
+	<label for="switch_lg_1"><span class="switch-toggle"><i></i></span>switch size : large</label>
+</div>
+<div class="krds-form-toggle-switch medium flex flex-col gap-krds-4 font-krds max-w-2xl text-krds-body-md">
+	<input type="checkbox" id="switch_lg_md">
+	<label for="switch_lg_md"><span class="switch-toggle"><i></i></span>switch size : medium</label>
+</div>
 ```
 
 ## Page Context

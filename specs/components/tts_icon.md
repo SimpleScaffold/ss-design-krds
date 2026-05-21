@@ -51,10 +51,27 @@ tts (부모)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Tts Icon 예시
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<button type="button" class="krds-tts medium font-krds inline-flex gap-krds-2 text-krds-body-md w-full" data-krds-component="tts_icon">
+	<span class="krds-tts-icon font-krds inline-flex gap-krds-2" aria-hidden="true">
+		<i class="svg-icon ico-volume"></i>
+	</span>
 </button>
+
+<!-- TTS 버튼 - Play 타입 -->
+<button type="button" class="krds-tts medium play font-krds inline-flex gap-krds-2 text-krds-body-md">
+	<span class="krds-tts-icon font-krds inline-flex gap-krds-2" aria-hidden="true">
+		<i class="svg-icon ico-play"></i>
+	</span>
+</button>
+
+<!-- TTS 버튼 - 상태 예시 -->
+<button type="button" class="krds-tts medium font-krds inline-flex gap-krds-2 text-krds-body-md" disabled>
+	<span class="krds-tts-icon font-krds inline-flex gap-krds-2" aria-hidden="true">
+		<i class="svg-icon ico-volume"></i>
+	</span>
+</button>
+<!-- //TTS 버튼 -->
 ```
 
 ## Page Context

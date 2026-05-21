@@ -123,4 +123,8 @@ KRDS Tokens
 ## 참고
 
 - [gracefullight/krds-tokens](https://github.com/gracefullight/krds/tree/main/packages/krds-tokens)
-- [KRDS 디자인 토큰](https://www.krds.go.kr/html/site/style/style02.html)
+- [docs/style/색상.md](../docs/style/색상.md) — KRDS 색상·매직넘버 상세
+- [docs/style/타이포그래피.md](../docs/style/타이포그래피.md) — Pretendard GOV·글자 스케일
+- [docs/style/디자인-토큰.md](../docs/style/디자인-토큰.md) — primitive/semantic/component
+- [docs/style/index.md](../docs/style/index.md) — 스타일 가이드 전체
+- [KRDS 디자인 토큰](https://www.krds.go.kr/html/site/style/style_07.html)

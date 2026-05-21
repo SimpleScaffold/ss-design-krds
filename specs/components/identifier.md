@@ -37,10 +37,13 @@ identifier (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Identifier 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="krds-identifier font-krds text-krds-primary font-bold tracking-widest text-krds-label-sm" data-krds-component="identifier">
+	<span class="logo">
+		<span class="sr-only">KRDS - Korea Design System</span>
+	</span>
+	<span class="ban-txt">이 누리집은 보건복지부 누리집입니다.</span>
+</div>
 ```
 
 ## Page Context

@@ -59,10 +59,71 @@ carousel (부모)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Carousel Banner 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="main-sect font-krds max-w-7xl" data-krds-component="carousel_banner">
+    <div class="inner">
+        <div class="main-box-responsive type-wrap">
+            <div class="d-fix">
+                <div class="main-tit-wrap">
+                    <h2 class="tit">배너영역 타이틀</h2>
+                </div>
+
+                <div class="in">
+                    <div class="main-d-ban-swiper">
+                        <div class="swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <div class="text border-0 bg-transparent">
+                                        <p class="cate">서브타이틀</p>
+                                        <p class="tit">타이틀</p>
+                                    </div>
+                                    <div class="im">
+                                        <svg width="243" height="178" viewBox="0 0 243 178" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="예시">
+                                            <rect width="243" height="178" fill="#E6E8EA" />
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="text border-0 bg-transparent">
+                                        <p class="cate">서브타이틀</p>
+                                        <p class="tit">타이틀</p>
+                                    </div>
+                                    <div class="im">
+										<svg width="243" height="178" viewBox="0 0 243 178" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="예시">
+											<rect width="243" height="178" fill="#E6E8EA"/>
+										</svg>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-indicator">
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-controller">
+                                <button type="button" class="swiper-button-play">
+                                    <span class="sr-only">슬라이드 재생</span>
+                                </button>
+                                <button type="button" class="swiper-button-stop">
+                                    <span class="sr-only">슬라이드 멈춤</span>
+                                </button>
+                            </div>
+                            <div class="swiper-navigation">
+                                <button type="button" class="swiper-button-prev">
+                                    <span class="sr-only">이전</span>
+                                </button>
+                                <button type="button" class="swiper-button-next">
+                                    <span class="sr-only">다음</span>
+                                </button>
+                                <a href="#" class="swiper-button-more">
+                                    <span class="sr-only">더 보기</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 ```
 
 ## Page Context

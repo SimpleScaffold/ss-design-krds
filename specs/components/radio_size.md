@@ -42,10 +42,17 @@ radio_button (부모)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Radio Size 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="krds-check-area inline-flex items-center gap-krds-2 font-krds" data-krds-component="radio_size">
+	<div class="krds-form-check medium flex flex-col gap-krds-4 font-krds max-w-2xl text-krds-body-md">
+		<input type="radio" name="rdo_2-1" id="rdo_2-2">
+		<label for="rdo_2-2">사이즈 : medium</label>
+	</div>
+	<div class="krds-form-check large flex flex-col gap-krds-4 font-krds max-w-2xl text-krds-body-lg">
+		<input type="radio" name="rdo_2-1" id="rdo_2-3">
+		<label for="rdo_2-3">사이즈 : large</label>
+	</div>
+</div>
 ```
 
 ## Page Context

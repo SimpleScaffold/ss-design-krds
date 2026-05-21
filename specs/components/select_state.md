@@ -50,10 +50,25 @@ select (부모)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-input bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Select State 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="fieldset font-krds" data-krds-component="select_state">
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="select_error">레이블</label>
+		</div>
+		<div class="form-conts">
+			<select id="select_error" class="krds-form-select is-error flex flex-col gap-krds-4 font-krds max-w-2xl" title="선택">
+				<option value="">항목1</option>
+				<option value="">항목2</option>
+				<option value="">항목3</option>
+				<option value="">항목4</option>
+			</select>
+		</div>
+		<p class="form-hint-invalid">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+</div>
 ```
 
 ## Page Context

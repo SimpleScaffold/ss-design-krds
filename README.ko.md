@@ -10,13 +10,28 @@ AI 에이전트(Claude, Cursor 등)가 [KRDS(Korea Design System)](https://www.k
 
 ```text
 docs/
-├── index.md                   ← ★ 시작
-├── reading-guide.md           ← 시나리오별 읽기 순서
-├── repo-tree.md               ← 저장소 트리
-├── page-structure-tree.md     ← 페이지 DOM 계층
-├── workflow-tree.md           ← plan/transform/improve
-└── component-category-tree.md ← KRDS 10패밀리 74컴포넌트
+├── index.md                      ← ★ 시작
+├── reading-guide.md              ← 시나리오별 읽기 순서
+├── repo-tree.md                  ← 저장소 트리
+├── page-structure-tree.md        ← 페이지 DOM 계층
+├── workflow-tree.md              ← plan/transform/improve
+├── validation-checklist-tree.md  ← 공식 311항 체크리스트
+├── component-category-tree.md    ← KRDS 10패밀리 74컴포넌트
+└── style/                        ← KRDS 공식 스타일 가이드 (9페이지 MD)
 ```
+
+## 스타일 가이드
+
+KRDS 공식 스타일 페이지(색상·타이포·형태 등)를 [`docs/style/`](docs/style/index.md) MD로 변환해 두었습니다.
+
+| 무엇 | 어디 | 용도 |
+|------|------|------|
+| 스타일 지식 | `docs/style/` | AI가 색상·타이포·레이아웃 규칙을 먼저 읽음 |
+| 토큰 요약 | `specs/tokens.md` | 빠른 참조; 상세는 `docs/style/` |
+| 페이지 검증 | `npm run krds:checklist` | 311항 중 스타일 21항 → browser 규칙 |
+| 공유 임계값 | `scripts/style-guide-lib.mjs` | gov 17px, 행간 1.5, radius 2–12px 등 |
+
+흐름: `docs/style/` → `style-guide-lib.mjs` → 체크리스트 browser 규칙 · MD 검증
 
 ## 무엇인가요?
 
@@ -26,7 +41,7 @@ ss-design-krds는 [KRDS HTML Component Kit](https://github.com/KRDS-uiux/krds-ui
 2. **`krds-transform`** — 기존 UI를 KRDS 규칙으로 전환
 3. **`krds-improve`** — 규칙 검증 후 score ≥ 95까지 반복 개선
 
-74개 HTML 컴포넌트, Markdown 스펙(HTML + Tailwind 예시), 기계 검증 스크립트를 포함합니다.
+74개 HTML 컴포넌트, Markdown 스펙(HTML + Tailwind 예시), **`@simplescaffold/krds-tailwind`** npm 패키지, 기계 검증 스크립트를 포함합니다.
 
 ## 설치
 
@@ -45,6 +60,20 @@ cp -R ss-design-krds/skills/krds-* ~/.cursor/skills/
 # 또는
 npx skills add SimpleScaffold/ss-design-krds
 ```
+
+### Tailwind 패키지
+
+```bash
+npm install @simplescaffold/krds-tailwind tailwindcss
+# 또는 monorepo 내
+npm run krds:build:tailwind
+```
+
+- CSS: `@import "@simplescaffold/krds-tailwind"`
+- HTML 스니펫: `dist/components/*.html` (74개)
+- 샘플: `experiment/sample-page/tailwind.html`
+
+자세한 내용: [`packages/krds-tailwind/README.md`](packages/krds-tailwind/README.md)
 
 ### npm 검증 (CI)
 
@@ -81,8 +110,15 @@ krds-improve로 score 95 이상, failed rules 0까지 개선해 주세요.
 ## 검증
 
 ```bash
+npm install
+npx playwright install chromium   # L2 browser 체크리스트 (WSL/CI)
 npm run krds:score      # 유사도 점수 (기준: 95)
-npm run krds:coverage   # 컴포넌트 참조 커버리지
+npm run krds:score:tailwind  # Tailwind 샘플 유사도
+npm run krds:build:tailwind  # Tailwind CSS + 74 스니펫 빌드
+npm run krds:checklist  # 공식 311항 자체 검증 체크리스트
+npm run krds:style:md:validate  # 스타일 MD 무결성 (9페이지)
+npm run krds:style:md   # KRDS 사이트 → docs/style/ 재생성 (유지보수)
+npm run krds:coverage   # 컴포넌트 참조 커버리지 (index + tailwind)
 npm run krds:validate   # 저장소 전체 검증
 npm run krds:improve    # 반복 개선 루프
 ```
@@ -90,12 +126,15 @@ npm run krds:improve    # 반복 개선 루프
 ## 디렉터리 구조
 
 ```
+docs/style/      KRDS 공식 스타일 가이드 MD (색상·타이포·형태 등)
+specs/           Markdown 스펙 (토큰, 컴포넌트, 패턴, validation/)
+resources/       체크리스트 JSON·manifest (official-checklist.json)
 skills/          에이전트 워크플로 (plan, transform, improve)
-specs/           Markdown 스펙 (토큰, 컴포넌트, 패턴)
 assets/krds/     KRDS-uiux HTML/CSS 벤더 (74개 컴포넌트)
-scripts/         검증 하네스
+scripts/         검증 하네스 (style-guide-lib, checklist, similarity)
 templates/       소비 프로젝트 부트스트랩
-experiment/      참조 구현
+packages/        @simplescaffold/krds-tailwind
+experiment/      참조 구현 (index.html + tailwind.html)
 ```
 
 ## 참고 자료

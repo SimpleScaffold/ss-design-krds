@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "description": "Manual checklist result template — fill status P|F|E|N/A per item",
+  "meta": {
+    "target": "",
+    "tier": ["gov", "self", "common"],
+    "verifiedAt": "",
+    "verifier": ""
+  },
+  "results": [
+    {
+      "id": "component.official-banner.1",
+      "status": "P",
+      "note": ""
+    }
+  ]
+}

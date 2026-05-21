@@ -10,7 +10,7 @@ ss-design-krds는 **프레임워크에 종속되지 않는 MD 스펙**을 제공
 │   ├── MUI 사용? → gracefullight/krds (references/gracefullight-krds.md)
 │   └── Tailwind 사용? → krds-react (references/krds-react.md)
 ├── Tailwind만?
-│   └── templates/tailwind-theme.css + krds- 클래스
+│   └── @simplescaffold/krds-tailwind (packages/krds-tailwind)
 ├── 순수 HTML/CSS?
 │   └── assets/krds/html/code/ + resources/css/
 └── AI 설계만 (코드 없음)?
@@ -24,7 +24,7 @@ flowchart TD
   mui -->|Yes| gracefullight[gracefullight/krds]
   mui -->|No| krdsReact[krds-react]
   react -->|No| tailwind{Tailwind}
-  tailwind -->|Yes| twTheme[tailwind-theme.css]
+  tailwind -->|Yes| krdsTw[@simplescaffold/krds-tailwind]
   tailwind -->|No| htmlCss[HTML krds-uiux]
 ```
 
@@ -33,7 +33,7 @@ flowchart TD
 | 상황 | 권장 스택 | 참조 |
 |------|-----------|------|
 | 정부 누리집 HTML/CSS | **HTML + krds-uiux** | `assets/krds/html/code/` |
-| Tailwind 프로젝트 | **HTML classes + @theme** | `templates/tailwind-theme.css` |
+| Tailwind 프로젝트 | **@simplescaffold/krds-tailwind** | `packages/krds-tailwind/` |
 | React + Tailwind | **krds-react** | `references/krds-react.md` |
 | React + MUI | **gracefullight/krds** | `references/gracefullight-krds.md` |
 | AI 에이전트 설계만 | **specs/ MD** | `specs/components/`, `specs/tokens.md` |
@@ -52,15 +52,25 @@ flowchart TD
 
 ## Tailwind CSS v4
 
-KRDS 토큰을 `@theme`으로 매핑하고, `krds-` 클래스와 병행합니다.
+[`@simplescaffold/krds-tailwind`](../packages/krds-tailwind/) 패키지가 KRDS 토큰 `@theme`, 공식 `output.css`, 74개 HTML 스니펫을 제공합니다.
 
-```html
-<link rel="stylesheet" href="templates/tailwind-theme.css" />
-<button class="krds-btn primary bg-krds-primary rounded-krds-sm">신청하기</button>
+```bash
+npm install @simplescaffold/krds-tailwind tailwindcss
 ```
 
-**장점**: 유틸리티와 KRDS 클래스 혼용 가능  
-**참조**: `experiment/sample-page/tailwind.html`
+```css
+@import "tailwindcss";
+@import "@simplescaffold/krds-tailwind/theme";
+@import "@simplescaffold/krds-tailwind";
+```
+
+```html
+<button class="krds-btn primary bg-krds-primary rounded-krds-sm px-krds-4 font-krds">신청하기</button>
+```
+
+**장점**: 유틸리티와 KRDS 클래스 혼용, 컴포넌트 스니펫 npm import  
+**참조**: `experiment/sample-page/tailwind.html` · `npm run krds:build:tailwind`  
+**레거시**: `templates/tailwind-theme.css`는 빌드 시 `packages/krds-tailwind/src/theme.css`와 동기화됩니다.
 
 ## React
 

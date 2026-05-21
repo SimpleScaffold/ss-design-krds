@@ -12,6 +12,8 @@ AI 에이전트가 KRDS UI 작업 시 **어떤 MD를 어떤 순서로** 읽어�
 │   └── 왜: KRDS 필수 DOM 골격(#krds-header, #content 등) 이해
 ├── 3. specs/tokens.md
 │   └── 왜: hex/폰트를 임의로 만들지 않고 토큰 키 사용
+├── 3b. docs/style/index.md (필요 시)
+│   └── 왜: 색상·타이포·레이아웃 등 공식 스타일 규칙 상세 확인
 ├── 4. specs/components/_categories.md
 │   └── 왜: 74개 중 필요한 컴포넌트를 패밀리별로 빠르게 찾기
 ├── 5. specs/components/<name>.md (필요한 것만)
@@ -71,12 +73,28 @@ AI 에이전트가 KRDS UI 작업 시 **어떤 MD를 어떤 순서로** 읽어�
 
 ---
 
+## 시나리오 4: 스타일·체크리스트 검증
+
+```text
+[스타일 검증]
+├── 1. docs/style/index.md
+│   └── 왜: 색상·타이포·형태·레이아웃 공식 규칙 한눈에 파악
+├── 2. docs/style/<주제>.md (실패 항목에 맞게)
+│   └── 왜: 매직넘버, 브레이크포인트, Pretendard GOV 등 준수 기준
+├── 3. specs/validation/style.md
+│   └── 왜: 21항 스타일 체크리스트 ↔ spec 매핑
+└── 4. npm run krds:checklist -- --target <file>
+    └── 왜: 브라우저 기반 스타일 항목 자동 점검
+```
+
+---
+
 ## 읽지 않아도 되는 경우
 
 | 파일 | 언제 스킵 |
 |------|-----------|
 | `assets/krds/resources/` | CSS/JS 빌드 산출물 — MD+html/code로 충분 |
-| `references/krds/` | assets와 동일 미러 — lookup용 |
+| `references/` (krds-react 등) | React/MUI 스택 참고 — HTML 작업 시 스킵 |
 | `experiment/sample-page/` | 참조 구현이 필요할 때만 |
 | `references/krds-react.md` | React 프로젝트가 아닐 때 |
 

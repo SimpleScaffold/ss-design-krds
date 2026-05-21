@@ -34,10 +34,11 @@ skip_link (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Skip Link 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div id="krds-skip-link" class="font-krds" data-krds-component="skip_link">
+	<a href="#breadcrumb">본문 바로가기</a>
+</div>
+<!-- //건너뛰기 링크 -->
 ```
 
 ## Page Context

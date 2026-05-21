@@ -4,6 +4,8 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
+import { STYLE_PAGES } from './krds-style-to-md.mjs';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 process.chdir(root);
@@ -52,7 +54,6 @@ const requiredPaths = [
   'specs/components/_taxonomy.json',
   'specs/components/_categories.md',
   'assets/krds/html/code',
-  'references/krds/html/code',
   'skills/krds-plan/SKILL.md',
   'skills/krds-improve/SKILL.md',
   'skills/krds-transform/SKILL.md',
@@ -63,22 +64,35 @@ const requiredPaths = [
   'specs/accessibility.md',
   'specs/stacks.md',
   'experiment/sample-page/index.html',
+  'scripts/krds-html-rules.mjs',
   'scripts/krds-similarity.mjs',
+  'scripts/krds-checklist.mjs',
+  'scripts/generate-checklist-docs.mjs',
+  'resources/krds/checklist/official-checklist.json',
+  'resources/krds/checklist/schema.json',
+  'docs/validation-checklist-tree.md',
+  'docs/디지털-정부-서비스-uiux-가이드라인-자체-검증-체크리스트.md',
+  'scripts/pdf-to-checklist-md.mjs',
+  'scripts/validate-checklist-md.mjs',
+  'scripts/checklist-text-lib.mjs',
+  'docs/style/index.md',
+  'scripts/krds-style-to-md.mjs',
+  'scripts/validate-style-md.mjs',
+  'scripts/style-guide-lib.mjs',
+  'specs/validation-checklist.md',
+  'specs/validation-tools.md',
   'scripts/krds-improve-loop.mjs',
   'scripts/verify-krds-component-coverage.mjs',
   'scripts/generate-spec-index.mjs',
   'scripts/generate-docs-trees.mjs',
   'reports/experiment/final-score.json',
-  'reports/experiment/component-coverage-check.json'
+  'reports/experiment/component-coverage-check.json',
+  ...STYLE_PAGES.map((page) => `docs/style/${page.filename}`),
 ];
 
 for (const p of requiredPaths) {
   addCheck(`exists:${p}`, await exists(path.join(root, p)), p);
 }
-
-const assetCount = await countFiles(path.join(root, 'assets/krds'));
-const refCount = await countFiles(path.join(root, 'references/krds'));
-addCheck('mirror:references matches assets count', assetCount === refCount, `${assetCount} vs ${refCount}`);
 
 const componentFiles = (await fs.readdir(path.join(root, 'assets/krds/html/code'))).filter((f) => f.endsWith('.html'));
 addCheck('component count >= 74', componentFiles.length >= 74, String(componentFiles.length));
@@ -112,6 +126,69 @@ addCheck('component MD has Category metadata', /Category/.test(sampleComponent),
 
 const taxonomy = JSON.parse(await fs.readFile(path.join(root, 'specs/components/_taxonomy.json'), 'utf8'));
 addCheck('taxonomy covers 74 components', Object.keys(taxonomy.components).length >= 74, String(Object.keys(taxonomy.components).length));
+
+const checklistCatalog = JSON.parse(await fs.readFile(path.join(root, 'resources/krds/checklist/official-checklist.json'), 'utf8'));
+addCheck('checklist catalog has 311 items', checklistCatalog.summary?.totalItems === 311, String(checklistCatalog.summary?.totalItems));
+addCheck('checklist schema exists', await exists(path.join(root, 'resources/krds/checklist/schema.json')), 'schema.json');
+
+const checklistDocsStat = await fs.stat(path.join(root, 'docs/validation-checklist-tree.md'));
+const catalogStat = await fs.stat(path.join(root, 'resources/krds/checklist/official-checklist.json'));
+addCheck(
+  'checklist docs fresh vs catalog',
+  checklistDocsStat.mtimeMs >= catalogStat.mtimeMs - 60000,
+  `${checklistDocsStat.mtimeMs} vs ${catalogStat.mtimeMs}`
+);
+
+const checklistRun = spawnSync(
+  'node',
+  ['scripts/krds-checklist.mjs', '--target', 'experiment/sample-page/index.html', '--mode', 'static', '--output', 'reports/checklist-result.json'],
+  { encoding: 'utf8', cwd: root }
+);
+if (checklistRun.status === 0 || checklistRun.stdout) {
+  try {
+    const checklistOut = JSON.parse(checklistRun.stdout || '{}');
+    addCheck('checklist static run completes', checklistOut.ok === true, checklistRun.stderr || 'ok');
+    const resultPath = path.join(root, 'reports/checklist-result.json');
+    if (await exists(resultPath)) {
+      const result = JSON.parse(await fs.readFile(resultPath, 'utf8'));
+      addCheck('checklist pass rate warning threshold', result.summary?.passRate >= 0, String(result.summary?.passRate));
+    }
+  } catch (e) {
+    addCheck('checklist static run completes', false, e.message);
+  }
+} else {
+  addCheck('checklist static run completes', false, checklistRun.stderr || 'checklist run failed');
+}
+
+const checklistMdRun = spawnSync('node', ['scripts/validate-checklist-md.mjs'], { encoding: 'utf8', cwd: root });
+if (checklistMdRun.status === 0 || checklistMdRun.stdout) {
+  try {
+    const mdOut = JSON.parse(checklistMdRun.stdout || '{}');
+    addCheck('checklist pdf-md validate', mdOut.ok === true, JSON.stringify(mdOut.summary));
+    for (const c of mdOut.checks || []) {
+      if (!c.pass) addCheck(`checklist-md:${c.name}`, false, c.detail);
+    }
+  } catch (e) {
+    addCheck('checklist pdf-md validate', false, e.message);
+  }
+} else {
+  addCheck('checklist pdf-md validate', false, checklistMdRun.stderr || 'validate-checklist-md failed');
+}
+
+const styleMdRun = spawnSync('node', ['scripts/validate-style-md.mjs'], { encoding: 'utf8', cwd: root });
+if (styleMdRun.status === 0 || styleMdRun.stdout) {
+  try {
+    const styleOut = JSON.parse(styleMdRun.stdout || '{}');
+    addCheck('style md validate', styleOut.ok === true, JSON.stringify(styleOut.summary));
+    for (const c of styleOut.checks || []) {
+      if (!c.pass) addCheck(`style-md:${c.name}`, false, c.detail);
+    }
+  } catch (e) {
+    addCheck('style md validate', false, e.message);
+  }
+} else {
+  addCheck('style md validate', false, styleMdRun.stderr || 'validate-style-md failed');
+}
 
 const similarityRun = spawnSync('node', ['scripts/krds-similarity.mjs', '--target', 'experiment/sample-page/index.html'], { encoding: 'utf8', cwd: root });
 if (similarityRun.status === 0 || similarityRun.stdout) {

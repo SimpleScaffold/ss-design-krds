@@ -40,10 +40,16 @@ masthead (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Masthead 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div id="krds-masthead" class="font-krds" data-krds-component="masthead">
+	<div class="toggle-wrap">
+		<div class="toggle-head">
+			<div class="inner">
+				<span class="nuri-txt">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+			</div>
+		</div>
+	</div>
+</div>
 ```
 
 ## Page Context

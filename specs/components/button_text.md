@@ -39,10 +39,14 @@ button (부모)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-btn primary bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Button Text 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<button type="button" class="krds-btn small text inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-body-sm min-h-[30px] px-krds-2 py-krds-1 border-0 bg-transparent" data-krds-component="button_text">텍스트 버튼</button>
+<button type="button" class="krds-btn xsmall text inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-label-sm min-h-[30px] px-krds-2 py-krds-1 border-0 bg-transparent">찜하기 <i class="svg-icon ico-like"></i></button>
+<button type="button" class="krds-btn small text inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-body-sm min-h-[30px] px-krds-2 py-krds-1 border-0 bg-transparent">주민등록표초본 <i class="svg-icon ico-angle right"></i></button>
+<button type="button" class="krds-btn medium text inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-body-md border-0 bg-transparent">검색 <i class="svg-icon ico-sch"></i></button>
+<button type="button" class="krds-btn xlarge text inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border border-0 bg-transparent">자세히 보기 <i class="svg-icon ico-more"></i></button>
+<button type="button" class="krds-btn text inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border border-0 bg-transparent">파일다운로드 <i class="svg-icon ico-down"></i></button>
+<button type="button" class="krds-btn text inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border border-0 bg-transparent" disabled>필터 <i class="svg-icon ico-filter"></i></button>
 ```
 
 ## Page Context

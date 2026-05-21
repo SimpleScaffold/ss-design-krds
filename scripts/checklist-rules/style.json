@@ -1,0 +1,100 @@
+{
+  "category": "style",
+  "rules": [
+    {
+      "id": "style-color-palette",
+      "engine": "browser",
+      "checklistIds": ["style.color.1", "style.color.2", "style.color.3"],
+      "description": "KRDS Primary/Gray/System 팔레트 hex (docs/style/색상.md)"
+    },
+    {
+      "id": "style-interaction-color",
+      "engine": "browser",
+      "checklistIds": ["style.color.4", "style.color.5"],
+      "description": "상호작용·시스템 상태 색상 규칙 (docs/style/색상.md)"
+    },
+    {
+      "id": "style-color-consistency",
+      "engine": "browser",
+      "checklistIds": ["style.color.6", "style.color.7", "style.color.8"],
+      "description": "배경·테두리·텍스트 색상 일관성 (docs/style/색상.md)"
+    },
+    {
+      "id": "style-font-gov",
+      "engine": "browser",
+      "checklistIds": [
+        "style.typography.1",
+        "style.typography.2",
+        "style.typography.3",
+        "style.typography.4"
+      ],
+      "description": "Pretendard GOV, 본문 17px+ (docs/style/타이포그래피.md)"
+    },
+    {
+      "id": "style-font-self",
+      "engine": "browser",
+      "checklistIds": ["style.typography.5", "style.typography.6", "style.typography.7"],
+      "description": "고딕 16px+ (docs/style/타이포그래피.md)"
+    },
+    {
+      "id": "style-font-common",
+      "engine": "browser",
+      "checklistIds": ["style.typography.8", "style.typography.9", "style.typography.10"],
+      "description": "행간 1.5+, 제목 계층 (docs/style/타이포그래피.md)"
+    },
+    {
+      "id": "style-radius-gov",
+      "engine": "browser",
+      "checklistIds": ["style.shape.1"],
+      "description": "KRDS 표준 radius 2~12px (docs/style/형태.md)"
+    },
+    {
+      "id": "style-radius-scale",
+      "engine": "browser",
+      "checklistIds": ["style.shape.2"],
+      "description": "컨테이너 크기에 따른 radius 스케일 (docs/style/형태.md)"
+    },
+    {
+      "id": "style-radius-clip",
+      "engine": "browser",
+      "checklistIds": ["style.shape.3"],
+      "description": "border-radius without clip (docs/style/형태.md)"
+    },
+    {
+      "id": "official-banner-style",
+      "engine": "browser",
+      "checklistIds": ["component.official-banner.3"],
+      "description": "공식 배너 computed style"
+    },
+    {
+      "id": "link-not-color-only",
+      "engine": "browser",
+      "checklistIds": ["component.link.2"],
+      "description": "링크 색상만으로 구분 금지"
+    },
+    {
+      "id": "skip-link-keyboard",
+      "engine": "browser",
+      "checklistIds": ["component.skip-link.6"],
+      "description": "skip link Tab/Enter"
+    },
+    {
+      "id": "footer-responsive-order",
+      "engine": "browser",
+      "checklistIds": ["component.footer.10"],
+      "description": "768px 푸터 순서"
+    },
+    {
+      "id": "breadcrumb-mobile-collapse",
+      "engine": "browser",
+      "checklistIds": ["component.breadcrumb.15"],
+      "description": "768px breadcrumb 축약"
+    },
+    {
+      "id": "side-menu-hidden-mobile",
+      "engine": "browser",
+      "checklistIds": ["component.side-menu.5"],
+      "description": "768px side menu 숨김"
+    }
+  ]
+}

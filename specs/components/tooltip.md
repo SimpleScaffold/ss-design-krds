@@ -43,10 +43,17 @@ tooltip (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Tooltip 예시
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<button type="button" class="krds-btn small text krds-tooltip inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-secondary text-krds-body-sm min-h-[30px] px-krds-2 py-krds-1 border-0 bg-transparent" data-tooltip="툴팁의 기본 설정입니다" data-krds-component="tooltip">
+	tooltip-horizontal <i class="svg-icon ico-angle right"></i>
 </button>
+
+<button type="button" class="krds-btn icon krds-tooltip inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-secondary text-krds-body-sm w-11 p-0" data-tooltip="아이콘 버튼에 제공되는 툴팁">
+	<span class="sr-only">도움말</span>
+	<i class="svg-icon ico-help"></i>
+</button>
+
+<button type="button" class="krds-btn krds-tooltip inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-secondary text-krds-body-sm" data-tooltip="버튼에 제공되는 툴팁">도움말</button>
 ```
 
 ## Page Context

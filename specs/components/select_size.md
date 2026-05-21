@@ -73,10 +73,54 @@ select (부모)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-input bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Select Size 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="fieldset font-krds" data-krds-component="select_size">
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="select_size_small">레이블</label>
+		</div>
+		<div class="form-conts">
+			<select id="select_size_small" class="krds-form-select large flex flex-col gap-krds-4 font-krds max-w-2xl text-krds-body-lg" title="선택">
+				<option value="" selected>large</option>
+				<option value="">medium</option>
+				<option value="">small</option>
+			</select>
+		</div>
+		<p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="select_size_medium">레이블</label>
+		</div>
+		<div class="form-conts">
+			<select id="select_size_medium" class="krds-form-select medium flex flex-col gap-krds-4 font-krds max-w-2xl text-krds-body-md" title="선택">
+				<option value="">large</option>
+				<option value="" selected>medium</option>
+				<option value="">small</option>
+			</select>
+		</div>
+		<p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="select_size_large">레이블</label>
+		</div>
+		<div class="form-conts">
+			<select id="select_size_large" class="krds-form-select small flex flex-col gap-krds-4 font-krds max-w-2xl text-krds-body-sm min-h-[30px] px-krds-2 py-krds-1" title="선택">
+				<option value="">large</option>
+				<option value="">medium</option>
+				<option value="" selected>small</option>
+			</select>
+		</div>
+		<p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+</div>
 ```
 
 ## Page Context

@@ -58,10 +58,42 @@ badge (부모)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-badge bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Badge Size 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="krds-badge-wrap inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1" data-krds-component="badge_size">
+	<span class="krds-badge large outline-primary inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-lg">Label</span>
+	<span class="krds-badge large outline-secondary inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-lg">Label</span>
+	<span class="krds-badge large outline-gray inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-lg">Label</span>
+	<span class="krds-badge large outline-point inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-lg">Label</span>
+	<span class="krds-badge large outline-danger inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-lg">Label</span>
+	<span class="krds-badge large outline-warning inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-lg">Label</span>
+	<span class="krds-badge large outline-success inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-lg">Label</span>
+	<span class="krds-badge large outline-information inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-lg">Label</span>
+	<span class="krds-badge large outline-disabled inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-lg">Label</span>
+</div>
+
+<div class="krds-badge-wrap inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1">
+	<span class="krds-badge medium bg-primary inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-md">Label</span>
+	<span class="krds-badge medium bg-secondary inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-md">Label</span>
+	<span class="krds-badge medium bg-gray inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-md">Label</span>
+	<span class="krds-badge medium bg-point inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-md">Label</span>
+	<span class="krds-badge medium bg-danger inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-md">Label</span>
+	<span class="krds-badge medium bg-warning inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-md">Label</span>
+	<span class="krds-badge medium bg-success inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-md">Label</span>
+	<span class="krds-badge medium bg-information inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-md">Label</span>
+	<span class="krds-badge medium bg-disabled inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-md">Label</span>
+</div>
+
+<div class="krds-badge-wrap inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1">
+	<span class="krds-badge small bg-light-primary inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-sm min-h-[30px] px-krds-2">Label</span>
+	<span class="krds-badge small bg-light-secondary inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-sm min-h-[30px] px-krds-2">Label</span>
+	<span class="krds-badge small bg-light-gray inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-sm min-h-[30px] px-krds-2">Label</span>
+	<span class="krds-badge small bg-light-point inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-sm min-h-[30px] px-krds-2">Label</span>
+	<span class="krds-badge small bg-light-danger inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-sm min-h-[30px] px-krds-2">Label</span>
+	<span class="krds-badge small bg-light-warning inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-sm min-h-[30px] px-krds-2">Label</span>
+	<span class="krds-badge small bg-light-success inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-sm min-h-[30px] px-krds-2">Label</span>
+	<span class="krds-badge small bg-light-information inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-sm min-h-[30px] px-krds-2">Label</span>
+	<span class="krds-badge small bg-light-disabled inline-flex items-center font-krds text-krds-text rounded-krds-full text-krds-label-sm font-bold px-krds-4 py-krds-1 text-krds-body-sm min-h-[30px] px-krds-2">Label</span>
+</div>
 ```
 
 ## Page Context

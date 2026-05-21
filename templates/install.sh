@@ -28,11 +28,16 @@ echo "  Installed: krds-plan, krds-transform, krds-improve"
 # 3. npm scripts hint
 echo "[3/3] Add to your package.json:"
 cat <<'EOF'
+  "dependencies": {
+    "@simplescaffold/krds-tailwind": "github:SimpleScaffold/ss-design-krds#main:packages/krds-tailwind",
+    "tailwindcss": "^4"
+  },
   "devDependencies": {
     "ss-design-krds": "github:SimpleScaffold/ss-design-krds"
   },
   "scripts": {
-    "krds:score": "node node_modules/ss-design-krds/scripts/krds-similarity.mjs --target ./public/index.html"
+    "krds:score": "node node_modules/ss-design-krds/scripts/krds-similarity.mjs --target ./public/index.html",
+    "krds:build:tailwind": "cd node_modules/ss-design-krds && npm run krds:build:tailwind"
   }
 EOF
 

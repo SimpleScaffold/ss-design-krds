@@ -55,37 +55,37 @@
       "weight": 2
     },
     {
-      "name": "selector-#krds-skip-link",
+      "name": "selector-krds-skip-link",
       "pass": true,
       "weight": 3
     },
     {
-      "name": "selector-#wrap.g-wrap",
+      "name": "selector-wrap-g-wrap",
       "pass": true,
       "weight": 3
     },
     {
-      "name": "selector-#krds-masthead",
+      "name": "selector-krds-masthead",
       "pass": true,
       "weight": 3
     },
     {
-      "name": "selector-#krds-header",
+      "name": "selector-krds-header",
       "pass": true,
       "weight": 3
     },
     {
-      "name": "selector-#container",
+      "name": "selector-container",
       "pass": true,
       "weight": 3
     },
     {
-      "name": "selector-#content",
+      "name": "selector-content",
       "pass": true,
       "weight": 3
     },
     {
-      "name": "selector-#krds-footer",
+      "name": "selector-krds-footer",
       "pass": true,
       "weight": 3
     },
@@ -120,12 +120,12 @@
       "weight": 2
     },
     {
-      "name": "skip-link-target-exists",
+      "name": "skip-link-target",
       "pass": true,
       "weight": 3
     },
     {
-      "name": "form-input-has-label",
+      "name": "form-label-binding",
       "pass": true,
       "weight": 3
     },
@@ -150,7 +150,7 @@
       "weight": 2
     },
     {
-      "name": "krds-class-prefix-coverage>=0.10",
+      "name": "krds-class-prefix-coverage",
       "pass": true,
       "weight": 1
     }

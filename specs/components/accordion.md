@@ -54,10 +54,14 @@ accordion (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Accordion 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="krds-accordion font-krds border border-krds-border rounded-krds-md divide-y divide-krds-border" data-krds-component="accordion">
+	<div class="accordion-item">
+		<h5 class="accordion-header"><button type="button" id="accordionHeaderSample01" class="btn-accordion" aria-controls="accordionCollapseSample01">아코디언 타이틀 영역</button></h5>
+		<div id="accordionCollapseSample01" class="accordion-collapse collapse" aria-labelledby="accordionHeaderSample01">
+			<div class="accordion-body">
+				<!-- accordion contents -->
+				아코디언 내용 영역
 ```
 
 ## Page Context

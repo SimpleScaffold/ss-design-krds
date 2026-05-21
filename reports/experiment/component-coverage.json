@@ -1,302 +1,380 @@
 {
   "source": "assets/krds/html/code",
   "total": 74,
+  "samples": [
+    "experiment/sample-page/index.html",
+    "experiment/sample-page/tailwind.html"
+  ],
   "components": [
     {
       "file": "assets/krds/html/code/accordion.html",
-      "component": "accordion"
+      "component": "accordion",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/accordion.html"
     },
     {
       "file": "assets/krds/html/code/accordion_line.html",
-      "component": "accordion_line"
+      "component": "accordion_line",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/accordion_line.html"
     },
     {
       "file": "assets/krds/html/code/badge.html",
-      "component": "badge"
+      "component": "badge",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/badge.html"
     },
     {
       "file": "assets/krds/html/code/badge_number.html",
-      "component": "badge_number"
+      "component": "badge_number",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/badge_number.html"
     },
     {
       "file": "assets/krds/html/code/badge_size.html",
-      "component": "badge_size"
+      "component": "badge_size",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/badge_size.html"
     },
     {
       "file": "assets/krds/html/code/breadcrumb.html",
-      "component": "breadcrumb"
+      "component": "breadcrumb",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/breadcrumb.html"
     },
     {
       "file": "assets/krds/html/code/button.html",
-      "component": "button"
+      "component": "button",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/button.html"
     },
     {
       "file": "assets/krds/html/code/button_hierarchy.html",
-      "component": "button_hierarchy"
+      "component": "button_hierarchy",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/button_hierarchy.html"
     },
     {
       "file": "assets/krds/html/code/button_icon.html",
-      "component": "button_icon"
+      "component": "button_icon",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/button_icon.html"
     },
     {
       "file": "assets/krds/html/code/button_size.html",
-      "component": "button_size"
+      "component": "button_size",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/button_size.html"
     },
     {
       "file": "assets/krds/html/code/button_text.html",
-      "component": "button_text"
+      "component": "button_text",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/button_text.html"
     },
     {
       "file": "assets/krds/html/code/button_with_icon.html",
-      "component": "button_with_icon"
+      "component": "button_with_icon",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/button_with_icon.html"
     },
     {
       "file": "assets/krds/html/code/calendar.html",
-      "component": "calendar"
+      "component": "calendar",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/calendar.html"
     },
     {
       "file": "assets/krds/html/code/calendar_range.html",
-      "component": "calendar_range"
+      "component": "calendar_range",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/calendar_range.html"
     },
     {
       "file": "assets/krds/html/code/carousel.html",
-      "component": "carousel"
+      "component": "carousel",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/carousel.html"
     },
     {
       "file": "assets/krds/html/code/carousel_banner.html",
-      "component": "carousel_banner"
+      "component": "carousel_banner",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/carousel_banner.html"
     },
     {
       "file": "assets/krds/html/code/checkbox.html",
-      "component": "checkbox"
+      "component": "checkbox",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/checkbox.html"
     },
     {
       "file": "assets/krds/html/code/checkbox_chip.html",
-      "component": "checkbox_chip"
+      "component": "checkbox_chip",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/checkbox_chip.html"
     },
     {
       "file": "assets/krds/html/code/checkbox_size.html",
-      "component": "checkbox_size"
+      "component": "checkbox_size",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/checkbox_size.html"
     },
     {
       "file": "assets/krds/html/code/coach_mark.html",
-      "component": "coach_mark"
+      "component": "coach_mark",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/coach_mark.html"
     },
     {
       "file": "assets/krds/html/code/contextual_help.html",
-      "component": "contextual_help"
+      "component": "contextual_help",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/contextual_help.html"
     },
     {
       "file": "assets/krds/html/code/critical_alerts.html",
-      "component": "critical_alerts"
+      "component": "critical_alerts",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/critical_alerts.html"
     },
     {
       "file": "assets/krds/html/code/date_input.html",
-      "component": "date_input"
+      "component": "date_input",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/date_input.html"
     },
     {
       "file": "assets/krds/html/code/disclosure.html",
-      "component": "disclosure"
+      "component": "disclosure",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/disclosure.html"
     },
     {
       "file": "assets/krds/html/code/favicon.html",
-      "component": "favicon"
+      "component": "favicon",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/favicon.html"
     },
     {
       "file": "assets/krds/html/code/file_upload.html",
-      "component": "file_upload"
+      "component": "file_upload",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/file_upload.html"
     },
     {
       "file": "assets/krds/html/code/footer.html",
-      "component": "footer"
+      "component": "footer",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/footer.html"
     },
     {
       "file": "assets/krds/html/code/header.html",
-      "component": "header"
+      "component": "header",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/header.html"
     },
     {
       "file": "assets/krds/html/code/help_panel.html",
-      "component": "help_panel"
+      "component": "help_panel",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/help_panel.html"
     },
     {
       "file": "assets/krds/html/code/identifier.html",
-      "component": "identifier"
+      "component": "identifier",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/identifier.html"
     },
     {
       "file": "assets/krds/html/code/in_page_navigation.html",
-      "component": "in_page_navigation"
+      "component": "in_page_navigation",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/in_page_navigation.html"
     },
     {
       "file": "assets/krds/html/code/language_switcher.html",
-      "component": "language_switcher"
+      "component": "language_switcher",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/language_switcher.html"
     },
     {
       "file": "assets/krds/html/code/language_switcher_page.html",
-      "component": "language_switcher_page"
+      "component": "language_switcher_page",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/language_switcher_page.html"
     },
     {
       "file": "assets/krds/html/code/link.html",
-      "component": "link"
+      "component": "link",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/link.html"
     },
     {
       "file": "assets/krds/html/code/main_menu_mobile.html",
-      "component": "main_menu_mobile"
+      "component": "main_menu_mobile",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/main_menu_mobile.html"
     },
     {
       "file": "assets/krds/html/code/main_menu_pc.html",
-      "component": "main_menu_pc"
+      "component": "main_menu_pc",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/main_menu_pc.html"
     },
     {
       "file": "assets/krds/html/code/masthead.html",
-      "component": "masthead"
+      "component": "masthead",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/masthead.html"
     },
     {
       "file": "assets/krds/html/code/modal.html",
-      "component": "modal"
+      "component": "modal",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/modal.html"
     },
     {
       "file": "assets/krds/html/code/modal_sample.html",
-      "component": "modal_sample"
+      "component": "modal_sample",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/modal_sample.html"
     },
     {
       "file": "assets/krds/html/code/pagination.html",
-      "component": "pagination"
+      "component": "pagination",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/pagination.html"
     },
     {
       "file": "assets/krds/html/code/radio_button.html",
-      "component": "radio_button"
+      "component": "radio_button",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/radio_button.html"
     },
     {
       "file": "assets/krds/html/code/radio_chip.html",
-      "component": "radio_chip"
+      "component": "radio_chip",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/radio_chip.html"
     },
     {
       "file": "assets/krds/html/code/radio_size.html",
-      "component": "radio_size"
+      "component": "radio_size",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/radio_size.html"
     },
     {
       "file": "assets/krds/html/code/resize.html",
-      "component": "resize"
+      "component": "resize",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/resize.html"
     },
     {
       "file": "assets/krds/html/code/select.html",
-      "component": "select"
+      "component": "select",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/select.html"
     },
     {
       "file": "assets/krds/html/code/select_size.html",
-      "component": "select_size"
+      "component": "select_size",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/select_size.html"
     },
     {
       "file": "assets/krds/html/code/select_sorting.html",
-      "component": "select_sorting"
+      "component": "select_sorting",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/select_sorting.html"
     },
     {
       "file": "assets/krds/html/code/select_state.html",
-      "component": "select_state"
+      "component": "select_state",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/select_state.html"
     },
     {
       "file": "assets/krds/html/code/side_navigation.html",
-      "component": "side_navigation"
+      "component": "side_navigation",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/side_navigation.html"
     },
     {
       "file": "assets/krds/html/code/skip_link.html",
-      "component": "skip_link"
+      "component": "skip_link",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/skip_link.html"
     },
     {
       "file": "assets/krds/html/code/spinner.html",
-      "component": "spinner"
+      "component": "spinner",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/spinner.html"
     },
     {
       "file": "assets/krds/html/code/step_indicator.html",
-      "component": "step_indicator"
+      "component": "step_indicator",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/step_indicator.html"
     },
     {
       "file": "assets/krds/html/code/structured_list.html",
-      "component": "structured_list"
+      "component": "structured_list",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/structured_list.html"
     },
     {
       "file": "assets/krds/html/code/structured_list_table.html",
-      "component": "structured_list_table"
+      "component": "structured_list_table",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/structured_list_table.html"
     },
     {
       "file": "assets/krds/html/code/tab.html",
-      "component": "tab"
+      "component": "tab",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/tab.html"
     },
     {
       "file": "assets/krds/html/code/table.html",
-      "component": "table"
+      "component": "table",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/table.html"
     },
     {
       "file": "assets/krds/html/code/tag.html",
-      "component": "tag"
+      "component": "tag",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/tag.html"
     },
     {
       "file": "assets/krds/html/code/tag_link.html",
-      "component": "tag_link"
+      "component": "tag_link",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/tag_link.html"
     },
     {
       "file": "assets/krds/html/code/text_input.html",
-      "component": "text_input"
+      "component": "text_input",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/text_input.html"
     },
     {
       "file": "assets/krds/html/code/text_input_icon.html",
-      "component": "text_input_icon"
+      "component": "text_input_icon",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/text_input_icon.html"
     },
     {
       "file": "assets/krds/html/code/text_input_size.html",
-      "component": "text_input_size"
+      "component": "text_input_size",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/text_input_size.html"
     },
     {
       "file": "assets/krds/html/code/text_input_state.html",
-      "component": "text_input_state"
+      "component": "text_input_state",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/text_input_state.html"
     },
     {
       "file": "assets/krds/html/code/text_list.html",
-      "component": "text_list"
+      "component": "text_list",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/text_list.html"
     },
     {
       "file": "assets/krds/html/code/text_list_ordered.html",
-      "component": "text_list_ordered"
+      "component": "text_list_ordered",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/text_list_ordered.html"
     },
     {
       "file": "assets/krds/html/code/textarea.html",
-      "component": "textarea"
+      "component": "textarea",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/textarea.html"
     },
     {
       "file": "assets/krds/html/code/toggle_switch.html",
-      "component": "toggle_switch"
+      "component": "toggle_switch",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/toggle_switch.html"
     },
     {
       "file": "assets/krds/html/code/toggle_switch_size.html",
-      "component": "toggle_switch_size"
+      "component": "toggle_switch_size",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/toggle_switch_size.html"
     },
     {
       "file": "assets/krds/html/code/tooltip.html",
-      "component": "tooltip"
+      "component": "tooltip",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/tooltip.html"
     },
     {
       "file": "assets/krds/html/code/tooltip_box.html",
-      "component": "tooltip_box"
+      "component": "tooltip_box",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/tooltip_box.html"
     },
     {
       "file": "assets/krds/html/code/tooltip_vertical.html",
-      "component": "tooltip_vertical"
+      "component": "tooltip_vertical",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/tooltip_vertical.html"
     },
     {
       "file": "assets/krds/html/code/tts.html",
-      "component": "tts"
+      "component": "tts",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/tts.html"
     },
     {
       "file": "assets/krds/html/code/tts_icon.html",
-      "component": "tts_icon"
+      "component": "tts_icon",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/tts_icon.html"
     },
     {
       "file": "assets/krds/html/code/tts_size.html",
-      "component": "tts_size"
+      "component": "tts_size",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/tts_size.html"
     },
     {
       "file": "assets/krds/html/code/tutorial_panel.html",
-      "component": "tutorial_panel"
+      "component": "tutorial_panel",
+      "tailwindSnippet": "packages/krds-tailwind/dist/components/tutorial_panel.html"
     }
   ]
 }

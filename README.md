@@ -10,13 +10,28 @@ English | [한국어](README.ko.md)
 
 ```text
 docs/
-├── index.md                   ← ★ start here
-├── reading-guide.md           ← scenario-based reading order
-├── repo-tree.md               ← repository tree
-├── page-structure-tree.md     ← page DOM hierarchy
-├── workflow-tree.md           ← plan/transform/improve
-└── component-category-tree.md ← KRDS 10 families, 74 components
+├── index.md                      ← ★ start here
+├── reading-guide.md              ← scenario-based reading order
+├── repo-tree.md                  ← repository tree
+├── page-structure-tree.md        ← page DOM hierarchy
+├── workflow-tree.md              ← plan/transform/improve
+├── validation-checklist-tree.md  ← official 311-item checklist
+├── component-category-tree.md    ← KRDS 10 families, 74 components
+└── style/                        ← KRDS official style guide (9 MD pages)
 ```
+
+## Style Guide
+
+Official KRDS style pages (color, typography, shape, etc.) live in [`docs/style/`](docs/style/index.md).
+
+| What | Where | Purpose |
+|------|-------|---------|
+| Style knowledge | `docs/style/` | AI reads color, typography, layout rules first |
+| Token summary | `specs/tokens.md` | Quick reference; details in `docs/style/` |
+| Page validation | `npm run krds:checklist` | 21 style items (of 311) via browser rules |
+| Shared thresholds | `scripts/style-guide-lib.mjs` | gov 17px, line-height 1.5, radius 2–12px |
+
+Flow: `docs/style/` → `style-guide-lib.mjs` → checklist browser rules · MD validation
 
 ## What It Is
 
@@ -26,7 +41,7 @@ ss-design-krds turns the [KRDS HTML Component Kit](https://github.com/KRDS-uiux/
 2. **`krds-transform`** — retheme existing UI to KRDS rules
 3. **`krds-improve`** — validate and iterate until score ≥ 95
 
-Includes 74 vendored HTML components, Markdown specs (HTML + Tailwind examples), and machine-checkable validation scripts.
+Includes 74 vendored HTML components, Markdown specs (HTML + Tailwind examples), **`@simplescaffold/krds-tailwind`**, and machine-checkable validation scripts.
 
 ## Install
 
@@ -45,6 +60,20 @@ cp -R ss-design-krds/skills/krds-* ~/.cursor/skills/
 # or
 npx skills add SimpleScaffold/ss-design-krds
 ```
+
+### Tailwind package
+
+```bash
+npm install @simplescaffold/krds-tailwind tailwindcss
+# or in monorepo
+npm run krds:build:tailwind
+```
+
+- CSS: `@import "@simplescaffold/krds-tailwind"`
+- HTML snippets: `dist/components/*.html` (74)
+- Sample: `experiment/sample-page/tailwind.html`
+
+See [`packages/krds-tailwind/README.md`](packages/krds-tailwind/README.md)
 
 ### npm validation (CI)
 
@@ -81,21 +110,31 @@ Use krds-improve until score ≥ 95 with no failed rules.
 ## Validation
 
 ```bash
-npm run krds:score      # similarity score (threshold: 95)
-npm run krds:coverage   # component reference coverage
-npm run krds:validate   # full repo validation
-npm run krds:improve    # iterative hardening loop
+npm install
+npx playwright install chromium   # L2 browser checklist (WSL/CI)
+npm run krds:score           # similarity score (threshold: 95)
+npm run krds:score:tailwind  # Tailwind sample similarity
+npm run krds:build:tailwind  # Tailwind CSS + 74 snippets
+npm run krds:checklist       # official 311-item checklist
+npm run krds:style:md:validate  # style MD integrity (9 pages)
+npm run krds:style:md        # regenerate docs/style/ from KRDS site (maintenance)
+npm run krds:coverage        # component reference coverage
+npm run krds:validate        # full repo validation
+npm run krds:improve         # iterative hardening loop
 ```
 
 ## Structure
 
 ```
+docs/style/      KRDS official style guide MD (color, typography, shape, …)
+specs/           Markdown specs (tokens, components, patterns, validation/)
+resources/       checklist JSON, manifest (official-checklist.json)
 skills/          Agent workflows (plan, transform, improve)
-specs/           Markdown specs (tokens, components, patterns)
 assets/krds/     Vendored KRDS-uiux HTML/CSS (74 components)
-scripts/         Validation harness
+scripts/         Validation harness (style-guide-lib, checklist, similarity)
 templates/       Consumer project bootstrap
-experiment/      Reference implementation
+packages/        @simplescaffold/krds-tailwind
+experiment/      Reference implementation (index.html + tailwind.html)
 ```
 
 ## References

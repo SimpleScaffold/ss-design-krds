@@ -36,10 +36,13 @@ favicon (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Favicon 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/ class="font-krds" data-krds-component="favicon">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png"/>
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png"/>
+
+<!-- 파비콘 - 기본 svg -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 ```
 
 ## Page Context

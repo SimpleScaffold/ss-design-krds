@@ -55,10 +55,30 @@ tts (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Tts 예시
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<button type="button" class="krds-tts medium font-krds inline-flex gap-krds-2 text-krds-body-md w-full" onclick="krds_playTts('TTS 기능이란 화면에 표시된 주요 안내, 입력 서식 설명, 업무 진행 상태 등의 텍스트를 사용자가 요청했을 때 음성으로 읽어주는 보조적 사용자 지원 기능을 말하며, 이는 시각 정보의 대체가 아닌 보완 수단으로서 다른 접근성 기능(글자 크기 조절, 대비 향상, 쉬운모드 등)과 함께 제공되는 것을 원칙으로 한다.', this)" data-krds-component="tts">
+	<span class="krds-tts-icon font-krds inline-flex gap-krds-2" aria-hidden="true">
+		<i class="svg-icon ico-volume"></i>
+	</span>
+	<span class="krds-tts-text font-krds inline-flex gap-krds-2">레이블</span>
 </button>
+
+<!-- TTS 버튼 - Play 타입 -->
+<button type="button" class="krds-tts medium play font-krds inline-flex gap-krds-2 text-krds-body-md" onclick="krds_playTts('TTS 기능이란 화면에 표시된 주요 안내, 입력 서식 설명, 업무 진행 상태 등의 텍스트를 사용자가 요청했을 때 음성으로 읽어주는 보조적 사용자 지원 기능을 말하며, 이는 시각 정보의 대체가 아닌 보완 수단으로서 다른 접근성 기능(글자 크기 조절, 대비 향상, 쉬운모드 등)과 함께 제공되는 것을 원칙으로 한다.', this)">
+	<span class="krds-tts-icon font-krds inline-flex gap-krds-2" aria-hidden="true">
+		<i class="svg-icon ico-play"></i>
+	</span>
+	<span class="krds-tts-text font-krds inline-flex gap-krds-2">재생</span>
+</button>
+
+<!-- TTS 버튼 - 상태 예시 -->
+<button type="button" class="krds-tts medium font-krds inline-flex gap-krds-2 text-krds-body-md" disabled>
+	<span class="krds-tts-icon font-krds inline-flex gap-krds-2" aria-hidden="true">
+		<i class="svg-icon ico-volume"></i>
+	</span>
+	<span class="krds-tts-text font-krds inline-flex gap-krds-2">레이블</span>
+</button>
+<!-- //TTS 버튼 -->
 ```
 
 ## Page Context

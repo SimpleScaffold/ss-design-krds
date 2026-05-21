@@ -69,10 +69,42 @@ text_input (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-input bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Text Input 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="fieldset font-krds w-full max-w-3xl" data-krds-component="text_input">
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="consult_name">레이블</label>
+		</div>
+		<div class="form-conts">
+			<input type="text" id="consult_name" class="krds-input w-full font-krds text-krds-text border border-krds-border rounded-krds-sm px-krds-4 py-krds-3 bg-krds-surface" placeholder="플레이스홀더">
+		</div>
+		<p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="consult_name2">레이블</label>
+		</div>
+		<div class="form-conts">
+			<input type="text" id="consult_name2" class="krds-input w-full font-krds text-krds-text border border-krds-border rounded-krds-sm px-krds-4 py-krds-3 bg-krds-surface" placeholder="플레이스홀더" value="readonly" readonly>
+		</div>
+		<p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+	<!-- 폼그룹 -->
+	<div class="form-group">
+		<div class="form-tit">
+			<label for="consult_name3">레이블</label>
+		</div>
+		<div class="form-conts">
+			<input type="text" id="consult_name3" class="krds-input w-full font-krds text-krds-text border border-krds-border rounded-krds-sm px-krds-4 py-krds-3 bg-krds-surface" placeholder="플레이스홀더" value="disabled" disabled>
+		</div>
+		<p class="form-hint">도움말</p>
+	</div>
+	<!-- //폼그룹 -->
+</div>
 ```
 
 ## Page Context

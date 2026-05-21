@@ -67,10 +67,85 @@ carousel (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Carousel 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="main-vban-wrap bg font-krds max-w-7xl" data-krds-component="carousel">
+	<div class="inner">
+		<div class="vb-swiper">
+			<div class="swiper">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide">
+						<div class="in">
+							<div class="text border-0 bg-transparent">
+								<p class="tit">타이틀 영역 <br class="w-hide">타이틀 영역</p>
+								<p class="txt">컨텐츠 영역 컨텐츠 영역 <br class="w-hide">컨텐츠 영역 컨텐츠 영역</p>
+								<a href="#" class="krds-btn primary inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border bg-krds-primary text-white border-krds-primary hover:bg-krds-primary-hover">버튼 영역</a>
+							</div>
+							<div class="im">
+								<svg width="243" height="178" viewBox="0 0 243 178" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="예시">
+									<rect width="243" height="178" fill="#E6E8EA"/>
+								</svg>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="in">
+							<div class="text border-0 bg-transparent">
+								<p class="tit">타이틀 영역 <br class="w-hide">타이틀 영역</p>
+								<p class="txt">컨텐츠 영역 컨텐츠 영역 <br class="w-hide">컨텐츠 영역 컨텐츠 영역</p>
+								<a href="#" class="krds-btn primary inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border bg-krds-primary text-white border-krds-primary hover:bg-krds-primary-hover">버튼 영역</a>
+							</div>
+							<div class="im">
+								<svg width="243" height="178" viewBox="0 0 243 178" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="예시">
+									<rect width="243" height="178" fill="#E6E8EA"/>
+								</svg>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="in">
+							<div class="text border-0 bg-transparent">
+								<p class="tit">타이틀 영역 <br class="w-hide">타이틀 영역</p>
+								<p class="txt">컨텐츠 영역 컨텐츠 영역 <br class="w-hide">컨텐츠 영역 컨텐츠 영역</p>
+								<a href="#" class="krds-btn primary inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border bg-krds-primary text-white border-krds-primary hover:bg-krds-primary-hover">버튼 영역</a>
+							</div>
+							<div class="im">
+								<svg width="243" height="178" viewBox="0 0 243 178" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="예시">
+									<rect width="243" height="178" fill="#E6E8EA"/>
+								</svg>
+							</div>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<div class="in">
+							<div class="text border-0 bg-transparent">
+								<p class="tit">타이틀 영역 <br class="w-hide">타이틀 영역</p>
+								<p class="txt">컨텐츠 영역 컨텐츠 영역 <br class="w-hide">컨텐츠 영역 컨텐츠 영역</p>
+								<a href="#" class="krds-btn primary inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border bg-krds-primary text-white border-krds-primary hover:bg-krds-primary-hover">버튼 영역</a>
+							</div>
+							<div class="im">
+								<svg width="243" height="178" viewBox="0 0 243 178" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="예시">
+									<rect width="243" height="178" fill="#E6E8EA"/>
+								</svg>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<button type="button" class="swiper-button-prev">
+				<span class="sr-only">이전</span>
+			</button>
+			<button type="button" class="swiper-button-next">
+				<span class="sr-only">다음</span>
+			</button>
+			<div class="swiper-indicator text-center">
+				<div class="swiper-pagination"></div>
+				<a href="#" class="swiper-button-more">
+					<span class="sr-only">더 보기</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
 ```
 
 ## Page Context

@@ -1,0 +1,153 @@
+{
+  "category": "component",
+  "rules": [
+    {
+      "id": "official-banner-present",
+      "engine": "static",
+      "checklistIds": ["component.official-banner.1"],
+      "description": "공식 배너(masthead) 제공"
+    },
+    {
+      "id": "official-banner-topmost",
+      "engine": "static",
+      "checklistIds": ["component.official-banner.2"],
+      "description": "공식 배너가 wrap 내 최상단"
+    },
+    {
+      "id": "official-banner-text",
+      "engine": "static",
+      "checklistIds": ["component.official-banner.4"],
+      "description": "공식 배너 고정 문구"
+    },
+    {
+      "id": "skip-link-present",
+      "engine": "static",
+      "checklistIds": ["component.skip-link.2"],
+      "description": "건너뛰기 링크 존재"
+    },
+    {
+      "id": "skip-link-count",
+      "engine": "static",
+      "checklistIds": ["component.skip-link.3"],
+      "description": "건너뛰기 링크 3개 이내"
+    },
+    {
+      "id": "skip-link-first-main",
+      "engine": "static",
+      "checklistIds": ["component.skip-link.4"],
+      "description": "첫 skip link가 본문(#content)으로"
+    },
+    {
+      "id": "skip-link-target",
+      "engine": "static",
+      "checklistIds": ["component.skip-link.5"],
+      "description": "skip link href와 content id 일치"
+    },
+    {
+      "id": "footer-required-info",
+      "engine": "static",
+      "checklistIds": ["component.footer.1"],
+      "description": "푸터 로고/연락처/저작권"
+    },
+    {
+      "id": "footer-privacy-link",
+      "engine": "static",
+      "checklistIds": ["component.footer.4"],
+      "description": "개인정보처리방침 링크"
+    },
+    {
+      "id": "footer-order",
+      "engine": "static",
+      "checklistIds": ["component.footer.3"],
+      "description": "푸터 정보 순서"
+    },
+    {
+      "id": "header-logo-position",
+      "engine": "static",
+      "checklistIds": ["component.header.2"],
+      "description": "헤더 로고 좌상단"
+    },
+    {
+      "id": "header-utility-count",
+      "engine": "static",
+      "checklistIds": ["component.header.6"],
+      "description": "유틸리티 링크 4개 이하"
+    },
+    {
+      "id": "header-lang-no-flag",
+      "engine": "static",
+      "checklistIds": ["component.header.7"],
+      "description": "언어 드롭다운 무국기"
+    },
+    {
+      "id": "header-icon-label",
+      "engine": "static",
+      "checklistIds": ["component.header.8"],
+      "description": "아이콘 버튼 sr-only 레이블"
+    },
+    {
+      "id": "form-label-binding",
+      "engine": "static",
+      "checklistIds": [
+        "component.select.4",
+        "component.date-input.2",
+        "component.textarea.1",
+        "component.text-input.2",
+        "component.file-upload.3"
+      ],
+      "description": "label[for]와 input id 바인딩"
+    },
+    {
+      "id": "mailto-link",
+      "engine": "static",
+      "checklistIds": ["component.link.4"],
+      "description": "mailto: 링크"
+    },
+    {
+      "id": "tel-link",
+      "engine": "static",
+      "checklistIds": ["component.link.5"],
+      "description": "tel: 링크"
+    },
+    {
+      "id": "external-link-indicator",
+      "engine": "static",
+      "checklistIds": ["component.link.6", "component.link.7"],
+      "description": "외부 링크 표시 클래스/aria"
+    },
+    {
+      "id": "button-single-primary",
+      "engine": "static",
+      "checklistIds": ["component.button.2"],
+      "description": "화면당 primary 버튼 1개"
+    },
+    {
+      "id": "autocomplete-present",
+      "engine": "static",
+      "checklistIds": [
+        "component.date-input.7",
+        "component.text-input.5",
+        "pattern.basic.form.10"
+      ],
+      "description": "autocomplete 속성"
+    },
+    {
+      "id": "breadcrumb-separator",
+      "engine": "static",
+      "checklistIds": ["component.breadcrumb.4"],
+      "description": "breadcrumb 구분자"
+    },
+    {
+      "id": "breadcrumb-home-first",
+      "engine": "static",
+      "checklistIds": ["component.breadcrumb.5"],
+      "description": "breadcrumb 첫 항목 홈"
+    },
+    {
+      "id": "icon-button-has-sr-only",
+      "engine": "static",
+      "checklistIds": ["component.header.8"],
+      "description": "icon button sr-only"
+    }
+  ]
+}

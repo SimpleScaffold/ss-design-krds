@@ -1,0 +1,20 @@
+{
+  "version": "2024.11",
+  "items": [
+    {
+      "id": "qualitative.usability-journey",
+      "title": "서비스 이용 여정 전반의 사용성 품질",
+      "category": "qualitative"
+    },
+    {
+      "id": "qualitative.content-clarity",
+      "title": "콘텐츠 명확성 및 이해 용이성",
+      "category": "qualitative"
+    },
+    {
+      "id": "qualitative.visual-hierarchy",
+      "title": "시각적 위계 및 정보 구조",
+      "category": "qualitative"
+    }
+  ]
+}

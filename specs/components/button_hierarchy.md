@@ -39,10 +39,10 @@ button_hierarchy (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-btn primary bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Button Hierarchy 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<button type="button" class="krds-btn primary inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border bg-krds-primary text-white border-krds-primary hover:bg-krds-primary-hover" data-krds-component="button_hierarchy">버튼 : primary</button>
+<button type="button" class="krds-btn secondary inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border bg-krds-surface text-krds-primary border-krds-primary">버튼 : secondary</button>
+<button type="button" class="krds-btn tertiary inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border bg-krds-surface border-krds-border">버튼 : tertiary</button>
 ```
 
 ## Page Context

@@ -38,10 +38,15 @@ breadcrumb (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Breadcrumb 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<nav class="krds-breadcrumb-wrap font-krds text-krds-secondary text-krds-body-sm flex flex-wrap gap-krds-2" aria-label="현재 경로" id="breadcrumb" data-krds-component="breadcrumb">
+	<ol class="breadcrumb">
+		<li class="home"><a href="#" class="txt">홈</a></li>
+		<li><a href="#" class="txt">서비스 신청</a></li>
+		<li><a href="#" class="txt">서비스 신청2</a></li>
+	</ol>
+</nav>
+<!-- breadcrumb -->
 ```
 
 ## Page Context

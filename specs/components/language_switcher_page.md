@@ -55,10 +55,30 @@ language_switcher (부모)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Language Switcher Page 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="krds-drop-wrap krds-language font-krds inline-flex gap-krds-2" data-krds-component="language_switcher_page">
+  <button type="button" class="krds-btn small text drop-btn inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-body-sm min-h-[30px] px-krds-2 py-krds-1 border-0 bg-transparent">
+    <i class="svg-icon ico-global"></i>
+    언어 변경
+    <i class="svg-icon ico-toggle"></i>
+  </button>
+  <div class="drop-menu">
+    <div class="drop-in">
+      <div class="drop-top">
+        <p class="current-laguage">
+          <span>현재 언어</span>
+          <strong>한국어</strong>
+        </p>
+      </div>
+      <ul class="drop-list">
+        <li><a href="#" class="item-link" lang="en" target="_blank" title="새 창 열림">English (영어)<i class="svg-icon ico-go"></i></a></li>
+        <li><a href="#" class="item-link" lang="zh" target="_blank" title="새 창 열림">中文 (중국어)<i class="svg-icon ico-go"></i></a></li>
+        <li><a href="#" class="item-link" lang="ja" target="_blank" title="새 창 열림">日本語 (일본어)<i class="svg-icon ico-go"></i></a></li>
+        <li><a href="#" class="item-link" lang="fr" target="_blank" title="새 창 열림">français (프랑스어)<i class="svg-icon ico-go"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 ```
 
 ## Page Context

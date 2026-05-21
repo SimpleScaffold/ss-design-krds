@@ -47,10 +47,23 @@ pagination (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Pagination 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="krds-pagination flex gap-krds-2 font-krds items-center" data-krds-component="pagination">
+	<span class="page-navi prev disabled" href="#">이전</span>
+	<div class="page-links">
+		<a class="page-link" href="#">1</a>
+		<a class="page-link" href="#">2</a>
+		<a class="page-link" href="#">3</a>
+		<a class="page-link active" href="#"><span class="sr-only">현재페이지 </span>4</a>
+		<a class="page-link" href="#">5</a>
+		<a class="page-link" href="#">6</a>
+		<a class="page-link" href="#">7</a>
+		<a class="page-link" href="#">8</a>
+		<span class="page-link link-dot"></span>
+		<a class="page-link" href="#">99</a>
+	</div>
+	<a class="page-navi next" href="#">다음</a>
+</div>
 ```
 
 ## Page Context

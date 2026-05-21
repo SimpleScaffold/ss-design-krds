@@ -4,6 +4,9 @@
   "description": "AI 에이전트용 KRDS(Korea Design System) 스킬·스펙·검증 패키지",
   "type": "module",
   "license": "Apache-2.0",
+  "workspaces": [
+    "packages/*"
+  ],
   "files": [
     "AGENTS.md",
     "CLAUDE.md",
@@ -15,16 +18,29 @@
     "references",
     "resources",
     "scripts",
-    "templates"
+    "templates",
+    "packages"
   ],
   "scripts": {
     "krds:validate": "node scripts/validate-krds.mjs",
     "krds:score": "node scripts/krds-similarity.mjs --target experiment/sample-page/index.html",
+    "krds:checklist": "node scripts/krds-checklist.mjs",
+    "krds:checklist:docs": "node scripts/generate-checklist-docs.mjs",
+    "krds:checklist:catalog": "node scripts/build-checklist-catalog.mjs",
+    "krds:checklist:pdf-md": "node scripts/pdf-to-checklist-md.mjs",
+    "krds:checklist:pdf-md:validate": "node scripts/validate-checklist-md.mjs",
+    "krds:style:md": "node scripts/krds-style-to-md.mjs",
+    "krds:style:md:validate": "node scripts/validate-style-md.mjs",
     "krds:improve": "node scripts/krds-improve-loop.mjs",
     "krds:index": "node scripts/generate-spec-index.mjs",
     "krds:docs": "node scripts/generate-docs-trees.mjs",
-    "krds:coverage": "node scripts/verify-krds-component-coverage.mjs",
-    "krds:build-sample": "node scripts/build-sample-experiment.mjs"
+    "krds:coverage": "node scripts/verify-krds-component-coverage.mjs && node scripts/verify-krds-component-coverage.mjs --target experiment/sample-page/tailwind.html",
+    "krds:build-sample": "node scripts/build-sample-experiment.mjs",
+    "krds:generate:tailwind": "node scripts/generate-krds-tailwind-components.mjs",
+    "krds:build:tailwind": "node scripts/generate-krds-tailwind-components.mjs && node scripts/build-krds-tailwind.mjs",
+    "krds:sync:tailwind-specs": "node scripts/sync-tailwind-specs.mjs",
+    "krds:score:tailwind": "node scripts/krds-similarity.mjs --target experiment/sample-page/tailwind.html",
+    "postinstall": "npx playwright install chromium || true"
   },
   "repository": {
     "type": "git",
@@ -36,5 +52,11 @@
     "government",
     "accessibility",
     "agent-skills"
-  ]
+  ],
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "pdf-parse": "^2.4.5",
+    "playwright": "^1.52.0",
+    "tailwindcss": "^4.1.8"
+  }
 }

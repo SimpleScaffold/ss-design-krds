@@ -1,0 +1,35 @@
+{
+  "name": "@simplescaffold/krds-tailwind",
+  "version": "0.1.0",
+  "description": "KRDS design tokens and Tailwind v4 utilities with official krds- component CSS",
+  "type": "module",
+  "license": "Apache-2.0",
+  "files": [
+    "dist",
+    "src/components",
+    "README.md"
+  ],
+  "exports": {
+    ".": "./dist/krds-tailwind.css",
+    "./theme": "./dist/theme.css",
+    "./components/*": "./dist/components/*.html"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^4.0.0"
+  },
+  "scripts": {
+    "build": "node ../../scripts/build-krds-tailwind.mjs",
+    "generate": "node ../../scripts/generate-krds-tailwind-components.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SimpleScaffold/ss-design-krds.git",
+    "directory": "packages/krds-tailwind"
+  },
+  "keywords": [
+    "krds",
+    "tailwindcss",
+    "design-system",
+    "government"
+  ]
+}

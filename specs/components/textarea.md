@@ -46,10 +46,21 @@ textarea (기본)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-input bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Textarea 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="form-group font-krds w-full max-w-3xl" data-krds-component="textarea">
+	<div class="form-tit">
+		<label for="textarea">레이블</label>
+	</div>
+	<div class="form-conts">
+		<div class="textarea-wrap">
+			<textarea class="krds-input w-full font-krds text-krds-text border border-krds-border rounded-krds-sm px-krds-4 py-krds-3 bg-krds-surface" placeholder="플레이스홀더" id="textarea"></textarea>
+			<p class="textarea-count">
+				<span class="count-now">0</span><span class="count-total">/100</span>
+			</p>
+		</div>
+	</div>
+</div>
+<!-- //폼그룹 -->
 ```
 
 ## Page Context

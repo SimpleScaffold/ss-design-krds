@@ -49,7 +49,7 @@ KRDS Accessibility
 <main id="content">...</main>
 ```
 
-포커스 시에만 보이도록 CSS 처리. `scripts/krds-similarity.mjs`가 `skip-link-target-exists` 규칙으로 검증합니다.
+포커스 시에만 보이도록 CSS 처리. `scripts/krds-similarity.mjs`가 `skip-link-target` 규칙 ID로 검증합니다.
 
 ## Screen Reader Only
 

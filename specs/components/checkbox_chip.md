@@ -46,10 +46,21 @@ checkbox (부모)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-component bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Checkbox Chip 예시
-</button>
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<div class="krds-check-area inline-flex items-center gap-krds-2 font-krds" data-krds-component="checkbox_chip">
+	<div class="krds-form-chip flex flex-col gap-krds-4 font-krds max-w-2xl">
+		<input type="checkbox" class="checkbox" id="chk_chip_1">
+		<label class="krds-form-chip-outline flex flex-col gap-krds-4 font-krds max-w-2xl" for="chk_chip_1">chip 상태 : default</label>
+	</div>
+	<div class="krds-form-chip flex flex-col gap-krds-4 font-krds max-w-2xl">
+		<input type="checkbox" class="checkbox" id="chk_chip_2" checked>
+		<label class="krds-form-chip-outline flex flex-col gap-krds-4 font-krds max-w-2xl" for="chk_chip_2">chip 상태 : checked</label>
+	</div>
+	<div class="krds-form-chip flex flex-col gap-krds-4 font-krds max-w-2xl">
+		<input type="checkbox" class="checkbox" id="chk_chip_3" disabled>
+		<label class="krds-form-chip-outline flex flex-col gap-krds-4 font-krds max-w-2xl" for="chk_chip_3">chip 상태 : disabled</label>
+	</div>
+</div>
 ```
 
 ## Page Context

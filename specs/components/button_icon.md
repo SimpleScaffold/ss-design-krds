@@ -53,9 +53,27 @@ button (부모)
 ## Tailwind
 
 ```html
-<!-- templates/tailwind-theme.css + krds- 클래스 병행 -->
-<button type="button" class="krds-btn primary bg-krds-primary rounded-krds-sm px-4 py-3 font-krds">
-  Button Icon 예시
+<!-- @simplescaffold/krds-tailwind + official krds- classes -->
+<button type="button" class="krds-btn icon inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border w-11 p-0" data-krds-component="button_icon">
+	<span class="sr-only">검색</span>
+	<i class="svg-icon ico-sch"></i>
+</button>
+<button type="button" class="krds-btn icon medium inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-body-md w-11 p-0">
+	<span class="sr-only">입력한 비밀번호 보기</span>
+	<i class="svg-icon ico-pw-visible"></i>
+</button>
+<button class="krds-btn icon medium btn-help-exec inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 border text-krds-body-md w-11 p-0">
+	<span class="sr-only">도움말</span>
+	<i class="svg-icon ico-help"></i>
+</button>
+
+<button type="button" class="krds-btn large icon border inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 text-krds-body-lg w-11 p-0">
+	<span class="sr-only">새로고침</span>
+	<i class="svg-icon ico-refresh"></i>
+</button>
+<button type="button" class="krds-btn large icon border inline-flex items-center justify-center font-krds text-krds-text rounded-krds-sm font-bold transition-colors min-h-[42px] px-krds-4 py-krds-3 text-krds-body-lg w-11 p-0" disabled>
+	<span class="sr-only">열기</span>
+	<i class="svg-icon ico-angle down"></i>
 </button>
 ```
 

@@ -1,27 +1,41 @@
 {
-  "requiredSelectors": [
-    "#krds-skip-link",
-    "#wrap.g-wrap",
-    "#krds-masthead",
-    "#krds-header",
-    "#container",
-    "#content",
-    "#krds-footer"
+  "threshold": 95,
+  "checks": [
+    { "ruleId": "doctype", "weight": 2 },
+    { "ruleId": "lang-ko", "weight": 2 },
+    { "ruleId": "meta-charset", "weight": 1 },
+    { "ruleId": "meta-viewport", "weight": 1 },
+    { "ruleId": "meta-description", "weight": 1 },
+    { "ruleId": "landmark-header", "weight": 2 },
+    { "ruleId": "landmark-nav", "weight": 2 },
+    { "ruleId": "landmark-main", "weight": 2 },
+    { "ruleId": "landmark-footer", "weight": 2 },
+    { "ruleId": "selector-krds-skip-link", "weight": 3 },
+    { "ruleId": "selector-wrap-g-wrap", "weight": 3 },
+    { "ruleId": "selector-krds-masthead", "weight": 3 },
+    { "ruleId": "selector-krds-header", "weight": 3 },
+    { "ruleId": "selector-container", "weight": 3 },
+    { "ruleId": "selector-content", "weight": 3 },
+    { "ruleId": "selector-krds-footer", "weight": 3 },
+    { "ruleId": "class-krds-btn", "weight": 2 },
+    { "ruleId": "class-krds-input", "weight": 2 },
+    { "ruleId": "class-krds-form", "weight": 2 },
+    { "ruleId": "class-krds-table", "weight": 2 },
+    { "ruleId": "class-krds-badge", "weight": 2 },
+    { "ruleId": "class-sr-only", "weight": 2 },
+    { "ruleId": "skip-link-target", "weight": 3 },
+    { "ruleId": "form-label-binding", "weight": 3 },
+    { "ruleId": "icon-button-has-sr-only", "weight": 2 },
+    { "ruleId": "image-has-alt", "weight": 2 },
+    { "ruleId": "nav-aria-label", "weight": 2 },
+    { "ruleId": "table-semantic", "weight": 2 }
   ],
-  "requiredClassPatterns": [
-    "krds-btn",
-    "krds-input",
-    "krds-form",
-    "krds-table",
-    "krds-badge",
-    "sr-only"
-  ],
-  "requiredLandmarks": ["header", "nav", "main", "footer"],
-  "requiredMeta": ["charset", "viewport", "description"],
-  "a11yRules": [
-    "skip-link-target-exists",
-    "form-input-has-label",
-    "icon-button-has-sr-only",
-    "image-has-alt"
+  "extraChecks": [
+    {
+      "id": "krds-class-prefix-coverage",
+      "weight": 1,
+      "type": "reference-class-coverage",
+      "minRatio": 0.1
+    }
   ]
 }
