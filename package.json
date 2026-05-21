@@ -1,0 +1,38 @@
+{
+  "name": "ss-design-krds",
+  "version": "0.1.0",
+  "description": "AI 에이전트용 KRDS(Korea Design System) 스킬·스펙·검증 패키지",
+  "type": "module",
+  "license": "Apache-2.0",
+  "files": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "DESIGN.md",
+    "skills",
+    "specs",
+    "assets",
+    "references",
+    "resources",
+    "scripts",
+    "templates"
+  ],
+  "scripts": {
+    "krds:validate": "node scripts/validate-krds.mjs",
+    "krds:score": "node scripts/krds-similarity.mjs --target experiment/sample-page/index.html",
+    "krds:improve": "node scripts/krds-improve-loop.mjs",
+    "krds:index": "node scripts/generate-spec-index.mjs",
+    "krds:coverage": "node scripts/verify-krds-component-coverage.mjs",
+    "krds:build-sample": "node scripts/build-sample-experiment.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SimpleScaffold/ss-design-krds.git"
+  },
+  "keywords": [
+    "krds",
+    "korea-design-system",
+    "government",
+    "accessibility",
+    "agent-skills"
+  ]
+}

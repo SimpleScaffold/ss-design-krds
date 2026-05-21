@@ -1,0 +1,48 @@
+# Radio Size (`radio_size`)
+
+> Source: `assets/krds/html/code/radio_size.html`
+
+## When to use
+
+- KRDS 공식 컴포넌트 `radio_size` 패턴이 필요할 때
+- `data-krds-component="radio_size"` / `data-krds-reference="assets/krds/html/code/radio_size.html"`로 출처 추적
+
+## Tokens
+
+- `specs/tokens.md` 참조 — 임의 hex 금지
+
+## HTML (official)
+
+```html
+<!-- radio button -->
+<div class="krds-check-area">
+	<div class="krds-form-check medium">
+		<input type="radio" name="rdo_2-1" id="rdo_2-2">
+		<label for="rdo_2-2">사이즈 : medium</label>
+	</div>
+	<div class="krds-form-check large">
+		<input type="radio" name="rdo_2-1" id="rdo_2-3">
+		<label for="rdo_2-3">사이즈 : large</label>
+	</div>
+</div>
+<!-- //radio button -->
+```
+
+## Tailwind
+
+```html
+<!-- krds- 클래스 + templates/tailwind-theme.css 토큰 병행 -->
+<div data-krds-component="radio_size" data-krds-reference="assets/krds/html/code/radio_size.html">
+  <!-- assets/krds/html/code/radio_size.html 구조 참조 -->
+</div>
+```
+
+## Accessibility
+
+- `specs/accessibility.md` 게이트 준수
+- label-input 바인딩, sr-only, alt text 확인
+
+## Do / Don't
+
+**Do**: 공식 HTML 구조·클래스 유지  
+**Don't**: krds- 접두사 없이 generic 클래스만 사용

@@ -1,0 +1,27 @@
+@theme {
+  --color-krds-primary: #256ef4;
+  --color-krds-primary-hover: #0b50d0;
+  --color-krds-text: #1e2124;
+  --color-krds-text-secondary: #58616a;
+  --color-krds-surface: #f4f5f6;
+  --color-krds-border: #cdd1d5;
+  --color-krds-danger: #de3412;
+  --color-krds-success: #228738;
+  --color-krds-warning: #9e6a00;
+  --color-krds-info: #0b78cb;
+
+  --font-krds: "Pretendard GOV", "Pretendard", "Noto Sans KR", sans-serif;
+
+  --radius-krds-sm: 4px;
+  --radius-krds-md: 8px;
+  --radius-krds-lg: 12px;
+}
+
+/* KRDS utility aliases — use alongside krds- component classes */
+.bg-krds-primary { background-color: var(--color-krds-primary); }
+.bg-krds-surface { background-color: var(--color-krds-surface); }
+.text-krds-text { color: var(--color-krds-text); }
+.text-krds-secondary { color: var(--color-krds-text-secondary); }
+.rounded-krds-sm { border-radius: var(--radius-krds-sm); }
+.rounded-krds-md { border-radius: var(--radius-krds-md); }
+.font-krds { font-family: var(--font-krds); }

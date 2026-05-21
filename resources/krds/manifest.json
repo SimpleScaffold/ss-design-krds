@@ -1,0 +1,25 @@
+{
+  "name": "krds-local-resource-bundle",
+  "version": "1.1.0",
+  "source": "https://github.com/KRDS-uiux/krds-uiux",
+  "sourcePackage": "krds-uiux",
+  "mirrors": {
+    "assets": "assets/krds",
+    "references": "references/krds"
+  },
+  "componentCount": 74,
+  "componentRoot": "assets/krds/html/code",
+  "reports": {
+    "krdsCatalog": "reports/krds-uiux-files.md",
+    "designMdCatalog": "reports/design-md-files.md",
+    "verifiers": "resources/krds/test-verifiers.md",
+    "experimentScore": "reports/experiment/final-score.json",
+    "experimentCoverage": "reports/experiment/component-coverage-check.json"
+  },
+  "specs": {
+    "tokens": "specs/tokens.md",
+    "accessibility": "specs/accessibility.md",
+    "stacks": "specs/stacks.md",
+    "components": "specs/components/"
+  }
+}

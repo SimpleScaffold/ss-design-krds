@@ -1,0 +1,37 @@
+---
+description: KRDS UI 생성 시 토큰·접근성·컴포넌트 규칙을 강제합니다.
+globs: "**/*.{html,css,tsx,jsx,vue,md}"
+alwaysApply: false
+---
+
+# KRDS Design Rules
+
+UI를 생성·수정할 때 ss-design-krds 규칙을 따르세요.
+
+## 필수 참조
+
+- `specs/tokens.md` — 색상·타이포·간격 (임의 hex 금지)
+- `specs/accessibility.md` — skip-link, landmarks, label binding
+- `assets/krds/html/code/` — 공식 HTML 컴포넌트
+
+## 필수 DOM
+
+`#krds-skip-link`, `#wrap.g-wrap`, `#krds-header`, `#container`, `#content`, `#krds-footer`
+
+## 클래스
+
+KRDS 컴포넌트는 `krds-` 접두사 사용: `krds-btn`, `krds-input`, `krds-table`, `krds-badge`, `sr-only`
+
+## CJK Typography
+
+- Font: Pretendard GOV → Pretendard → Noto Sans KR
+- 본문 16px, line-height 1.6
+- letter-spacing 과도 축소 금지
+
+## 검증
+
+```bash
+node scripts/krds-similarity.mjs --target <file>
+```
+
+score ≥ 95, failed rules = 0

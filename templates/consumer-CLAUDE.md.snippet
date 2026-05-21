@@ -1,0 +1,21 @@
+## KRDS Design System (ss-design-krds)
+
+이 프로젝트는 `.krds/` (또는 submodule 경로)의 ss-design-krds 패키지를 참조합니다.
+
+### 작업 전 필독
+
+- `.krds/skills/krds-plan/SKILL.md` (신규) 또는 `krds-transform` (기존 UI)
+- `.krds/specs/tokens.md` — **임의 hex/폰트 금지**
+- `.krds/specs/accessibility.md` — a11y 게이트
+
+### 검증
+
+```bash
+node .krds/scripts/krds-similarity.mjs --target <your-page.html>
+# score ≥ 95, failed rules = 0
+```
+
+### 참조
+
+- HTML 원본: `.krds/assets/krds/html/code/`
+- 컴포넌트 스펙: `.krds/specs/components/`
